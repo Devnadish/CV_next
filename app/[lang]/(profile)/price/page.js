@@ -1,5 +1,5 @@
 import { BiHappyAlt } from "react-icons/bi";
-import PakageDetail from "@/components/pricecompnent/Pakagedetail.json";
+import PakageDetail from "@/components/pricecompnent/pakagedetail.json";
 import { Package } from "@/components/pricecompnent/Package";
 import PageContainer from "@/components/pagecontainer/PageContainer";
 
