@@ -1,23 +1,35 @@
 import { FaPalette } from "react-icons/fa";
-import { enLang } from "@/locales/en/translation";
 import Title from "@/components/shared/title/Title";
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
+import { getDictionary } from "@/lib/dictionary";
+import {sectionStyle} from "@/styles/homeSectionStyle"
+import { design } from "./utl";
 
-
-function DesignSection() {
+async function DesignSection({lang}) {
+  const {
+    page: {
+      about: { skills },
+    },
+  } = await getDictionary(lang);
   const baseUrl="/assets/about/"
+  const data=design()
   return (
     <>
-      <div className="flex flex-col justify-center gap-2 p-2 border-1 rounded  w-[calc(100%-15px)] ">
+      <div className={sectionStyle}>
         <Title
-          title={enLang.desigtitle}
+          title={skills.desigtitle}
           icon={<FaPalette className="text-3xl text-orange-600"/>}
         />
-        <div className="flex justify-between w-auto gap-4 p-4">
-          <AboutImage imgx={baseUrl+"ps.png"}   pres={"70%"} />
-          <AboutImage imgx={baseUrl+"ai.png"}   pres={"60%"} />
-          <AboutImage imgx={baseUrl+"pr.png"}   pres={"60%"} />
-          <AboutImage imgx={baseUrl+"ae.png"}   pres={"50%"} />
+     <div className="grid grid-cols-2 gap-6 lg:grid-cols-6 place-items-center">
+     {data.data.map((skill) => {
+          return (
+            <AboutImage
+            key={skill.id}
+              imgx={baseUrl + skill.imgx}
+              pres={skill.pres}
+
+            />
+        )})}
         </div>
       </div>
     </>

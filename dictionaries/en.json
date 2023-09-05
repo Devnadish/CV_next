@@ -110,6 +110,41 @@
             "S7L3": "Pintrest",
             "S7D3": "Pinterest is a social media platform for sharing photos, ideas and personal interests, characterized by its good organization and ease of use. Pinterest can inspire you in the design of your site by collecting ideas and images, organizing them on different boards, providing attractive and diverse content to users. Pinterest can also be used to search for inspiration in various fields and use it as a source of new ideas in designing your site uniquely and creatively."
       }
+    },
+
+"about": {
+      "heroSection": {
+        "himsg": "Hello...",
+        "iamKhalid": "I am Khalid",
+        "develepor":  "Website Developer and Designer",
+        "develoerSince":"Since 1998",
+        "download": "Download"
+      },
+      "advTxt": {
+        "ask1":"Are you looking for a website that perfectly represents your brand?",
+        "ask2":  "Don't miss the opportunity to turn your idea into reality. Contact us today!"
+      },
+      "willdo": {
+        "waitingForyou":"Waiting for you",
+        "Ui": "Innovative and Engaging Design",
+        "UiDetail": "Our professional team designs innovative and engaging websites that professionally reflect your brand identity.",
+        "Ux":  "Excellent User Experience",
+        "UxDetail": "We pay close attention to user experience details to ensure an easy and seamless experience for visitors to your website.",
+        "perfomance": "Fast and High-Performance",
+        "perfomanceTitle": "We guarantee that your website works quickly and efficiently on all devices and screens.",
+        "seo":"Optimized Search Engine (SEO)",
+        "seoTitle": "We use best practices to improve your website's search engine optimization and increase its visibility in search results.",
+        "help": "Continuous Technical Support",
+        "helpTitle": "We provide you with continuous technical support to help solve any issues you may encounter and ensure your website continues to work perfectly.",
+        "freeConsultaion": "Free Consultations",
+        "freeConsultaionTitle":"I'm happy to provide free consultations in the field of website design, programming, or mobile applications, and to work with you to find the right solutions for your business."
+      },
+      "skills": {
+        "devlopingtitle": "Programming Languages",
+        "desigtitle": "Design Technology",
+        "uiux": "User Experience Technology",
+        "database": "Database Technology"
+      }
     }
   }
 }

@@ -1,6 +1,7 @@
 import Title from "../shared/title/Title";
 import   Description  from "../shared/description/Description";
 import { getDictionary } from "@/lib/dictionary";
+import {sectionStyle} from "@/styles/homeSectionStyle";
 export const Section4 =async ({ lang }) => {
   const {
     page: {
@@ -11,7 +12,7 @@ export const Section4 =async ({ lang }) => {
     <>
       <section
         id="section4"
-        className="flex flex-col w-[calc(100%-15px)] gap-4 p-4 border border-gray-400/40 hover:opacity-80 hover:shadow-lg"
+        className={sectionStyle}
       >
         <Title title={section4.title} />
         <Description  des={section4.S4L1} />

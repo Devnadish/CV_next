@@ -1,31 +1,31 @@
 
-import  AdvertisingText  from "@/components/aboutCompnent/AdvertisingText";
-import  LazyDBSection from "@/components/aboutCompnent/DBSection"
-import ProgSection from  "@/components/aboutCompnent/ProgSection";
-import DesignSection from "@/components/aboutCompnent/DesignSection";
-import UiSection from "@/components/aboutCompnent/UiSection";
-import WillDo from "@/components/aboutCompnent/WillDo"
-import HeroBanner from "@/components/aboutCompnent/HeroBanner";
+import  AdvertisingText  from "@/components/aboutcompnent/AdvertisingText";
+import  LazyDBSection from "@/components/aboutcompnent/DBSection"
+import ProgSection from  "@/components/aboutcompnent/ProgSection";
+import DesignSection from "@/components/aboutcompnent/DesignSection";
+import UiSection from "@/components/aboutcompnent/UiSection";
+import WillDo from "@/components/aboutcompnent/WillDo"
+import HeroBanner from "@/components/aboutcompnent/HeroBanner";
 import PageContainer from "@/components/pagecontainer/PageContainer";
 
 
-function page() {
+function page({params: { lang }}) {
 
   return (
     <>
     <PageContainer>
 
-    <div className='flex flex-col justify-start gap-4 overflow-auto ' >
+    <div className='flex flex-col justify-start w-full gap-4 overflow-auto ' >
         {/* v.1.01.1 */}
-          <HeroBanner   />
-          <AdvertisingText   />
-          <WillDo   />
-          <ProgSection   />
-          <DesignSection   />
+          <HeroBanner  lang={lang} />
+          <AdvertisingText  lang={lang} />
+          <WillDo  lang={lang} />
+          <ProgSection  lang={lang} />
+          <DesignSection  lang={lang} />
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2  w-[calc(100%-15px)] place-items-center">
 
-          <UiSection   />
-          <LazyDBSection   />
+          <UiSection   lang={lang}/>
+          <LazyDBSection lang={lang}   />
           </div>
       </div>
       </PageContainer>

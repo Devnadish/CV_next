@@ -20,7 +20,7 @@ export default Navbar;
 function MenuItems({navigation,lang}) {
   return (
     <div className="w-full shadow-md">
-      <ul className="flex items-center justify-between w-full font-cairo">
+      <ul className="flex items-center justify-between w-full font-tajawal font-bold">
         <Link href={`/${lang}`} className={`${navbarMenuItem} bg-orange-400 text-white`}>
           <li>{navigation.home}</li>
         </Link>

@@ -1,51 +1,26 @@
 
-import { VscSymbolColor } from "react-icons/vsc";
-import { FaUsers, FaHandshake } from "react-icons/fa";
-import { IoSpeedometerOutline } from "react-icons/io5";
-import { AiOutlineFileSearch } from "react-icons/ai";
-import {BsFillEmojiHeartEyesFill} from "react-icons/bs"
-import { enLang } from "@/locales/en/translation";
- 
-function WillDo() {
+import { getDictionary } from "@/lib/dictionary";
+import {WillDoData} from "@/components/aboutcompnent/utl.js"
+async function WillDo({ lang }) {
+  const {
+    page: {
+      about: { willdo },
+    },
+  } = await getDictionary(lang);
+
+  const data =  WillDoData(willdo);
   return (
     <>
-      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2  w-[calc(100%-15px)] place-items-start">
-        <InfoBox
-          titlex={enLang.Ui}
-          subtitlex={enLang.UiDetail}
-          alt={enLang.Ui}
-          icon={<VscSymbolColor className="text-2xl text-orange-500" />}
-        />
-        <InfoBox
-          titlex={enLang.Ux}
-          subtitlex={enLang.UxDetail}
-          alt={enLang.Ux}
-          icon={<FaUsers className="text-2xl text-green-500" />}
-        />
-        <InfoBox
-          titlex={enLang.perfomance}
-          subtitlex={enLang.perfomanceTitle}
-          alt={enLang.perfomance}
-          icon={<IoSpeedometerOutline className="text-2xl text-red-500" />}
-        />
-        <InfoBox
-          titlex={enLang.seo}
-          subtitlex={enLang.seoTitle}
-          alt={enLang.seo}
-          icon={<AiOutlineFileSearch className="text-2xl text-blue-500" />}
-        />
-        <InfoBox
-          titlex={enLang.help}
-          subtitlex={enLang.helpTitle}
-          alt={enLang.help}
-          icon={<FaHandshake className="text-2xl text-brown-900" />}
-        />
-        <InfoBox
-          titlex={enLang.freeConsultaion}
-          subtitlex={enLang.freeConsultaionTitle}
-          alt={enLang.help}
-          icon={<BsFillEmojiHeartEyesFill className="text-2xl text-yellow-400" />}
-        />
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-2  lg:grid-cols-3 w-[calc(100%-15px)] place-items-center">
+      {data?.data?.map((willdo) => {
+        return (
+          <InfoBox
+            key={willdo.id}
+            icon={willdo.icon}
+            titlex={willdo.title}
+            subtitlex={willdo.subtitlex}
+            alt={willdo.alt}/>
+      )})}
       </div>
     </>
   );
@@ -53,15 +28,16 @@ function WillDo() {
 export default WillDo;
 
 const InfoBox = ({ img, titlex, subtitlex, alt = "tst", activeLang, icon }) => {
-
   return (
     <>
-      <div className="flex flex-col p-2 border-2 divide-y-2 rounded-lg hover:shadow-lg">
-        <div className="flex items-center justify-between p-1 mb-1 text-white " >
-          <p  > {titlex} </p>
+      <div className="flex flex-col p-2 border-2 max-w-[350px]    rounded-lg hover:shadow-lg">
+         <div className="flex justify-center p-4" >
           {icon}
+          </div>
+        <div className="flex flex-col items-center justify-between gap-4 p-1 mb-1 text-white ">
+          <p className="font-semibold font-tajawal"> {titlex} </p>
         </div>
-        <p className="p-2 text-gray-300"> {subtitlex} </p>
+        <p className="p-4 text-gray-300 font-tajawal line-clamp-2 hover:line-clamp-none "> {subtitlex} </p>
       </div>
     </>
   );

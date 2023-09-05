@@ -1,17 +1,33 @@
 
 import { FaServer } from "react-icons/fa"
 import Title from "@/components/shared/title/Title";
-import { enLang } from "@/locales/en/translation"
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
-function DBSection() {
+import { getDictionary } from "@/lib/dictionary";
+import { dataBase } from "./utl";
+import {sectionStyle} from "@/styles/homeSectionStyle"
+
+async function DBSection({lang}) {
+  const {
+    page: {
+      about: { skills },
+    },
+  } = await getDictionary(lang);
   const baseUrl="/assets/about/"
+  const data=dataBase()
   return (
     <>
-     <div className="flex flex-col justify-center  w-[calc(100%-15px)]  border-gray-300/50 hover:border-gray-300 gap-2 p-2 border-1 bg-blue-gray-400 ">
-         <Title title={enLang.database}  icon={<FaServer className="text-3xl text-green-600"/>}/>
+     <div className={sectionStyle}>
+         <Title title={skills.database}  icon={<FaServer className="text-3xl text-green-600"/>}/>
      <div className="flex justify-between w-auto gap-4 mt-4">
-        <AboutImage imgx={baseUrl+"mysql.png"}   pres={"70%"} />
-        <AboutImage imgx={baseUrl+"firebase.png"}   pres={"60%"} />
+     {data.data.map((skill) => {
+          return (
+            <AboutImage
+            key={skill.id}
+              imgx={baseUrl + skill.imgx}
+              pres={skill.pres}
+
+            />
+        )})}
       </div>
       </div>
     </>

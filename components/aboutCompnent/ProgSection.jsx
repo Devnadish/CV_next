@@ -1,71 +1,40 @@
 import { FaJs } from "react-icons/fa";
-import { enLang } from "@/locales/en/translation";
 import Title from "@/components/shared/title/Title";
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
-import {ProgData} from "@/helpers/aboutInfo"
+import { getDictionary } from "@/lib/dictionary";
+import { devlopment } from "./utl";
+import {sectionStyle} from "@/styles/homeSectionStyle"
 
-
-function ProgSection() {
+async function ProgSection({lang}) {
+  const {
+    page: {
+      about: { skills },
+    },
+  } = await getDictionary(lang);
   const baseUrl = "/assets/about/";
-console.log(ProgData)
+  const data=devlopment()
+
   return (
     <>
-      <div className="flex flex-col justify-center gap-2 p-2 border-1 border-gray-300/50 hover:border-gray-300 rounded   w-[calc(100%-15px)] ">
+      <div className={sectionStyle}>
         <Title
-          title={enLang.devlopingtitle}
+          title={skills.devlopingtitle}
           icon={<FaJs className="text-3xl text-yellow-600" />}
         />
         <div className="grid grid-cols-3 gap-6 lg:grid-cols-6 place-items-center">
-          <AboutImage
-            imgx={baseUrl + "html.png"}
-            pres={"90%"}
 
-            link={{ pathname: "/blog/html5" }}
-          />
-          <AboutImage
-            imgx={baseUrl + "css.png"}
-            pres={"75%"}
-            link={{
-              pathname: "/about/css3",
-              query: { title: "CSS3" },
-            }}
-          />
-          <AboutImage
-            imgx={baseUrl + "javascript.png"}
-            pres={"80%"}
-            link={{
-              pathname: "/about/javascript",
-              query: { title: "Javascript" },
-            }}
-          />
-          <AboutImage
-            imgx={baseUrl + "react.png"}
-            pres={"90%"}
-            link={{
-              pathname: "/about/react",
-              query: { title: "Reactjs" },
-            }}
-          />
-          <AboutImage
-            imgx={baseUrl + "nextjs.jpg"}
-            pres={"90%"}
-            link={{
-              pathname: "/about/nextjs",
-              query: { title: "Nextjs" },
-            }}
-          />
-          <AboutImage
-            imgx={baseUrl + "nodejs.png"}
-            pres={"75%"}
-            link={{
-              pathname: "/about/nodejs",
-              query: { title: "Nodejs" },
-            }}
-          />
+        {data.data.map((skill) => {
+          return (
+            <AboutImage
+            key={skill.id}
+              imgx={baseUrl + skill.imgx}
+              pres={skill.pres}
+
+            />
+        )})}
         </div>
       </div>
     </>
   );
 }
-
 export default ProgSection;

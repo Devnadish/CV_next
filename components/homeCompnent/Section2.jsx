@@ -1,7 +1,7 @@
 import CardWithImage from "@/components/shared/cardWithImage/CardWithImage";
 import Title from "@/components/shared/title/Title";
 import { getDictionary } from "@/lib/dictionary";
-
+import {sectionStyle} from "@/styles/homeSectionStyle";
 export const Section2 = async ({ lang }) => {
   const {
     page: {
@@ -14,11 +14,12 @@ export const Section2 = async ({ lang }) => {
     <>
       <section
         id="section2"
-        className="flex flex-col justify-between
-         w-[calc(100%-15px)] full gap-6 p-4 border border-gray-400/40 center rounded-b-md"
+        className={sectionStyle}
       >
-        <div className="w-full">
-          <Title title={section2.title} />
+        <div className="w-full flex items-center">
+          <Title title={section2.title} withBtn />
+
+
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 place-items-center">
           <CardWithImage
@@ -59,8 +60,6 @@ export const Section2 = async ({ lang }) => {
             imageUrl={Imageurl + "markting.jpg?=v1"}
             link={`/blog/socailPost`}
             />
-
-
           <CardWithImage
             title={section2.S2L7}
             des={section2.S2D7}
@@ -73,7 +72,6 @@ export const Section2 = async ({ lang }) => {
             imageUrl={Imageurl + "support.jpg?=v1"}
             link={`/blog/freesupport`}
             />
-
              <CardWithImage
             title={section2.S2L9}
             des={section2.S2D9}

@@ -7,7 +7,7 @@ import { IoNavigateCircleOutline } from "react-icons/io5";
 import { BiLineChart } from "react-icons/bi";
 import Title from "../shared/title/Title";
 import ShowHint from "../shared/hint/ShowHint";
-
+import {sectionStyle} from "@/styles/homeSectionStyle";
 export const Section5 = async ({ lang }) => {
   const {
     page: {
@@ -18,7 +18,7 @@ export const Section5 = async ({ lang }) => {
     <>
       <section
         id="section5"
-        className="flex flex-col justify-center w-[calc(100%-15px)] gap-8 px-4 pb-4 border rounded-lg border-gray-400/40"
+        className={sectionStyle}
       >
         <Title title={section5.title} />
         <div className="flex flex-col w-full gap-3 sm:flex-row">
