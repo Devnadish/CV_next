@@ -2,33 +2,40 @@ import { BiHappyAlt } from "react-icons/bi";
 import PakageDetail from "@/components/pricecompnent/pakagedetail.json";
 import { Package } from "@/components/pricecompnent/Package";
 import PageContainer from "@/components/pagecontainer/PageContainer";
+import { getDictionary } from "@/lib/dictionary";
 
-async function page({ test }) {
+async function page({ params: { lang } }) {
+  const {
+    page: { pricePkg  },
+  } = await getDictionary(lang);
+
+  console.log(pricePkg);
   return (
     <>
       <PageContainer>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 place-items-start ">
           <Package
-            category={PakageDetail.pkg1.title}
+            category={pricePkg.standerd.title}
             offerIcon={<BiHappyAlt size={"1.5rem"} />}
-            facility={PakageDetail.pkg1.facility}
-            price={PakageDetail.pkg1.price}
-            cur={PakageDetail.pkg1.cur}
+            facility={pricePkg.standerd.facility}
+            price={pricePkg.standerd.price}
+            lang={lang}
           />
           <Package
-            category={PakageDetail.pkg2.title}
-            offerIcon={<BiHappyAlt size={"1.5rem"} />}
-            facility={PakageDetail.pkg2.facility}
-            price={PakageDetail.pkg2.price}
-            cur={PakageDetail.pkg2.cur}
+
+           category={pricePkg.plus.title}
+           offerIcon={<BiHappyAlt size={"1.5rem"} />}
+           facility={pricePkg.plus.facility}
+           price={pricePkg.plus.price}
             recommend={true}
+            lang={lang}
           />
           <Package
-            category={PakageDetail.pkg3.title}
+            category={pricePkg.advance.title}
             offerIcon={<BiHappyAlt size={"1.5rem"} />}
-            facility={PakageDetail.pkg3.facility}
-            price={PakageDetail.pkg3.price}
-            cur={PakageDetail.pkg3.cur}
+            facility={pricePkg.advance.facility}
+            price={pricePkg.advance.price}
+            lang={lang}
           />
         </div>
       </PageContainer>

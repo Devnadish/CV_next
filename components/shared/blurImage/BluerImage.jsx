@@ -30,7 +30,8 @@ function cn(...classes) {
           src={image}
           alt="Picture of the author"
 
-
+          width={300}
+          height={300}
             fill
             style={{objectFit:"contain"}}
             className={cn(

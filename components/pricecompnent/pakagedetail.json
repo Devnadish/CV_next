@@ -9,15 +9,8 @@
       { "id": 3, "icon": "", "title": "website in Arabic" },
       { "id": 4, "icon": "", "title": "domain name reservation" },
       { "id": 5, "icon": "", "title": "free hosting for a year" },
-      {
-        "id": 6,
-        "icon": "",
-        "title": "support and maintenance for six months"
-      },
-      {
-        "id": 7,
-        "icon": "",
-        "title": "integrate the site with the social network"
+      { "id": 6, "icon": "", "title": "support and maintenance for six months"  },
+      { "id": 7, "icon": "", "title": "integrate the site with the social network"
       },
       { "id": 8, "icon": "", "title": "one official emails" },
       { "id": 9, "icon": "", "title": "search engine optimization" }
@@ -34,16 +27,8 @@
       { "id": 3, "icon": "", "title": "website in Arabic" },
       { "id": 4, "icon": "", "title": "domain name reservation" },
       { "id": 5, "icon": "", "title": "free hosting for a year" },
-      {
-        "id": 6,
-        "icon": "",
-        "title": "support and maintenance for 12 months"
-      },
-      {
-        "id": 7,
-        "icon": "",
-        "title": "integrate the site with the social network"
-      },
+      { "id": 6, "icon": "", "title": "support and maintenance for 12 months"},
+      { "id": 7, "icon": "", "title": "integrate the site with the social network"},
       { "id": 8, "icon": "", "title": "five of official emails" },
       { "id": 9, "icon": "", "title": "search engine optimization" },
       { "id": 10, "icon": "", "title": "contact pages, services and about us" }
@@ -60,16 +45,8 @@
       { "id": 3, "icon": "", "title": "website in Arabic" },
       { "id": 4, "icon": "", "title": "domain name reservation" },
       { "id": 5, "icon": "", "title": "free hosting for a year" },
-      {
-        "id": 6,
-        "icon": "",
-        "title": "support and maintenance for 24 months"
-      },
-      {
-        "id": 7,
-        "icon": "",
-        "title": "integrate the site with the social network"
-      },
+      { "id": 6, "icon": "",  "title": "support and maintenance for 24 months"      },
+      {        "id": 7,        "icon": "",        "title": "integrate the site with the social network"      },
       { "id": 8, "icon": "", "title": "unlimited of official emails" },
       { "id": 9, "icon": "", "title": "search engine optimization" },
       { "id": 10, "icon": "", "title": "contact pages, services and about us" }

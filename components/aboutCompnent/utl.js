@@ -52,7 +52,7 @@ export function WillDoData( willdo ) {
 }
 
 
-export function devlopment()  {
+export function devlopment(lang)  {
 
   return {
     data: [
@@ -60,31 +60,38 @@ export function devlopment()  {
         id: "html",
         imgx:  "html.png",
         pres: "90%",
+        link:`/blog/${lang}html5`
       },
       {
         id: "css",
         imgx: "css.png",
-        pres: "80%"
+        pres: "80%",
+        link:`/blog/${lang}css`
       },
       {
         id: "js",
         imgx: "javascript.png",
         pres: "75%",
+        link:`/blog/${lang}js`
       },
       {
         id: "react",
         imgx: "react.png",
-        pres: "80%"
+        pres: "80%",
+        link:`/blog/${lang}react`
       },
       {
         id: "nextjs",
         imgx: "nextjs.jpg",
-        pres: "70%"
+        pres: "70%",
+        link:`/blog/${lang}nextjs`
+
       },
       {
         id: "node",
         imgx: "nodejs.png",
-        pres: "70%"
+        pres: "70%",
+        link:`/blog/${lang}nodejs`
       },
     ],
   };

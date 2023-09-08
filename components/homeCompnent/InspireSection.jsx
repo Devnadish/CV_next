@@ -1,8 +1,8 @@
-import { erInspire } from "./MDdocument/insporeSite.mjs";
 import Title from "../shared/title/Title";
 import CardWithImage from "../shared/cardWithImage/CardWithImage";
 import { getDictionary } from "@/lib/dictionary";
-import {sectionStyle} from "@/styles/homeSectionStyle";
+import {sectionStyle,sectionGridStyle} from "@/styles/homeSectionStyle";
+import { section8Data } from "./utl";
 
 export const  InspireSection =async ({ lang }) => {
   const {
@@ -12,15 +12,26 @@ export const  InspireSection =async ({ lang }) => {
   } = await getDictionary(lang);
 
 
-  const baseUrl = "/assets/homePage/inSpirceSection/";
+  const Imageurl = "/assets/homePage/inSpirceSection/";
+  const data=section8Data(inspire,lang);
   return (
     <>
       <div  className={sectionStyle}>
-        <div className="w-auto">
-          <Title title={enLang.S11L1} withBtn/>
-        </div>
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 place-items-center">
-          <CardWithImage
+        <div className="w-auto"><Title title={inspire.S11L1} withBtn/></div>
+
+        <div className={sectionGridStyle}>
+        {data.data.map((section8) => {
+            return (
+              <CardWithImage
+                key={section8.id}
+                title={section8.title}
+                imageUrl={Imageurl + section8.imageUrl}
+                des={section8.des}
+                link={section8.link}
+              />
+            );
+          })}
+          {/* <CardWithImage
             title={inspire.S7L1}
             des={inspire.S7D1}
             // des={erInspire[0].des}
@@ -44,7 +55,7 @@ export const  InspireSection =async ({ lang }) => {
             linkText={erInspire[4].name + " " + "Site"}
             link={erInspire[4].link}
           />
-
+ */}
 
 
 

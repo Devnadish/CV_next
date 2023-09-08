@@ -8,7 +8,7 @@ import { Roboto } from "next/font/google";
 import { Lateef } from "next/font/google";
 import { Cairo } from "next/font/google";
 import { Tajawal } from "next/font/google";
-
+// export const runtime = 'edge'
 const roboto = Roboto({
   weight: ["400", "700"],
   style: ["normal", "italic"],
@@ -48,7 +48,7 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-  console.log("from array: ", i18n.locales);
+  // console.log("from array: ", i18n.locales);
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 

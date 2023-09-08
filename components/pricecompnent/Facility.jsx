@@ -1,7 +1,10 @@
 import { FcApproval } from "react-icons/fc";
-export function Facility({ facility }) {
+export function Facility({ facility,recommend=false,lang }) {
   return (
-    <div className="flex flex-col flex-wrap items-start justify-start gap-2 px-1 mt-3 mb-6">
+    <div className="flex flex-col flex-wrap items-start justify-start gap-2 py-2  "
+
+    style={{ backgroundColor: recommend ? "blue" : "none",color: recommend ? "yellow" : "black" }}
+    >
       {facility?.map((el) => {
         return (
 

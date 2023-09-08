@@ -1,11 +1,14 @@
 import { FcApproval } from "react-icons/fc";
 
 
-export function Category({ category,recommend=false }) {
+export function Category({ category,recommend=false,lang }) {
   return (
-    <div className="flex items-center justify-start h-8 gap-4 pt-4 pb-4 mt-2 ml-4 text-2xl text-yellow-400 uppercase border-b-8 border-yellow-400/50 w-fit ">
-      <h1 className="mt-2">{category}</h1>
-      {recommend ? <FcApproval size={30}/>:null}
+    <div
+      className="flex items-center justify-center w-full h-16 gap-4 text-2xl text-yellow-400 capitalize shadow-lg font-tajawal border-yellow-400/50 bg-slate-700 "
+      style={{ backgroundColor: recommend ? "yellow" : "none",color: recommend ? "blue" : "white" }}
+    >
+      <h1 className="font-tajawal">{category}</h1>
+      {recommend ? <FcApproval className="w-8 h-8" /> : null}
     </div>
   );
 }

@@ -12,7 +12,7 @@ async function ProgSection({lang}) {
     },
   } = await getDictionary(lang);
   const baseUrl = "/assets/about/";
-  const data=devlopment()
+  const data=devlopment(lang)
 
   return (
     <>
@@ -29,6 +29,7 @@ async function ProgSection({lang}) {
             key={skill.id}
               imgx={baseUrl + skill.imgx}
               pres={skill.pres}
+              link={skill.link}
 
             />
         )})}

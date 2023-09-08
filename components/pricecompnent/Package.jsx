@@ -8,17 +8,19 @@ export const Package = ({
   price = "",
   facility = "",
   cur = "",
-  recommend,
+  recommend=false,
 }) => {
   return (
     <>
-      <div className="p-4 rounded-lg bg-gradient-to-r from-gray-700 to-gray-900">
-        <div className="relative flex flex-col w-full gap-1 rounded-lg bg-gradient-to-bl from-slate-900 to-slate-700">
+
+        <div className="relative flex flex-col w-full font-tajawal  justify-between items-start rounded-lg border overflow-hidden bg-red-100 min-h-[500px]"
+          style={{ backgroundColor: recommend ? "blue" : "none",color: recommend ? "yellow" : "black" }}
+        >
           <Category category={category} recommend={recommend} />
-          <Facility facility={facility} />
-          <Price price={price} cur={cur} />
+          <Facility facility={facility} recommend={recommend}/>
+          <Price price={price} cur={cur} recommend={recommend}/>
         </div>
-      </div>
+
     </>
   );
 };

@@ -10,3 +10,14 @@ export const sectionStyle = [
   "center",
   "rounded-b-md",
 ].join(" ");
+
+export const sectionGridStyle = [
+  "grid",
+  "grid-cols-1",
+  "gap-6",
+  "md:grid-cols-2",
+  "lg:grid-cols-3",
+  "place-items-center",
+].join(" ");
+
+

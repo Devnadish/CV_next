@@ -2,7 +2,7 @@ import Image from "next/image";
 import { CardLink } from "./CardLink";
 import { Description } from "./Description";
 import { Title } from "./Title";
-import base64 from "@/helpers/base64";
+import base64 from "@/lib/base64";
 
 // title,image,link,description,
 export default  function CardWithImage({

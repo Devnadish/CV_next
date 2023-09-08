@@ -5,6 +5,7 @@ const nextConfig = {
 
     // Enable SWC minification for faster build times
     swcMinify: true,
+    optimizeFonts: false,
 
     // Configure custom HTTP agent options
     httpAgentOptions: {
@@ -14,6 +15,9 @@ const nextConfig = {
     // Configure image optimization options
     images: {
       domains: ['res.cloudinary.com'],
+      // under test ---------
+      disableStaticImages: true,
+      // ----------------
       minimumCacheTTL: 60,
       remotePatterns: [
         {

@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@next/bundle-analyzer": "^13.4.19",
+    "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.15",
     "eslint": "8.46.0",
@@ -19,7 +21,7 @@
     "markdown-to-jsx": "^7.3.2",
     "mongoose": "^7.4.2",
     "negotiator": "^0.6.3",
-    "next": "^13.4.19",
+    "next": "^13.4.20-canary.21",
     "next-i18next": "^14.0.0",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.9.4",

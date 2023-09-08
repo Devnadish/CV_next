@@ -19,7 +19,7 @@ export default function LocaleSwitcher() {
   };
 
   const ChangaLang =  () => {
-    console.log(language);
+    // console.log(language);
     setLanguage(language === "ar" ? "en" : "ar");
 
     router.push(redirectedPathName(language));
@@ -45,7 +45,7 @@ export default function LocaleSwitcher() {
                     height={70}
                   />
                 </div>
-                {/* <span className="flex items-center justify-center  px-4 text-white bg-black border rounded-lg">
+                {/* <span className="flex items-center justify-center px-4 text-white bg-black border rounded-lg">
                 {locale === "ar" ? "A" : "E"}
               </span> */}
               </Link>
