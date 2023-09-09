@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { HiOutlineEye } from "react-icons/hi";
 
-const PostPreview = ({ subtitle, title, date, counter = 100, slug }) => {
+const PostPreview = ({ subtitle, title, date, counter = 100, slug,lang }) => {
+  console.log(slug, title, date, subtitle)
   return (
     <div className="flex flex-col justify-between  p-4 bg-white border rounded-md shadow-sm  min-w-[350px] max-w-[350px] sm:min-w-[300px] sm:max-w-[300px] md:min-w-[230px] md:max-w-[250px] border-slate-300 ">
       <div className="flex items-center justify-between p-2 transition-all transform bg-gray-200 rounded-md hover:scale-110">
