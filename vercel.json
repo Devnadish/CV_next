@@ -1,9 +1,6 @@
 {
     "rewrites": [
       { "source": "/(.*)", "destination": "/" }
-    ],
-    "alias": {
-        "@components": "./components",
-        "@pages": "./pages"
-      }
+    ]
+
   }
