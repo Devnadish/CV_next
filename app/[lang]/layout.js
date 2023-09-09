@@ -8,6 +8,7 @@ import { Roboto } from "next/font/google";
 import { Lateef } from "next/font/google";
 import { Cairo } from "next/font/google";
 import { Tajawal } from "next/font/google";
+import { Analytics } from '@vercel/analytics/react';
 // export const runtime = 'edge'
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -64,6 +65,7 @@ export default function RootLayout({ children, params }) {
             <Navbar lang={params.lang} />
             <section className="flex flex-col  justify-start items-start h-[calc(100vh_-_170px)] ">
               {children}
+              <Analytics />
             </section>
             <Footer />
           </Container>
