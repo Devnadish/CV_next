@@ -20,7 +20,7 @@ async function page({ params: { lang } }) {
   return (
     <PageContainer>
       <div className="flex items-center justify-center p-4 rounded shadow-lg ">
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-5 lg:grid-cols-6 p-4 w-[calc(100%-15px)] place-items-center ">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-5 lg:grid-cols-6 p-4 w-[calc(100%-15px)] place-items-center ">
           {data?.data?.map((el) => {
             return (
               <div key={el.id}>

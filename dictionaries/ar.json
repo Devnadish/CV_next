@@ -1,5 +1,5 @@
 {
-  "loginBar": {"login": "تسجيل الدخول","register": "تسجيل","loginHint":"برجاء تسجيل الدخول"},
+  "loginBar": {"login": "دخول","register": "تسجيل","loginHint":"تسجيل الدخول"},
 
   "navigation": {
     "home": "الرئيسة",
