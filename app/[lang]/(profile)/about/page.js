@@ -1,4 +1,3 @@
-
 import  AdvertisingText  from "@/components/aboutcompnent/AdvertisingText";
 import  LazyDBSection from "@/components/aboutcompnent/DBSection"
 import ProgSection from  "@/components/aboutcompnent/ProgSection";

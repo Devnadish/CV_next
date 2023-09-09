@@ -3,7 +3,7 @@ import PostPreview from "@/components/PostPreview";
 import PageContainer from "@/components/pagecontainer/PageContainer";
 const page = ({params: { lang }}) => {
   const postMetadata = getPostMetadata(lang);
-console.log("language :" ,lang)
+// console.log("language :" ,lang)
   return (
     <PageContainer>
       <div className="grid w-full grid-cols-1 gap-4 place-items-center sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">

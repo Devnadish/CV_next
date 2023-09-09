@@ -9,8 +9,8 @@ const GoBack = dynamic(() => import("@/components/shared/goBack/GoBack"));
 const getPostContent = (slug, lang) => {
   const folder = `posts/`;
   const file = `${folder}${slug}.md`;
-  console.log("file name:", file);
-  console.log("folder :", folder);
+  // console.log("file name:", file);
+  // console.log("folder :", folder);
 
   const content = fs.readFileSync(file, "utf8");
   const matterResult = matter(content);

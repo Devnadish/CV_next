@@ -9,7 +9,7 @@ async function page({ params: { lang } }) {
     page: { pricePkg  },
   } = await getDictionary(lang);
 
-  console.log(pricePkg);
+  // console.log(pricePkg);
   return (
     <>
       <PageContainer>
