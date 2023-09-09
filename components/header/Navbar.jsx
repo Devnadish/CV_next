@@ -10,7 +10,7 @@ const  Navbar = async ({ lang }) => {
   const { navigation } = await getDictionary(lang)
   return (
     <div className="sticky left-0 z-50 flex flex-col justify-center w-full overflow-hidden rounded-t-lg top-4 text-grey-200">
-      <LoginBar />
+      <LoginBar lang={lang} />
       <MenuItems navigation={navigation}  lang={lang}/>
     </div>
   );
@@ -20,7 +20,7 @@ export default Navbar;
 function MenuItems({navigation,lang}) {
   return (
     <div className="w-full shadow-md">
-      <ul className="flex items-center justify-between w-full font-tajawal font-bold">
+      <ul className="flex items-center justify-between w-full font-bold font-tajawal">
         <Link href={`/${lang}`} className={`${navbarMenuItem} bg-orange-400 text-white`}>
           <li>{navigation.home}</li>
         </Link>

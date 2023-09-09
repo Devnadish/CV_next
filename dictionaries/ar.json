@@ -1,4 +1,6 @@
 {
+  "loginBar": {"login": "تسجيل الدخول","register": "تسجيل","loginHint":"برجاء تسجيل الدخول"},
+
   "navigation": {
     "home": "الرئيسة",
     "price": "الأسعار",

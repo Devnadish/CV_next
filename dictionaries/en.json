@@ -1,4 +1,6 @@
 {
+  "loginBar": {"login": "Login","register": "register","loginHint":"Login please"},
+
   "navigation": {
     "home": "Home",
     "price": "Prices",
