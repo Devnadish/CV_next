@@ -10,6 +10,7 @@ import { Cairo } from "next/font/google";
 import { Tajawal } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
 // export const runtime = 'edge'
+
 const roboto = Roboto({
   weight: ["400", "700"],
   style: ["normal", "italic"],
@@ -42,6 +43,8 @@ const tajawal = Tajawal({
   variable: "--font-tajawal",
   fallback: ["system-ui", "arial"],
 });
+// export const dynamic ='force-dynamic'
+export const revalidate = 0
 
 export const metadata = {
   title: "EazyCode",
