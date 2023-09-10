@@ -1,6 +1,7 @@
 import fs from "fs";
 import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
+import allgetPostMetadata from "../../../../components/allgetPostMetadata";
 import getPostMetadata from "../../../../components/getPostMetadata";
 import PageContainer from "@/components/pagecontainer/PageContainer";
 import dynamic from "next/dynamic";
@@ -18,7 +19,8 @@ const getPostContent = (slug, lang) => {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
+  const posts = allgetPostMetadata();
+  console.log(posts)
   return posts.map((post) => ({
     slug: post.slug,
   }));

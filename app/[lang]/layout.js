@@ -4,47 +4,12 @@ import Navbar from "@/components/header/Navbar";
 import { Locale, i18n } from "@/i18n.config";
 import dynamic from "next/dynamic";
 const Providers = dynamic(() => import("@/Providers/Provider"));
-import { Roboto } from "next/font/google";
-import { Lateef } from "next/font/google";
-import { Cairo } from "next/font/google";
-import { Tajawal } from "next/font/google";
 import { Analytics } from '@vercel/analytics/react';
-// export const runtime = 'edge'
 
-const roboto = Roboto({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto-mono",
-  fallback: ["system-ui", "arial"],
-});
-const lateef = Lateef({
-  weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["arabic"],
-  display: "swap",
-  variable: "--font-lateef",
-  fallback: ["system-ui", "arial"],
-});
-const cairo = Cairo({
-  weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["arabic"],
-  display: 'swap', adjustFontFallback: false,
-  variable: "--font-cairo",
-  fallback: ["system-ui", "arial"],
-});
-const tajawal = Tajawal({
-  weight: ["400", "700"],
-  style: ["normal"],
-  subsets: ["arabic"],
-  display: 'swap', adjustFontFallback: false,
-  variable: "--font-tajawal",
-  fallback: ["system-ui", "arial"],
-});
+import {roboto,lateef,cairo,tajawal} from "@/lib/fonts"
+
 // export const dynamic ='force-dynamic'
-export const revalidate = 0
+// export const revalidate = 0
 
 export const metadata = {
   title: "EazyCode",
@@ -52,6 +17,7 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
+
   // console.log("from array: ", i18n.locales);
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
