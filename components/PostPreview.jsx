@@ -39,7 +39,7 @@ function Viewer(props) {
 }
 function Title(props) {
   return (
-    <div className="flex items-center justify-between p-2 transition-all transform bg-zinc-700/50 hover:scale-110 ">
+    <div className="flex items-center justify-center p-2 transition-all transform bg-zinc-700/50 hover:scale-110 ">
       <Link href={`/blog/${props.slug}`}>
         <h2 className="text-center text-white text-md hover:underline font-tajawal font-semibold">
           {props.title}
