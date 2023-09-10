@@ -1,22 +1,14 @@
-import { match as matchLocale } from "@formatjs/intl-localematcher";
-import Negotiator from "negotiator";
+
 import { i18n } from "@/i18n.config";
-import { NextResponse } from "next/server";
-function getLocale(request) {
-  const negotiatorHeaders = {};
-  request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
-
-  const locales = i18n.locales;
-  const languages = new Negotiator({ headers: negotiatorHeaders }).languages();
-
-  const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
-  return locale;
-}
+import { NextResponse,NextRequest  } from "next/server";
+import { getLocale } from "@/lib/getlocal"
 
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
-  // console.log("pathname : ",pathname)
+  // const requestHeaders = new Headers(request.headers);
+  // const ip = request.ip || "";
+  // requestHeaders.set("x-forwarded-for", ip);
+  // console.log(requestHeaders,ip)
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );

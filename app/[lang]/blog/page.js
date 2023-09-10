@@ -1,6 +1,18 @@
 import getPostMetadata from "@/components/getPostMetadata";
 import PostPreview from "@/components/PostPreview";
 import PageContainer from "@/components/pagecontainer/PageContainer";
+
+export async function getServerSideProps({ req }) {
+  const clientIp = req.headers['x-forwarded-for'];
+console.log(clientIp)
+  return {
+    props: {
+      clientIp,
+    },
+  };
+}
+
+
 const page = ({params: { lang }}) => {
   const postMetadata = getPostMetadata(lang);
 // console.log("language :" ,lang)

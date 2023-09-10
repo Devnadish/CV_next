@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { Drawer } from "vaul";
+import {AiOutlineEye} from "@react-icons/all-files/ai/AiOutlineEye";
 import colors from "../../../utl/colors.json"
 
 export default function MyDrawer({
@@ -16,7 +17,7 @@ export default function MyDrawer({
       <div className="flex flex-col items-center justify-between">
         <ChipData chip={chip} />
         <Triger btnIcon={btnIcon} btnTXT={btnTXT} />
-        <div className="flex items-center justify-center w-full h-8 bg-gray-900 rounded-b-lg">{btnTXT}</div>
+        <div className="flex items-center font-tajawal text-sm justify-center w-full h-8 bg-gray-900 rounded-b-lg">{btnTXT}</div>
       </div>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/40" />
@@ -53,11 +54,17 @@ function DrawTItle({ headTitle }) {
   );
 }
 
-function ChipData(props) {
+function ChipData({chip,viewer=0}) {
   return (
-    <span className="w-full p-1 px-3 text-black rounded-t-lg shadow-sm border-1 bg-green-400/50 text-tiny">
-      {props.chip}
-    </span>
+    <div className=" flex  justify-between items-center w-full p-2  rounded-t-lg shadow-sm border-1 bg-green-400/50">
+      <span className="px-2 text-sm text-black rounded-t-sm  bg-green-400/50 ">
+        {chip}
+      </span>
+      <div className="flex  gap-2 items-center">
+      <span className="text-sm  text-zinc-600">{viewer}</span>
+      <AiOutlineEye className=" text-zinc-600 w-4 h-4"/>
+      </div>
+    </div>
   );
 }
 
@@ -81,7 +88,7 @@ function Triger({ btnIcon, btnTXT }) {
           color: colors.items[indexColor]?.textColor,
           fontSize: '24px',
           padding: '8px',
-          borderRadius: '50%'
+          // borderRadius: '50%'
         }
       })}
          {/* {btnTXT} */}

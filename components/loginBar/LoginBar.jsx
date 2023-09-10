@@ -1,6 +1,5 @@
 // "use client";
 import Link from "next/link";
-import { enLang } from "@/locales/en/translation";
 import { FaUserAlt } from "react-icons/fa";
 import Btn from "@/components/shared/btn/Btn";
 import { getDictionary } from "@/lib/dictionary";
@@ -17,7 +16,7 @@ export async function LoginBar({ USERSTUTES, userData, lang }) {
 
 function UserInfo({loginBar}) {
   return (
-    <div className="flex items-baseline gap-4 p-2 text-white">
+    <div className="flex items-baseline gap-4 p-2 text-white font-tajawal">
       <FaUserAlt  className="w-4 h-4 text-gray-400" />
       <p>{loginBar.loginHint}</p>
     </div>
@@ -27,7 +26,7 @@ function UserInfo({loginBar}) {
 const UserAction = ({loginBar}) => {
   return (
     <>
-      <div className="flex items-end gap-2 p-2">
+      <div className="flex items-end gap-2 p-2  ">
         <Link href={"/login"}>
           <Btn btnType={"success"}>{loginBar.login}</Btn>
         </Link>
