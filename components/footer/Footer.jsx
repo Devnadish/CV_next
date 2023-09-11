@@ -1,8 +1,5 @@
-import { BsInboxes } from "react-icons/bs";
-import { FaPaperPlane } from "react-icons/fa";
-import { BsMenuDown } from "react-icons/bs";
-// import ToggoleMode from "@/components/toggoleMode/toggoleMode";
-// import LanguageToggle from "@/components/toggoleMode/LanguageToggle";
+import { BsInboxes } from "@react-icons/all-files/bs/BsInboxes";
+import { FaPaperPlane } from "@react-icons/all-files/fa/FaPaperPlane";
 import LocaleSwitcher from '@/components/toggoleMode/locale-switcher'
 import Image from "next/image";
 import Link from "next/link";
@@ -16,7 +13,6 @@ const DarkLightMode =dynamic(()=>import("../toggoleMode/darkLight/DarkLightMode"
 function Footer() {
   return (
     <div className="flex items-center h-10 text-gray-200 align-middle rounded-b-lg bg-zinc-800 dark:bg-neutral-700 justify-evenly">
-      <BsMenuDown className="text-xl text-blue-gray-100" />
       <BsInboxes className="text-xl text-blue-gray-100" />
       <FaPaperPlane className="text-xl text-blue-gray-100" />
       <DarkLightMode />

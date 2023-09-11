@@ -1,4 +1,4 @@
-import { FiFigma } from "react-icons/fi";
+import { FiFigma } from "@react-icons/all-files/fi/FiFigma";
 import Title from "@/components/shared/title/Title";
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
 import { getDictionary } from "@/lib/dictionary";

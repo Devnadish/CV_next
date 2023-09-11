@@ -1,6 +1,6 @@
 // 'use client'
 import Btn from "@/components/shared/btn/Btn";
-import { GiRotaryPhone } from "react-icons/gi";
+import { GiRotaryPhone } from "@react-icons/all-files/gi/GiRotaryPhone";
 export function Price({ price, cur = "sr", recommend = false, lang }) {
   return (
     <div className="flex items-center w-full px-2 bg-red-500 justify-evenly">

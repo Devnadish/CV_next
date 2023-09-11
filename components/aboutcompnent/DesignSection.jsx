@@ -1,4 +1,4 @@
-import { FaPalette } from "react-icons/fa";
+import { FaPalette } from "@react-icons/all-files/fa/FaPalette";
 import Title from "@/components/shared/title/Title";
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
 import { getDictionary } from "@/lib/dictionary";
@@ -20,7 +20,7 @@ async function DesignSection({lang}) {
           title={skills.desigtitle}
           icon={<FaPalette className="text-3xl text-orange-600"/>}
         />
-     <div className="grid grid-cols-2 gap-6 lg:grid-cols-6 place-items-center">
+     <div className="grid grid-cols-2 gap-6 md:grid-cols-4 place-items-center">
      {data.data.map((skill) => {
           return (
             <AboutImage

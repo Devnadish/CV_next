@@ -22,7 +22,6 @@ function page({params: { lang }}) {
           <ProgSection  lang={lang} />
           <DesignSection  lang={lang} />
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2  w-[calc(100%-15px)] place-items-center">
-
           <UiSection   lang={lang}/>
           <LazyDBSection lang={lang}   />
           </div>

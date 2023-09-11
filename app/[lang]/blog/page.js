@@ -1,7 +1,6 @@
-import getPostMetadata from "@/components/getPostMetadata";
-import PostPreview from "@/components/PostPreview";
+import getPostMetadata from "@/lib//getPostMetadata";
+import PostPreview from "@/components/blogcomponent/PostPreview";
 import PageContainer from "@/components/pagecontainer/PageContainer";
-
 
 
 

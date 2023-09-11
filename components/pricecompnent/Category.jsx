@@ -1,4 +1,4 @@
-import { FcApproval } from "react-icons/fc";
+import { FcApproval } from "@react-icons/all-files/fc/FcApproval";
 
 
 export function Category({ category,recommend=false,lang }) {

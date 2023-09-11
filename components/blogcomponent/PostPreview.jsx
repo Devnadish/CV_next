@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { HiOutlineEye } from "react-icons/hi";
+import { HiOutlineEye } from "@react-icons/all-files/hi/HiOutlineEye";
 
 
 
@@ -10,7 +10,7 @@ const PostPreview = ({ subtitle, title, date, counter = 100, slug, lang }) => {
      justify-between overflow-hidden
        bg-zinc-800 border rounded-md
         shadow-sm  min-w-[300px] max-w-[300px] sm:min-w-[300px] sm:max-w-[300px] md:min-w-[230px] md:max-w-[250px] border-zinc-500  ">
-      <Title title={title} slug={slug}/>
+      <Title title={title} slug={slug} lang={lang}/>
       <Subtitle subtitle={subtitle}/>
       <Viewer date={date} counter={counter}/>
     </div>
@@ -40,8 +40,8 @@ function Viewer(props) {
 function Title(props) {
   return (
     <div className="flex items-center justify-center p-2 transition-all transform bg-zinc-700/50 hover:scale-110 ">
-      <Link href={`/blog/${props.slug}`}>
-        <h2 className="text-center text-white text-md hover:underline font-tajawal font-semibold">
+      <Link href={`/blog/${props.slug}`} as={`/${props.lang}/blog/${props.slug}`}>
+        <h2 className="font-semibold text-center text-white text-md hover:underline font-tajawal">
           {props.title}
         </h2>
       </Link>

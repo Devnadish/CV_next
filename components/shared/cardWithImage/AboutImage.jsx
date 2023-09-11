@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { GoLinkExternal } from "react-icons/go";
+import { GoLinkExternal } from "@react-icons/all-files/go/GoLinkExternal";
 function AboutImage({ imgx, pres, link = "dd", linkText = "dd" }) {
   return (
     <div className="flex flex-col justify-between w-full max-w-xs min-w-0 bg-white rounded-lg shadow-xl sm:flex sm:flex-col">

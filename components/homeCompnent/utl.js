@@ -1,18 +1,15 @@
-import { ImSmile2 } from "react-icons/im";
-import { MdMobileFriendly } from "react-icons/md";
-import { AiOutlineDeploymentUnit } from "react-icons/ai";
-import { BsImages } from "react-icons/bs";
-import { IoNavigateCircleOutline } from "react-icons/io5";
-import { BiLineChart } from "react-icons/bi";
-
-import {
-  AiOutlineFileSearch,
-  AiOutlineWhatsApp,
-  AiOutlineMail,
-} from "react-icons/ai";
-import { MdTextsms } from "react-icons/md";
-import { IoShareSocialOutline } from "react-icons/io5";
-import { FaExternalLinkSquareAlt } from "react-icons/fa";
+import { ImSmile2 } from "@react-icons/all-files/im/ImSmile2";
+import { FaMobileAlt } from "@react-icons/all-files/fa/FaMobileAlt";
+import { AiOutlineDeploymentUnit } from "@react-icons/all-files/ai/AiOutlineDeploymentUnit";
+import { BsImages } from "@react-icons/all-files/bs/BsImages";
+import { IoNavigateCircleOutline } from "@react-icons/all-files/io5/IoNavigateCircleOutline";
+import { BiLineChart } from "@react-icons/all-files/bi/BiLineChart";
+import { AiOutlineFileSearch} from "@react-icons/all-files/ai/AiOutlineFileSearch";
+import { AiOutlineWhatsApp } from "@react-icons/all-files/ai/AiOutlineWhatsApp";
+import { AiOutlineMail} from "@react-icons/all-files/ai/AiOutlineMail";
+import { MdTextsms } from "@react-icons/all-files/md/MdTextsms";
+import { IoShareSocialOutline } from "@react-icons/all-files/io5/IoShareSocialOutline";
+import { FaExternalLinkSquareAlt } from "@react-icons/all-files/fa/FaExternalLinkSquareAlt";
 
 export function section2Data(data, lang) {
   return {
@@ -113,7 +110,7 @@ export function section5Data(data, lang) {
         id: "responsivDesien",
         title: data.S5L4,
         des: data.S5D4,
-        icon: <MdMobileFriendly className="text-cyan-400 w-14 h-14" />,
+        icon: <FaMobileAlt className="text-cyan-400 w-14 h-14" />,
         link: `/blog/${lang}responsivDesien`,
       },
       {

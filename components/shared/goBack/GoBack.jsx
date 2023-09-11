@@ -1,11 +1,12 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import {AiOutlineRollback} from "@react-icons/all-files/ai/AiOutlineRollback"
 
 export default function GoBack() {
   const router = useRouter()
   return (
-    <button className="px-4 py-2 rounded-md text-black bg-slate-200 " type="button" onClick={() => router.back()}>
-      Click here to go back
+    <button className="p-1 text-white bg-red-500 rounded-md " type="button" onClick={() => router.back()}>
+      <AiOutlineRollback/>
     </button>
   )
 }

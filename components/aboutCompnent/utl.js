@@ -1,8 +1,9 @@
-import { VscSymbolColor } from "react-icons/vsc";
-import { FaUsers, FaHandshake } from "react-icons/fa";
-import { IoSpeedometerOutline } from "react-icons/io5";
-import { BsFillEmojiHeartEyesFill } from "react-icons/bs";
-import { AiOutlineFileSearch } from "react-icons/ai";
+import { VscSymbolColor } from "@react-icons/all-files/vsc/VscSymbolColor";
+import {  FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
+import { FaUsers } from "@react-icons/all-files/fa/FaUsers";
+import { IoSpeedometerOutline } from "@react-icons/all-files/io5/IoSpeedometerOutline";
+ import { FaJenkins } from "@react-icons/all-files/fa/FaJenkins";
+import { AiOutlineFileSearch } from "@react-icons/all-files/ai/AiOutlineFileSearch";
 export function WillDoData( willdo ) {
     return {
        data : [
@@ -46,7 +47,7 @@ export function WillDoData( willdo ) {
       title: willdo.freeConsultaion,
       subtitlex: willdo.freeConsultaionTitle,
       alt: willdo.freeConsultaion,
-      icon: <BsFillEmojiHeartEyesFill className="w-10 h-10 text-yellow-400" />,
+      icon: <FaJenkins className="w-10 h-10 text-yellow-200" />,
     },
   ]}
 }

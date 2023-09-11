@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { MdWorkOutline } from "react-icons/md";
+import {  FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
 // import mycv from "../../../../public/assets/about/mycv.jpg";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
 import Btn from "@/components/shared/btn/Btn";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -61,7 +61,7 @@ export function IamKhalid({
       <div className="flex items-center justify-around gap-4 my-4 ">
         <Btn
           type="button"
-          icon={<MdWorkOutline className="text-xl text-white" />}
+          icon={<FaHandshake className="text-xl text-white" />}
         >
           <p className="font-semibold font-tajawal"> {waitingForyou} </p>
         </Btn>

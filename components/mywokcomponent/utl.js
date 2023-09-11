@@ -1,16 +1,20 @@
 import { ImageData } from "./uiImages";
-import { HiOutlineSpeakerphone } from "react-icons/hi";
-import { BsLayoutWtf } from "react-icons/bs";
-import { BiLogoStackOverflow } from "react-icons/bi";
-import { FaChalkboardUser } from "react-icons/fa6";
-import { RiRemixiconLine } from "react-icons/ri";
-import { GiCircularSawblade } from "react-icons/gi";
-import { BiLogoMailchimp } from "react-icons/bi";
-import { MdNewspaper } from "react-icons/md";
-import { FaPaintBrush, FaBrush } from "react-icons/fa";
-import { TfiPackage } from "react-icons/tfi";
-import { BiRestaurant } from "react-icons/bi";
-import { TbChartInfographic } from "react-icons/tb";
+import { HiOutlineSpeakerphone } from "@react-icons/all-files/hi/HiOutlineSpeakerphone";
+import { BsLayoutWtf } from "@react-icons/all-files/bs/BsLayoutWtf";
+import { RiRemixiconLine } from "@react-icons/all-files/ri/RiRemixiconLine";
+import { GiCircularSawblade } from "@react-icons/all-files/gi/GiCircularSawblade";
+import { FaPaintBrush } from "@react-icons/all-files/fa/FaPaintBrush";
+import { FaBrush } from "@react-icons/all-files/fa/FaBrush";
+import { BiRestaurant } from "@react-icons/all-files/bi/BiRestaurant";
+
+
+import { FaBandcamp } from "@react-icons/all-files/fa/FaBandcamp";
+import { FaBattleNet } from "@react-icons/all-files/fa/FaBattleNet";
+import { FaSkull } from "@react-icons/all-files/fa/FaSkull";
+import { FaGlasses } from "@react-icons/all-files/fa/FaGlasses";
+import { FaDiceD6 } from "@react-icons/all-files/fa/FaDiceD6";
+
+import { FaChartPie } from "@react-icons/all-files/fa/FaChartPie";
 const iconStyle = [
   "bg-gray-100",
   "w-[80px]",
@@ -40,7 +44,7 @@ export function myWork2Data(data, lang) {
       {
         id: "identity",
         title: data.identityMenuTitle,
-        icon: <BiLogoStackOverflow className={`${iconStyle}  `} />,
+        icon: <FaBattleNet className={`${iconStyle}  `} />,
         imageFolder: ImageData("Identity", 10),
         chip:10
       },
@@ -48,7 +52,7 @@ export function myWork2Data(data, lang) {
       {
         id: "signboard",
         title: data.singBoardMEnuTitle,
-        icon: <FaChalkboardUser className={`${iconStyle}  `} />,
+        icon: <FaBandcamp className={`${iconStyle}  `} />,
         imageFolder: ImageData("sinboard", 6),
       chip:6
       },
@@ -62,14 +66,14 @@ export function myWork2Data(data, lang) {
       {
         id: "Character",
         title: data.Character,
-        icon: <BiLogoMailchimp className={`${iconStyle}`} />,
+        icon: <FaSkull className={`${iconStyle}`} />,
         imageFolder: ImageData("character", 10),
         chip:10
       },
       {
         id: "Coverpage",
         title: data.Coverpage,
-        icon: <MdNewspaper className={`${iconStyle}`} />,
+        icon: <FaGlasses className={`${iconStyle}`} />,
         imageFolder: ImageData("coverage", 2),
         chip:2
       },
@@ -90,7 +94,7 @@ export function myWork2Data(data, lang) {
       {
         id: "infograph",
         title: data.infograph,
-        icon: <TbChartInfographic className={`${iconStyle}`} />,
+        icon: <FaChartPie className={`${iconStyle}`} />,
         imageFolder: ImageData("infograph", 11),
         chip:11
       },
@@ -104,7 +108,7 @@ export function myWork2Data(data, lang) {
       {
         id: "package",
         title: data.package,
-        icon: <TfiPackage className={`${iconStyle} text-[5rem]`} />,
+        icon: <FaDiceD6 className={`${iconStyle} text-[5rem]`} />,
         imageFolder: ImageData("package", 5),
         chip:5
       },

@@ -13,17 +13,13 @@ export default function LocaleSwitcher() {
 
   const redirectedPathName = (locale) => {
     if (!pathName) return "/";
+    console.log(pathName)
     const segments = pathName.split("/");
     segments[1] = locale;
     return segments.join("/");
+    // return segments.join("/");
   };
 
-  const ChangaLang =  () => {
-    // console.log(language);
-    setLanguage(language === "ar" ? "en" : "ar");
-
-    router.push(redirectedPathName(language));
-  };
 
   return (
     <>
@@ -45,9 +41,7 @@ export default function LocaleSwitcher() {
                     height={70}
                   />
                 </div>
-                {/* <span className="flex items-center justify-center px-4 text-white bg-black border rounded-lg">
-                {locale === "ar" ? "A" : "E"}
-              </span> */}
+
               </Link>
             </li>
           );
@@ -56,31 +50,3 @@ export default function LocaleSwitcher() {
     </>
   );
 }
-
-// export default function LocaleSwitcher() {
-//   const pathName = usePathname();
-
-//   const redirectedPathName = (locale) => {
-//     if (!pathName) return "/";
-//     const segments = pathName.split("/");
-//     segments[1] = locale;
-//     return segments.join("/");
-//   };
-
-//   return (
-//     <ul className="flex gap-x-3">
-//       {i18n.locales.map((locale) => {
-//         return (
-//           <li key={locale}>
-//             <Link
-//               href={redirectedPathName(locale)}
-//               className="px-3 py-2 text-white bg-black border rounded-md"
-//             >
-//               {locale}
-//             </Link>
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// }

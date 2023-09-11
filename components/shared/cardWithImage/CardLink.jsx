@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GoLinkExternal } from "react-icons/go";
+import { GoLinkExternal } from "@react-icons/all-files/go/GoLinkExternal";
 
 export function CardLink({ link = "googl.com", linkText = "test" }) {
   return (

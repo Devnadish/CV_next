@@ -1,7 +1,7 @@
  "use client";
 import { useTheme } from "next-themes";
-import { FiMoon } from "react-icons/fi";
-import { BsSun } from "react-icons/bs";
+import { FiMoon } from "@react-icons/all-files/fi/FiMoon";
+import { BsSun } from "@react-icons/all-files/bs/BsSun";
 import styles from './themeMode.module.css'
 import { useState } from "react";
 

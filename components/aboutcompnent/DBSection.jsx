@@ -1,5 +1,5 @@
 
-import { FaServer } from "react-icons/fa"
+import { FaServer } from "@react-icons/all-files/fa/FaServer";
 import Title from "@/components/shared/title/Title";
 import AboutImage from "@/components/shared/cardWithImage/AboutImage";
 import { getDictionary } from "@/lib/dictionary";
