@@ -1,21 +1,52 @@
+
 import getPostMetadata from "@/lib//getPostMetadata";
 import PostPreview from "@/components/blogcomponent/PostPreview";
-import PageContainer from "@/components/pagecontainer/PageContainer";
+import PageContainer from   "@/components/shared/pagecontainer/PageContainer";
+
+
+// export const revalidate = true;
+export const revalidate = 0;
+export const dynamic = 'force-dynamic'
 
 
 
-const page = ({params: { lang }}) => {
+const getCounter = async () => {
+  try {
+    // const response = await fetch(`http://localhost:3000/api/blog/blogvisitor/${slug}`, {
+    const response = await fetch(`http://localhost:3000/api/blog/blogvisitor`,{
+      headers : {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    } ,{
+      cache: 'no-cache',
+    });
+    const data = await response.json();
+    // const data = await response.json();
+    return data
+  } catch (error) {
+    console.error('An error occurred during the fetch request:', error);
+    // Handle the error gracefully (e.g., show a fallback value or provide a default counter)
+    return null;
+  }
+};
+
+
+
+const page = async ({params: { lang }}) => {
   const postMetadata = getPostMetadata(lang);
-// console.log("language :" ,lang)
+  let GetcounterData = await getCounter()
+
   return (
     <PageContainer>
-      <div className="grid w-full grid-cols-1 gap-4 place-items-center sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {postMetadata.map((post) => (
-          <PostPreview key={post.slug} {...post} lang={lang} />
-        ))}
+      <div className="grid w-full grid-cols-1 gap-4 place-items-center sm:grid-cols-2 sm:gap-4 md:grid-cols-3 ">
+        {postMetadata.map(async (post) => {
+          return(<PostPreview key={post.slug} {...post} lang={lang} data={GetcounterData} />);
+        })}
       </div>
     </PageContainer>
   );
 };
 
 export default page;
+

@@ -17,7 +17,7 @@ export const  InspireSection =async ({ lang }) => {
   return (
     <>
       <div  className={sectionStyle}>
-        <div className="w-auto"><Title title={inspire.S11L1} withBtn/></div>
+        <div className="w-auto"><Title title={inspire.title} withBtn/></div>
 
         <div className={sectionGridStyle}>
         {data.data.map((section8) => {

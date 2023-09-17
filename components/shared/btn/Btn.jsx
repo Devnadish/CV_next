@@ -6,7 +6,7 @@ function Btn({ children, icon, btnType="success" }) {
   let typeStyle = ""
   switch (btnType) {
     case "success":
-       typeStyle = `bg-green-500  hover:bg-green-600  text-black   `;
+       typeStyle = `bg-green-600  hover:bg-green-500  text-black   `;
       break;
       case "secondary":
        typeStyle = `bg-orange-500  hover:bg-orange-400 `;

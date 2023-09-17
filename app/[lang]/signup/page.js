@@ -1,5 +1,5 @@
 // "use client";
-import PageContainer from "@/components/pagecontainer/PageContainer";
+import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import React from "react";
 
 function UserPassword() {

@@ -1,4 +1,4 @@
-import HomeSkelton from "@/components/shared/skelton/HomeSkelton"
+import BlogSkelton from "@/components/shared/skelton/BlogSkelton"
 
 
 export default function Loading() {
@@ -6,12 +6,12 @@ export default function Loading() {
     return (
       <>
         <div className="flex p-4 justify-evenly items-center flex-wrap    gap-4">
-          <HomeSkelton />
-          <HomeSkelton />
-          <HomeSkelton />
-          <HomeSkelton />
-          <HomeSkelton />
-          <HomeSkelton />
+          <BlogSkelton />
+          <BlogSkelton />
+          <BlogSkelton />
+          <BlogSkelton />
+          <BlogSkelton />
+          <BlogSkelton />
         </div>
       </>
     );

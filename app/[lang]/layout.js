@@ -4,12 +4,9 @@ import Navbar from "@/components/header/Navbar";
 import { Locale, i18n } from "@/i18n.config";
 import dynamic from "next/dynamic";
 const Providers = dynamic(() => import("@/Providers/Provider"));
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 
-import {roboto,lateef,cairo,tajawal} from "@/lib/fonts"
-
-// export const dynamic ='force-dynamic'
-// export const revalidate = 0
+import { lateef, cairo, tajawal } from "@/lib/fonts";
 
 export const metadata = {
   title: "EazyCode",
@@ -17,29 +14,26 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-
-  // console.log("from array: ", i18n.locales);
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
 export default function RootLayout({ children, params }) {
-
   return (
-    <html lang={params.lang} dir={params.lang === "ar" ? "rtl" : "ltr"}>
-        <body
-          className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  bg-slate-400 text-white dark:bg-gradient-to-t from-slate-900 to-blue-900`}
-          >
-          <Providers>
-          <Container>
+    <html lang={params.lang} dir={params.lang === "ar" ? "rtl" : "ltr"}  style={{colorScheme:"light"}}>
+      <body
+        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  p-4 `}
+        >
+        <Providers>
+          {/* <Container> */}
             <Navbar lang={params.lang} />
-            <section className="flex flex-col  justify-start items-start h-[calc(100vh_-_170px)] ">
+            <section id="children" className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] ">
               {children}
               <Analytics />
             </section>
             <Footer />
-          </Container>
-      </Providers>
-        </body>
+          {/* </Container> */}
+        </Providers>
+      </body>
     </html>
   );
 }
@@ -47,8 +41,8 @@ export default function RootLayout({ children, params }) {
 const Container = ({ children }) => {
   return (
     <>
-      <div className="container relative min-w-full px-6 py-4 ">
-        {children}{" "}
+      <div id="container" className="container relative min-w-full px-6 py-4 border-4bg-[#f5f5f5] text-black dark:bg-gradient-to-t from-slate-900 to-blue-900 ">
+        {children}
       </div>
     </>
   );

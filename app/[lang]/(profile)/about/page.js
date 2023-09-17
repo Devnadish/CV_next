@@ -5,7 +5,7 @@ import DesignSection from "@/components/aboutcompnent/DesignSection";
 import UiSection from "@/components/aboutcompnent/UiSection";
 import WillDo from "@/components/aboutcompnent/WillDo"
 import HeroBanner from "@/components/aboutcompnent/HeroBanner";
-import PageContainer from "@/components/pagecontainer/PageContainer";
+import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 
 
 function page({params: { lang }}) {

@@ -51,7 +51,7 @@ async function ImageCard(props) {
 
 function TitleAndLink(props) {
   return (
-    <div className="flex items-center w-full justify-between bg-slate-900">
+    <div className="flex items-center justify-between w-full bg-slate-900">
       <Title title={props.title} />
       {props.link !== null ? (
         <CardLink link={props.link} linkText={props.linkText} />

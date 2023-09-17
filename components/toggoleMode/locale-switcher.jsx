@@ -13,7 +13,7 @@ export default function LocaleSwitcher() {
 
   const redirectedPathName = (locale) => {
     if (!pathName) return "/";
-    console.log(pathName)
+    // console.log(pathName)
     const segments = pathName.split("/");
     segments[1] = locale;
     return segments.join("/");

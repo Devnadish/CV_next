@@ -7,7 +7,7 @@ import { getDictionary } from "@/lib/dictionary";
 export async function LoginBar({ USERSTUTES, userData, lang }) {
   const { loginBar } = await getDictionary(lang)
   return (
-    <div className="flex items-center justify-between w-full p-2 bg-zinc-800 dark:bg-neutral-700">
+    <div className="flex items-center justify-between w-full p-2 bg-[#256EFF] dark:bg-neutral-700">
       <UserInfo loginBar={loginBar} lang={lang}/>
       <UserAction loginBar={loginBar} lang={lang}/>
     </div>
