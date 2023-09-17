@@ -8,10 +8,13 @@ export default function Error({ error, reset }) {
     console.error(error)
   }, [error])
 
+  console.log(error.message)
   return (
-    <div>
+    <div className='flex flex-col items-center justify-center w-full h-full gap-4'>
       <h2>Something went wrong!</h2>
-      <button
+      <h2>{error.message}</h2>
+      <h2>{error.stack}</h2>
+      <button className='px-2 py-1 text-white bg-blue-500 rounded-md'
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
