@@ -5,7 +5,7 @@ function ViewerClick({title, slug, lang}) {
     const router = useRouter();
     const handelIncrese = () => {
       console.log("ViewerClick")
-        fetch(`http://localhost:3000/api/blog/blogvisitor/${slug}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/blogvisitor/${slug}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(slug),

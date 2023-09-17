@@ -12,8 +12,8 @@ export const dynamic = 'force-dynamic'
 
 const getCounter = async () => {
   try {
-    // const response = await fetch(`http://localhost:3000/api/blog/blogvisitor/${slug}`, {
-    const response = await fetch(`http://localhost:3000/api/blog/blogvisito`,{
+    // const response = await fetch(`http://localhost:3000/api/blog/blogvisitor`,{
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blog/blogvisitor`,{
       headers : {
         'Content-Type': 'application/json',
         'Accept': 'application/json'

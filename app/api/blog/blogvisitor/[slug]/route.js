@@ -7,11 +7,16 @@ export const revalidate = true
 
 
 export async function GET(request, context) {
-  const slug = context.params.slug;
+  const {slug} = context.params;
+
+try {
   await dbConnect();
-  // console.log("context from get : ", slug);
   const blogs = await Blog.find({blog:slug}, { _id: 0, __v: 0,createdAt:0,ip:0,updatedAt:0,user:0 });
   return NextResponse.json({ blogs });
+} catch (error) {
+  console.log("Error from get By slug : ", error);
+}
+
 }
 
 
@@ -41,6 +46,6 @@ export async function PUT(request, context) {
     // await dbClose();
     return NextResponse.json({ blogData });
   } catch (error) {
-    console.log("khalid they have an error : ", error);
+    console.log("Error from PUT When Update the counter : ", error);
   }
 }
