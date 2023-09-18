@@ -21,17 +21,21 @@ function MenuItems({navigation,lang}) {
   return (
     <div className="w-full shadow-md">
       <ul className="flex items-center justify-between w-full font-bold font-tajawal">
-        <Link href={`/${lang}`} className={`${navbarMenuItem} bg-orange-600 text-white`}>
+        <Link href={`/${lang}`} className={`${navbarMenuItem} bg-orange-600 text-white`}  prefetch={false}>
           <li>{navigation.home}</li>
+
         </Link>
         <Link
           href={`/${lang}/price`}
           className={`${navbarMenuItem} bg-green-600  text-white`}
+          prefetch={false}
         >
           <li>{navigation.price}</li>
+
         </Link>
-        <Link href={`/${lang}/worksample`}  className={`${navbarMenuItem}  bg-yellow-600 text-white`}>
+        <Link href={`/${lang}/worksample`}  className={`${navbarMenuItem}  bg-yellow-600 text-white`}  prefetch={false}>
           <li>{navigation.sample}</li>
+
         </Link>
         <Link
           href={`/${lang}/blog`}

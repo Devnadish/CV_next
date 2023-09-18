@@ -2,7 +2,8 @@ import { BiHappyAlt } from "@react-icons/all-files/bi/BiHappyAlt";
 import { Package } from "@/components/pricecompnent/Package";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import { getDictionary } from "@/lib/dictionary";
-
+export const revalidate = 0;
+export const dynamic = 'force-dynamic'
 
 const getCounter = async () => {
   try {
@@ -13,7 +14,7 @@ const getCounter = async () => {
         'Accept': 'application/json'
        }
     } ,{
-      cache: 'no-cache',
+      cache: 'no-store',
     });
     const data = await response.json();
     // const data = await response.json();
