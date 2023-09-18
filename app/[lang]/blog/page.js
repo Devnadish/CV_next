@@ -2,6 +2,7 @@ import getPostMetadata from "@/lib//getPostMetadata";
 import PostPreview from "@/components/blogcomponent/PostPreview";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import { getCounter } from "@/lib/getCouners";
+import myblog from "@/myblogs.json";
 
 // export const revalidate = true;
 export const revalidate = 0;
@@ -9,7 +10,7 @@ export const dynamic = "force-dynamic";
 
 const page = async ({ params: { lang } }) => {
   const postMetadata = getPostMetadata(lang);
-  let GetcounterData = await getCounter();
+  // let GetcounterData = await getCounter();
 
   return (
     <PageContainer>
@@ -20,7 +21,8 @@ const page = async ({ params: { lang } }) => {
               key={post.slug}
               {...post}
               lang={lang}
-              data={GetcounterData}
+              data={myblog}
+              // data={GetcounterData}
             />
           );
         })}

@@ -6,8 +6,8 @@ import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 const PostPreview = ({ subtitle, data, title, slug, lang }) => {
   // console.log("data : ", data.blogs);
   // let filteredItems = filterItems(data?.blogs, slug);
-  let lookup = search( slug,data?.blogs);
-  console.log("lookup : ", lookup.user);
+  // let lookup = search( slug,data?.blogs);
+  // console.log("lookup : ", lookup.user);
   // let couter;
   // if (filteredItems[0].counter === undefined) {
   //   couter = 0;
@@ -29,8 +29,8 @@ const PostPreview = ({ subtitle, data, title, slug, lang }) => {
       {/* <Title title={title} slug={slug} lang={lang}/> */}
       <Subtitle subtitle={subtitle} />
       <Viewer
-        blogLastView={getTimeElapsed(lookup.updatedAt)}
-        blogCounter={lookup.counter}
+        // blogLastView={getTimeElapsed(lookup.updatedAt)}
+        // blogCounter={lookup.counter}
       />
     </div>
   );
