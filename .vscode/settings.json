@@ -2,7 +2,7 @@
     "editor.acceptSuggestionOnEnter": "on",
     "files.exclude": {
         "**/my-custom-folder": true,
-        "**/node_modules": true,
+        // "**/node_modules": true,
         "**/.vercel": true,
         "**/build": true,
         "**/.DS_Store": true,

@@ -19,8 +19,8 @@ const PostPreview = ({ subtitle, data, title, slug, lang }) => {
       {/* <Title title={title} slug={slug} lang={lang}/> */}
       <Subtitle subtitle={subtitle} />
       <Viewer
-        date={getTimeElapsed(filteredItems[0]?.updatedAt)}
-        counter={filteredItems[0]?.counter}
+        // date={getTimeElapsed(filteredItems[0]?.updatedAt)}
+        // counter={filteredItems[0]?.counter}
       />
     </div>
   );
@@ -63,6 +63,6 @@ function Title(props) {
 }
 
 function filterItems(items, searchParam) {
-  const filteredItems = items?.filter((item) => item.blog.includes(searchParam));
+  const filteredItems = items?.filter((item) => item?.blog?.includes(searchParam));
   return filteredItems;
 }

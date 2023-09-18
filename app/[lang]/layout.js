@@ -14,7 +14,8 @@ export const metadata = {
 };
 
 export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
+  console.log("generateStaticParams");
+  return i18n.locales.map( async (locale) => await ({ lang: locale }));
 }
 
 export default function RootLayout({ children, params }) {
@@ -26,7 +27,7 @@ export default function RootLayout({ children, params }) {
         <Providers>
           {/* <Container> */}
             <Navbar lang={params.lang} />
-            <section id="children" className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] ">
+            <section id="childrenxx" className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] ">
               {children}
               <Analytics />
             </section>
