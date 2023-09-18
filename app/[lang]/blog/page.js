@@ -39,7 +39,7 @@ const page = async ({params: { lang }}) => {
 
   return (
     <PageContainer>
-      <h1>{process.env.NEXT_PUBLIC_API_URL}</h1>
+
 
       <div className="grid w-full grid-cols-1 gap-4 place-items-center sm:grid-cols-2 sm:gap-4 md:grid-cols-3 ">
         {postMetadata.map(async (post) => {

@@ -12,6 +12,7 @@ async function page({ params: { lang } }) {
   return (
     <>
       <PageContainer>
+      <h1>{process.env.NEXT_PUBLIC_API_URL}</h1>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3 place-items-start ">
           <Package
             category={pricePkg.standerd.title}
