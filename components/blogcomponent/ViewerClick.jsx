@@ -6,7 +6,6 @@ function ViewerClick({ title, slug, lang }) {
 
   const handleIncrease = async () => {
     try {
-      console.log("ViewerClick");
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/blog/blogvisitor/${slug}`,
         {
