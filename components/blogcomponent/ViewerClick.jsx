@@ -20,6 +20,7 @@ function ViewerClick({ title, slug, lang, children }) {
       router.push(`/${lang}/blog/${slug}`);
     } catch (error) {
       console.error(error);
+      console.error("khalid");
     }
   };
 
