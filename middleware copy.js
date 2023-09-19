@@ -6,7 +6,7 @@ import { getLocale } from "@/lib/getlocal"
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
 
-  const pathnameIsMissingLocale = i18n.locales.some(
+  const pathnameIsMissingLocale = i18n.locales.every(
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
   if (/^\/assets(\/|$)/.test(pathname)) {
