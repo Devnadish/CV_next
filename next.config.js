@@ -19,21 +19,21 @@ const nextConfig = {
       disableStaticImages: true,
       // ----------------
       minimumCacheTTL: 60,
-    //   remotePatterns: [
-    //     {
-    //       protocol: 'http',
-    //       hostname: 'localhost',
-    //       port: '3000',
-    //       pathname: '/assets/**',
-    //     },
-    //   ],
-    // },
+      remotePatterns: [
+        {
+          protocol: 'http',
+          hostname: 'localhost',
+          port: '3000',
+          pathname: '/assets/**',
+        },
+      ],
+    },
 
-    // // Define environment variables
-    // env: {
-    //   HOST: process.env.HOST || 'localhost',
-    //   PORT: process.env.PORT || 3000,
-    // },
+    // Define environment variables
+    env: {
+      HOST: process.env.HOST || 'localhost',
+      PORT: process.env.PORT || 3000,
+    },
   };
 
   module.exports = nextConfig;
