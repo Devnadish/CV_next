@@ -25,8 +25,8 @@ const PostPreview = ({ subtitle, data, title, slug, lang }) => {
 
       // md:min-w-[230px] md:max-w-[250px] "
     >
-      {/* <ViewerClick title={title} slug={slug} lang={lang} /> */}
-      <Title title={title} slug={slug} lang={lang}/>
+      <ViewerClick title={title} slug={slug} lang={lang} />
+      {/* <Title title={title} slug={slug} lang={lang}/> */}
       <Subtitle subtitle={subtitle} />
       <Viewer
         blogLastView={getTimeElapsed(lookup.updatedAt)}
