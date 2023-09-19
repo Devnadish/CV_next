@@ -4,7 +4,6 @@ import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import { getCounter } from "@/lib/getCouners";
 import myblog from "@/myblogs.json";
 
-// export const revalidate = true;
 export const revalidate = 0;
 export const dynamic = "force-dynamic";
 
