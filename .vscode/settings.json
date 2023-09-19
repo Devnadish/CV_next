@@ -4,7 +4,7 @@
         "**/my-custom-folder": true,
         // "**/node_modules": true,
         "**/.vercel": true,
-        "**/build": true,
+        // "**/build": true,
         "**/.DS_Store": true,
         "**/*.xyz": true
       },

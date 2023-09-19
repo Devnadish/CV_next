@@ -6,12 +6,12 @@ import { NEWSLUG } from "@/lib/slugWithLang";
 import { MDoptions } from "@/lib/MDoption/mdOption";
 import { getPostContent } from "@/lib/blog/getPostContent";
 const GoBack = dynamic(() => import("@/components/shared/goBack/GoBack"));
-
+export const dynamicParams = false;
 
 
 export async function generateMetadata({ params }) {
   const post = getPostContent(params.slug, params.lang);
-  // console.log(params.slug);
+
   return {
     title: post.data.title,
     description: post.data.subtitle,
@@ -20,18 +20,16 @@ export async function generateMetadata({ params }) {
 
 
 export const generateStaticParams = async () => {
-  const posts = allgetPostMetadata();
+  const posts = await allgetPostMetadata();
   return posts.map((post) => ({
     slug: post.slug,
   }));
 };
 
-const PostPage =async (props) => {
+const Page =async ({ params }) => {
   // await visitSlug(props.params.slug)
-  const post = getPostContent(NEWSLUG(props.params.slug,props.params.lang), props.params.lang);
-
-
-
+  const { slug } = params
+  const post = getPostContent(NEWSLUG(params.slug,params.lang),params.lang);
   return (
     <>
       <PageContainer>
@@ -53,4 +51,4 @@ const PostPage =async (props) => {
   );
 };
 
-export default PostPage;
+export default Page;

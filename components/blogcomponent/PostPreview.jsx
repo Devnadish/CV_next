@@ -5,15 +5,15 @@ import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 
 const PostPreview = ({ subtitle, data, title, slug, lang }) => {
   // console.log("data : ", data.blogs);
-  // let filteredItems = filterItems(data?.blogs, slug);
-  // let lookup = search( slug,data?.blogs);
+  let filteredItems = filterItems(data?.blogs, slug);
+  let lookup = search( slug,data?.blogs);
   // console.log("lookup : ", lookup.user);
-  // let couter;
-  // if (filteredItems[0].counter === undefined) {
-  //   couter = 0;
-  // } else {
-  //   couter = filteredItems[0].counter;
-  // }
+  let couter;
+  if (filteredItems[0].counter === undefined) {
+    couter = 0;
+  } else {
+    couter = filteredItems[0].counter;
+  }
 
   return (
     <div
@@ -25,12 +25,12 @@ const PostPreview = ({ subtitle, data, title, slug, lang }) => {
 
       // md:min-w-[230px] md:max-w-[250px] "
     >
-      <ViewerClick title={title} slug={slug} lang={lang} />
-      {/* <Title title={title} slug={slug} lang={lang}/> */}
+      {/* <ViewerClick title={title} slug={slug} lang={lang} /> */}
+      <Title title={title} slug={slug} lang={lang}/>
       <Subtitle subtitle={subtitle} />
       <Viewer
-        // blogLastView={getTimeElapsed(lookup.updatedAt)}
-        // blogCounter={lookup.counter}
+        blogLastView={getTimeElapsed(lookup.updatedAt)}
+        blogCounter={lookup.counter}
       />
     </div>
   );
@@ -73,12 +73,12 @@ function Title(props) {
 }
 function filterItems(items, searchParam) {
   const filteredItems = items?.filter((item) => {
-    console.log("Filtering item:", item.blog);
+    // console.log("Filtering item:", item.blog);
     return item?.blog?.includes(searchParam);
   });
 
-  console.log("Search Parameter:", searchParam);
-  console.log("Filtered Items:", filteredItems);
+  // console.log("Search Parameter:", searchParam);
+  // console.log("Filtered Items:", filteredItems);
 
   return filteredItems;
 }
