@@ -42,7 +42,7 @@ const Page =async ({ params }) => {
             </h1>
             <p className="text-xs text-slate-400">{post.data.date}</p>
           </div>
-          <article className="flex items-center justify-center min-w-[80%] mx-auto prose font-tajawal text-slate-200 ">
+          <article className="flex items-center justify-center min-w-[80%] mx-auto prose font-tajawal text-slate-600 dark:text-slate-200 ">
             <Markdown options={MDoptions}>{post.content}</Markdown>
           </article>
         </div>

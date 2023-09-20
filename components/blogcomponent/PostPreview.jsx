@@ -3,17 +3,18 @@ import { HiOutlineEye } from "@react-icons/all-files/hi/HiOutlineEye";
 import ViewerClick from "./ViewerClick";
 import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 
-const PostPreview = ({ subtitle, data, title, slug, lang }) => {
-  // console.log("data : ", data.blogs);
-  let filteredItems = filterItems(data?.blogs, slug);
-  let lookup = search( slug,data?.blogs);
-  // console.log("lookup : ", lookup.user);
-  let couter;
-  if (filteredItems[0].counter === undefined) {
-    couter = 0;
-  } else {
-    couter = filteredItems[0].counter;
-  }
+const PostPreview = ({ subtitle, data=[], title, slug, lang }) => {
+
+  // let filteredItems = filterItems(data?.blogs, slug);
+  let lookup;
+  if (data !== undefined) {
+     lookup = search( slug,data?.blogs);
+
+  }else{return null};
+
+
+
+
 
   return (
     <div
@@ -29,8 +30,8 @@ const PostPreview = ({ subtitle, data, title, slug, lang }) => {
       {/* <Title title={title} slug={slug} lang={lang}/> */}
       <Subtitle subtitle={subtitle} />
       <Viewer
-        blogLastView={getTimeElapsed(lookup.updatedAt)}
-        blogCounter={lookup.counter}
+        // blogLastView={getTimeElapsed(lookup.updatedAt)}
+        // blogCounter={lookup.counter}
       />
     </div>
   );
@@ -85,10 +86,10 @@ function filterItems(items, searchParam) {
 
 
 function search(nameKey, myArray){
-  console.log("nameKey:", nameKey);
+  myArray===undefined ? myArray=[]:myArray
   let index=0
-  for (let i=0; i < myArray.length; i++) {
-      if (myArray[i].blog === nameKey) {
+  for (let i=0; i < myArray?.length; i++) {
+      if (myArray[i]?.blog === nameKey) {
         //  console.log(myArray[i]);
         index=i
 

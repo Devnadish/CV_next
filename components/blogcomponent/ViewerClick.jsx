@@ -8,7 +8,8 @@ function ViewerClick({ title, slug, lang, children }) {
   const handleIncrease = async (slug) => {
     console.log(slug);
     try {
-      const url = `${process.env.NEXT_PUBLIC_API_URL}/api/blog/blogvisitor/${slug}`;
+      // const url = `${process.env.NEXT_PUBLIC_API_URL}/api/blog/blogvisitor/${slug}`;
+      const url = `/api/blog/blogvisitor/${slug}`;
       const options = {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
