@@ -1,7 +1,6 @@
-
 import { i18n } from "@/i18n.config";
-import { NextResponse,NextRequest  } from "next/server";
-import { getLocale } from "@/lib/getlocal"
+import { NextResponse, NextRequest } from "next/server";
+import { getLocale } from "@/lib/getlocal";
 
 export function middleware(request) {
   const pathname = request.nextUrl.pathname;
@@ -28,4 +27,3 @@ export function middleware(request) {
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
-

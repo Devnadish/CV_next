@@ -1,66 +1,42 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // Set the output directory to 'build'
-    distDir: 'build',
+  // Set the output directory to 'build'
+  // distDir: "build",
+  experimental: {
+    serverActions: true,
+  },
+  // swcMinify: true,
+  // optimizeFonts: false,
+  // Configure custom HTTP agent options
+  // httpAgentOptions: {
+  //   keepAlive: false,
+  // },
 
-    // Enable SWC minification for faster build times
-    swcMinify: true,
-    optimizeFonts: false,
+  // Configure image optimization options
+  images: {
+    domains: ["res.cloudinary.com"],
+    // under test ---------
+    disableStaticImages: true,
+    // ----------------
+    // minimumCacheTTL: 60,
+    // remotePatterns: [
+    //   {
+    //     protocol: "http",
+    //     hostname: "localhost",
+    //     port: "3000",
+    //     pathname: "/assets/**",
+    //   },
+    // ],
+  },
 
-    // Configure custom HTTP agent options
-    httpAgentOptions: {
-      keepAlive: false,
-    },
+  // Define environment variables
+  // env: {
+  //   HOST: process.env.HOST || "localhost",
+  //   PORT: process.env.PORT || 3000,
+  // },
+};
 
-    // Configure image optimization options
-    images: {
-      domains: ['res.cloudinary.com'],
-      // under test ---------
-      disableStaticImages: true,
-      // ----------------
-      minimumCacheTTL: 60,
-      remotePatterns: [
-        {
-          protocol: 'http',
-          hostname: 'localhost',
-          port: '3000',
-          pathname: '/assets/**',
-        },
-      ],
-    },
-
-    // Define environment variables
-    env: {
-      HOST: process.env.HOST || 'localhost',
-      PORT: process.env.PORT || 3000,
-    },
-  };
-
-  module.exports = nextConfig;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+module.exports = nextConfig;
 
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
@@ -90,4 +66,3 @@ const nextConfig = {
 // }
 
 // module.exports = nextConfig
-

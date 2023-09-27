@@ -1,11 +1,41 @@
 {
-    "editor.acceptSuggestionOnEnter": "on",
-    "files.exclude": {
-        "**/my-custom-folder": true,
-        // "**/node_modules": true,
-        "**/.vercel": true,
-        // "**/build": true,
-        "**/.DS_Store": true,
-        "**/*.xyz": true
-      },
+  "editor.acceptSuggestionOnEnter": "on",
+  "files.exclude": {
+    "**/my-custom-folder": true,
+    // "**/node_modules": true,
+    "**/.vercel": true,
+    // "**/build": true,
+    "**/.DS_Store": true,
+    "**/*.xyz": true
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma-insider"
+  },
+  "editor.formatOnSave": true,
+  "favorites.resources": [
+    {
+      "filePath": "prisma",
+      "group": "Default"
+    },
+    {
+      "filePath": "app\\[lang]\\dashboard\\tag",
+      "group": "Default"
+    },
+    {
+      "filePath": "dbcontrol\\tag.js",
+      "group": "Default"
+    },
+    {
+      "filePath": "components\\tagcomponet",
+      "group": "Default"
+    },
+    {
+      "filePath": "dbcontrol",
+      "group": "Default"
+    },
+    {
+      "filePath": "components\\forms\\tags\\new\\_actions.js",
+      "group": "Default"
+    }
+  ]
 }

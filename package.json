@@ -12,6 +12,7 @@
     "@formatjs/intl-localematcher": "^0.4.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@next/bundle-analyzer": "^13.4.19",
+    "@prisma/client": "^5.3.1",
     "@react-icons/all-files": "^4.1.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@vercel/analytics": "^1.0.2",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "@types/negotiator": "^0.6.1",
+    "prisma": "^5.3.1",
     "server-only": "^0.0.1",
     "terser-webpack-plugin": "^5.3.9",
     "typescript": "5.1.6"

@@ -10,6 +10,7 @@ export const dynamic = "force-dynamic";
 const page = async ({ params: { lang } }) => {
   const postMetadata = getPostMetadata(lang);
   let GetcounterData = await getCounter();
+  console.log(GetcounterData)
 
   return (
     <PageContainer>
