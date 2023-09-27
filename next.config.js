@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Set the output directory to 'build'
-  // distDir: "build",
+  distDir: "build",
   experimental: {
     serverActions: true,
   },
