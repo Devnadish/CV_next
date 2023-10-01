@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 const Providers = dynamic(() => import("@/Providers/Provider"));
 import { Analytics } from "@vercel/analytics/react";
 import { lateef, cairo, tajawal } from "@/lib/fonts";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "EazyCode",
@@ -17,7 +18,7 @@ export const metadata = {
 // }
 
 export async function generateStaticParams() {
-  return [{ lang: 'en' }, { lang: 'ar' }]
+  return [{ lang: "en" }, { lang: "ar" }];
 }
 
 export default function RootLayout({ children, params }) {
@@ -38,6 +39,7 @@ export default function RootLayout({ children, params }) {
             className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] "
           >
             {children}
+            <Toaster />
             <Analytics />
           </section>
           <Footer />

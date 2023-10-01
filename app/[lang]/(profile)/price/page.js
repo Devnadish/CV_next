@@ -1,5 +1,5 @@
 import { BiHappyAlt } from "@react-icons/all-files/bi/BiHappyAlt";
-import { Package } from "@/components/pricecompnent/Package";
+import { Package } from "@/components/pagecomponent/price/Package";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import { getDictionary } from "@/lib/dictionary";
 export const revalidate = 0;

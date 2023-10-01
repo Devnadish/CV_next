@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client-js"
+  provider =  "prisma-client-js"
 }
 
 datasource db {
@@ -11,30 +11,32 @@ datasource db {
 }
 
 model User {
-  id        String      @id @default(auto()) @map("_id") @db.ObjectId
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
   name      String
   email     String
   password  String
-  BlogTable BlogTable[]
+  // BlogTable BlogTable[]
 }
 
 model Blogtag{
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  BlogTable BlogTable[]
+  // BlogTable BlogTable[]
 }
 
 model BlogTable {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   slug        String
-  title       String
+  title       String   @default("khalid")
   viewers     Int @default(0)
+  published   Boolean @default(true)
   language    String @default("ar")
   createdDate DateTime @default(now())
   updatedDate DateTime @updatedAt
-  User        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId      String   @db.ObjectId
-  Blogtag     Blogtag?     @relation(fields: [blogTagId], references: [id], onDelete: Cascade)
-  blogTagId   String @db.ObjectId
+
+  // User        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // userId      String?   @db.ObjectId
+  // Blogtag     Blogtag?     @relation(fields: [blogTagId], references: [id], onDelete: Cascade)
+  // blogTagId   String? @db.ObjectId
 }
 

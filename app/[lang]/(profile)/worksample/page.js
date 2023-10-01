@@ -7,7 +7,7 @@ const MyDrawer = dynamic(() =>
   import("@/components/shared/drawer/vaulDrawer/Draw")
 );
 import { getDictionary } from "@/lib/dictionary";
-import { myWork2Data } from "@/components/mywokcomponent/utl";
+import { myWork2Data } from "@/components/pagecomponent/worksample/utl";
 import WorkeSkelton from "@/components/shared/skelton/WorkeSkelton";
 
 async function page({ params: { lang } }) {
@@ -20,7 +20,6 @@ async function page({ params: { lang } }) {
 
   return (
     <PageContainer>
-
       <div className="flex items-center justify-center p-4 rounded shadow-lg ">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-5 lg:grid-cols-6 p-4 w-[calc(100%-15px)] place-items-center ">
           {data?.data?.map((el) => {

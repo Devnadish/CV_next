@@ -1,5 +1,5 @@
 import getPostMetadata from "@/lib//getPostMetadata";
-import PostPreview from "@/components/blogcomponent/PostPreview";
+import PostPreview from "@/components/pagecomponent/blog/PostPreview";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import { getCounter } from "@/lib/getCouners";
 import myblog from "@/myblogs.json";
@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 const page = async ({ params: { lang } }) => {
   const postMetadata = getPostMetadata(lang);
   let GetcounterData = await getCounter();
-  console.log(GetcounterData)
+  console.log(GetcounterData);
 
   return (
     <PageContainer>
