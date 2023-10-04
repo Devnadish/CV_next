@@ -7,7 +7,6 @@ export function Files(props) {
       <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-4 place-items-center">
         {props.posts.map(async (post) => {
           const isExist = await checkFileIsExistAction(post.slug);
-          // console.log(isExist.slug);
           let clsName;
           let dbExist = "Yes";
           isExist === undefined ? (dbExist = "No") : (dbExist = "Yes");

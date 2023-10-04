@@ -1,8 +1,8 @@
 import Image from "next/image";
-import {  FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
-// import mycv from "../../../../public/assets/about/mycv.jpg";
+import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
 import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
-import Btn from "@/components/shared/btn/Btn";
+
+import { Button } from "@/components/ui/button";
 import { getDictionary } from "@/lib/dictionary";
 
 async function HeroBanner({ lang }) {
@@ -23,15 +23,14 @@ async function HeroBanner({ lang }) {
               style={{ objectFit: "cover" }}
             />
           </div>
-            <IamKhalid
-              himsg={heroSection.himsg}
-              iamKhalid={heroSection.iamKhalid}
-              develepor={heroSection.develepor}
-              develoerSince={heroSection.develoerSince}
-              waitingForyou={heroSection.waitingForyou}
-              download={heroSection.download}
-            />
-
+          <IamKhalid
+            himsg={heroSection.himsg}
+            iamKhalid={heroSection.iamKhalid}
+            develepor={heroSection.develepor}
+            develoerSince={heroSection.develoerSince}
+            waitingForyou={heroSection.waitingForyou}
+            download={heroSection.download}
+          />
         </div>
       </div>
       {/* medea area */}
@@ -49,7 +48,7 @@ export function IamKhalid({
   download,
 }) {
   return (
-    <div className="flex flex-col items-center w-full gap-4 p-4 md:flex-row justify-evenly">
+    <div className="flex flex-col items-center w-full gap-4 p-4 justify-evenly">
       <div>
         <span className="font-semibold font-tajawal"> {himsg} </span>
         <span className="font-semibold font-tajawal">{iamKhalid}</span>
@@ -59,15 +58,18 @@ export function IamKhalid({
         <span className="font-semibold font-tajawal"> {develoerSince} </span>
       </div>
       <div className="flex items-center justify-around gap-4 my-4 ">
-        <Btn
-          type="button"
-          icon={<FaHandshake className="text-xl text-white" />}
-        >
+        <Button type="button" variant="blue">
+          <FaHandshake className="text-xl text-white" />
           <p className="font-semibold font-tajawal"> {waitingForyou} </p>
-        </Btn>
-        <Btn ype="button" icon={<FiDownload className="text-xl text-white" />}>
+        </Button>
+        <Button
+          variant="green"
+          type="button"
+          className="flex items-center gap-2"
+        >
+          <FiDownload className="text-xl text-white" />
           <p className="font-semibold font-tajawal">{download}</p>
-        </Btn>
+        </Button>
       </div>
     </div>
   );

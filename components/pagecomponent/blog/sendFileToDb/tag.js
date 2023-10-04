@@ -19,7 +19,7 @@ export async function FileIsExist(slug) {
 }
 export async function getAllFiles() {
   try {
-    return await db.BlogTable.findMany();
+    return await db.BlogTable.findMany({ orderBy: { viewers: "desc" } });
   } catch (error) {
     console.log(error);
   }

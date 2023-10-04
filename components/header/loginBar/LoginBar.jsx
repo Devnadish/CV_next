@@ -1,8 +1,8 @@
 // "use client";
 import Link from "next/link";
 import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt";
-import Btn from "@/components/shared/btn/Btn";
 import { getDictionary } from "@/lib/dictionary";
+import { Button } from "@/components/ui/button";
 
 export async function LoginBar({ USERSTUTES, userData, lang }) {
   const { loginBar } = await getDictionary(lang);
@@ -28,13 +28,13 @@ const UserAction = ({ loginBar, lang }) => {
     <>
       <div className="flex items-end gap-2 p-2 ">
         <Link href={"/login"} as={`/${lang}/login`}>
-          <Btn btnType={"success"}>{loginBar.login}</Btn>
+          <Button variant="blue">{loginBar.login}</Button>
         </Link>
         <Link href={"/signup"} as={`/${lang}/signup`}>
-          <Btn btnType={"secondary"}>{loginBar.register}</Btn>
+          <Button variant="green">{loginBar.register}</Button>
         </Link>
         <Link href={"/dashboard"} as={`/${lang}/dashboard`}>
-          <Btn btnType={"secondary"}>Dashboard</Btn>
+          <Button variant="secondary">Dashboard</Button>
         </Link>
       </div>
     </>

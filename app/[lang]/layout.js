@@ -29,22 +29,26 @@ export default function RootLayout({ children, params }) {
       style={{ colorScheme: "light" }}
     >
       <body
-        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  p-4 `}
+        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  px-8   `}
       >
-        <Providers>
-          {/* <Container> */}
-          <Navbar lang={params.lang} />
-          <section
-            id="childrenxx"
-            className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] "
+        <section
+          id="childrenxx"
+          // className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] "
+        >
+          <Providers
+            // attributes="class"
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={false}
+            disableTransitionOnChange={false}
           >
+            <Navbar lang={params.lang} />
             {children}
-            <Toaster />
-            <Analytics />
-          </section>
-          <Footer />
-          {/* </Container> */}
-        </Providers>
+            <Footer />
+          </Providers>
+          <Toaster />
+          <Analytics />
+        </section>
       </body>
     </html>
   );

@@ -7,10 +7,10 @@ import { AiOutlineMenuFold } from "@react-icons/all-files/ai/AiOutlineMenuFold";
 function DashBoardMenu() {
   const [isOpen, setIsOpen] = useState(true);
   const menuItem = [
+    { id: 4, menuTitle: "Dashboard", menuLink: "/dashboard" },
     { id: 1, menuTitle: "Tags", menuLink: "/dashboard/tag" },
     { id: 2, menuTitle: "Grap Blog", menuLink: "/dashboard/bloglist" },
     { id: 3, menuTitle: "Blog Analitic", menuLink: "/dashboard/bloganalitic" },
-    { id: 4, menuTitle: "Add service", menuLink: "/blog" },
     { id: 5, menuTitle: "Add Project", menuLink: "/blog" },
   ];
   let styl1;
