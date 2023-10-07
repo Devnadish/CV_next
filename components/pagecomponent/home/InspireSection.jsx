@@ -17,7 +17,7 @@ export const InspireSection = async ({ lang }) => {
     <>
       <div className={sectionStyle}>
         <div className="w-auto">
-          <Title title={inspire.title} withBtn />
+          <Title title={inspire.title} withBtn flag="title" />
         </div>
 
         <div className={sectionGridStyle}>

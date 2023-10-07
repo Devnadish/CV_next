@@ -11,7 +11,7 @@ export const Section4 = async ({ lang }) => {
   return (
     <>
       <section id="section4" className={sectionStyle}>
-        <Title title={section4.title} />
+        <Title title={section4.title} flag="title" />
         <Description des={section4.S4L1} />
       </section>
     </>

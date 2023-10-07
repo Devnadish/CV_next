@@ -13,7 +13,7 @@ function LinkClick(props) {
   };
   return (
     <Button onClick={handleClick} size="xs">
-      <HiOutlineEye className="w-4 h-4 text-black/80 dark:text-white/80 " />
+      <HiOutlineEye className="w-4 h-4 text-primary-foreground " />
     </Button>
   );
 }

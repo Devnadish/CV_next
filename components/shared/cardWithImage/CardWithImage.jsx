@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { CardLink } from "./CardLink";
-import { Description } from "./Description";
-import { Title } from "./Title";
+import { Description } from "../title/Description";
+import Title from "@/components/shared/title/Title";
 import base64 from "@/lib/base64";
-
-// title,image,link,description,
-export default  function CardWithImage({
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+const CardWithImage = ({
   imageUrl,
   title = "",
   linkText,
@@ -14,48 +20,40 @@ export default  function CardWithImage({
   w = "250px",
   h = "250px",
   fitType = "contain",
-}) {
+}) => {
   return (
     <>
-      <div className="flex items-center justify-start overflow-hidden border rounded-md dark:border-orange-500   flex-col w-[250px]  h-fit bg-red-500">
-        <ImageCard imageUrl={imageUrl} alt={title} title={title} fitType={fitType} w={w} h={h}/>
-        <TitleAndLink title={title} linkText={linkText} link={link}/>
-        <Description des={des} />
-      </div>
+      <Card className="flex flex-col items-cener justify-between bg-card  min-h-[200px]   min-w-[250px] overflow-hidden">
+        <CardHeader className="p-2 bg-accent ">
+          <CardTitle className="flex items-center justify-between w-full ">
+            <Title title={title} flag="subtitle" />
+            {link !== null ? (
+              <CardLink link={link} linkText={linkText} />
+            ) : null}
+          </CardTitle>
+        </CardHeader>
+
+        <CardContent className="p-0">
+          <Image
+            src={imageUrl}
+            alt={title}
+            width={1200}
+            height={550}
+            style={{ maxWidth: "100%", height: "auto", margin: "auto" }}
+            // className="w-full h-auto mx-auto "
+            // fill
+            sizes="calc(100vw - 114px)"
+            // placeholder="blur"
+            // blurDataURL={myBlurDataUrl}
+            // style={{ objectFit: props.fitType }}
+          />
+        </CardContent>
+        <Separator />
+        <CardFooter className="py-2">
+          <Description des={des} />
+        </CardFooter>
+      </Card>
     </>
   );
-}
-async function ImageCard(props) {
-  // const myBlurDataUrl = await base64(props.imageUrl)
-  return (
-    <div
-      className="relative flex items-start shadow-lg hover:opacity-90 bg-slate-600"
-      style={{ width:"250px"  }}
-    >
-      <Image
-        src={props.imageUrl}
-        alt={props.title}
-        width={650}
-        height={366}
-        className="w-full h-auto mx-auto rounded-t-lg"
-        // fill
-        // sizes="calc(100vw - 114px)"
-        // placeholder='blur'
-        // blurDataURL={myBlurDataUrl}
-        style={{ objectFit: props.fitType }}
-      />
-    </div>
-  );
-}
-
-
-function TitleAndLink(props) {
-  return (
-    <div className="flex items-center justify-between w-full bg-slate-900">
-      <Title title={props.title} />
-      {props.link !== null ? (
-        <CardLink link={props.link} linkText={props.linkText} />
-      ) : null}
-    </div>
-  );
-}
+};
+export default CardWithImage;

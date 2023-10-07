@@ -22,12 +22,9 @@ export function Price({ price, cur = "sr", recommend = false, lang }) {
 const OrderNow = () => {
   return (
     <>
-      <Button
-        type="button"
-        className="px-2 py-2.5 text-sm font-medium text-white  items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-      >
+      <Button type="button" variant="secondary">
         <FaThumbsUp className="flex items-center mr-2 text-2xl" />
-        Order Now
+        <span>Order Now</span>
       </Button>
     </>
   );

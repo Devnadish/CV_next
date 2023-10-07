@@ -18,15 +18,12 @@ import SearchInput from "@/components/shared/inputSearch/InputSearch";
 
 function ShowReusltBlog({ search, posts }) {
   return (
-    <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-zinc-200 dark:bg-zinc-800 ">
+    <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-background/25 ">
       <InputHeader length={posts.length} />
+
       <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-4 place-items-center">
         {posts.map(async (post) => {
-          return (
-            <div className="text-sm text-black rounded-lg">
-              <FileCard post={post} key={post.slug} />
-            </div>
-          );
+          return <FileCard post={post} key={post.slug} />;
         })}
       </div>
     </div>

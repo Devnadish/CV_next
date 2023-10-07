@@ -5,8 +5,12 @@ function PageContainer({ children }) {
     <main
       id="pagecontainer"
       className="flex flex-col items-center
-       h-[calc(100vh_-_170px)] justify-start w-full
-        gap-10  px-4 py-1  overflow-auto bg-zinc-200 dark:bg-zinc-800  "
+       h-full justify-start w-full
+        gap-10  px-4 py-1  overflow-auto bg-muted"
+
+      // className="flex flex-col items-center
+      // h-[calc(100vh_-_170px)] justify-start w-full
+      //  gap-10  px-4 py-1  overflow-auto bg-background/25"
     >
       {children}
     </main>

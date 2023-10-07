@@ -8,7 +8,6 @@ import { getPostContent } from "@/lib/blog/getPostContent";
 const GoBack = dynamic(() => import("@/components/shared/goBack/GoBack"));
 export const dynamicParams = false;
 
-
 export async function generateMetadata({ params }) {
   const post = getPostContent(params.slug, params.lang);
 
@@ -18,7 +17,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-
 export const generateStaticParams = async () => {
   const posts = await allgetPostMetadata();
   return posts.map((post) => ({
@@ -26,10 +24,10 @@ export const generateStaticParams = async () => {
   }));
 };
 
-const Page =async ({ params }) => {
+const Page = async ({ params }) => {
   // await visitSlug(props.params.slug)
-  const { slug } = params
-  const post = getPostContent(NEWSLUG(params.slug,params.lang),params.lang);
+  const { slug } = params;
+  const post = getPostContent(NEWSLUG(params.slug, params.lang), params.lang);
   return (
     <>
       <PageContainer>
@@ -42,7 +40,7 @@ const Page =async ({ params }) => {
             </h1>
             <p className="text-xs text-slate-400">{post.data.date}</p>
           </div>
-          <article className="flex items-center justify-center min-w-[80%] mx-auto prose font-tajawal text-slate-600 dark:text-slate-200 ">
+          <article className="flex items-center justify-center min-w-[80%] mx-auto prose font-tajawal text-foreground ">
             <Markdown options={MDoptions}>{post.content}</Markdown>
           </article>
         </div>

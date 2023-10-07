@@ -1,8 +1,9 @@
 import CardWithImage from "@/components/shared/cardWithImage/CardWithImage";
 import Title from "@/components/shared/title/Title";
 import { getDictionary } from "@/lib/dictionary";
-import {sectionStyle,sectionGridStyle} from "@/styles/homeSectionStyle";
+import { sectionStyle, sectionGridStyle } from "@/styles/homeSectionStyle";
 import { section2Data } from "./utl";
+import Link from "next/link";
 export const Section2 = async ({ lang }) => {
   const {
     page: {
@@ -10,13 +11,20 @@ export const Section2 = async ({ lang }) => {
     },
   } = await getDictionary(lang);
   const Imageurl = `/assets/homePage/section2/`;
-  const data=section2Data(section2,lang)
+  const data = section2Data(section2, lang);
 
   return (
     <>
-      <section   id="section2" className={sectionStyle} >
-        <div className="flex items-center w-full">
-          <Title title={section2.title} withBtn />
+      <section id="section2" className={sectionStyle}>
+        <div className="flex items-center w-full ">
+          <Title title={section2.title} withBtn flag="title">
+            <Link
+              className="text-primary underline-offset-4 hover:underline"
+              href={"/"}
+            >
+              More
+            </Link>
+          </Title>
         </div>
 
         <div className={sectionGridStyle}>

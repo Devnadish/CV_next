@@ -1,7 +1,6 @@
 import "../../styles/globals.css";
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/header/Navbar";
-import { Locale, i18n } from "@/i18n.config";
 import dynamic from "next/dynamic";
 const Providers = dynamic(() => import("@/Providers/Provider"));
 import { Analytics } from "@vercel/analytics/react";
@@ -34,17 +33,25 @@ export default function RootLayout({ children, params }) {
         <section
           id="childrenxx"
           // className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] "
+          // className="flex flex-col    justify-start items-start h-screen "
+          // className="flex flex-col    justify-start items-start h-screen "
         >
           <Providers
             // attributes="class"
             attribute="class"
             defaultTheme="system"
-            enableSystem={false}
-            disableTransitionOnChange={false}
+            enableSystem
+            disableTransitionOnChange
           >
-            <Navbar lang={params.lang} />
-            {children}
-            <Footer />
+            <div className="h-screen grid grid-rows-[auto_minmax(0,1fr)] p-5">
+              <div className="row-span-1">
+                <Navbar lang={params.lang} />
+              </div>
+              <div> {children}</div>
+              <div>
+                <Footer />
+              </div>
+            </div>
           </Providers>
           <Toaster />
           <Analytics />
@@ -53,16 +60,3 @@ export default function RootLayout({ children, params }) {
     </html>
   );
 }
-
-const Container = ({ children }) => {
-  return (
-    <>
-      <div
-        id="container"
-        className="container relative min-w-full px-6 py-4 border-4bg-[#f5f5f5] text-black dark:bg-gradient-to-t from-slate-900 to-blue-900 "
-      >
-        {children}
-      </div>
-    </>
-  );
-};

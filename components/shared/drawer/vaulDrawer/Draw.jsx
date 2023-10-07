@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { Drawer } from "vaul";
-import {AiOutlineEye} from "@react-icons/all-files/ai/AiOutlineEye";
-import colors from "../../../utl/colors.json"
+import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
+import colors from "../../../utl/colors.json";
 
 export default function MyDrawer({
   headTitle = "sample",
@@ -17,7 +17,9 @@ export default function MyDrawer({
       <div className="flex flex-col items-center justify-between">
         <ChipData chip={chip} />
         <Triger btnIcon={btnIcon} btnTXT={btnTXT} />
-        <div className="flex items-center font-tajawal text-sm justify-center w-full h-8 bg-gray-900 rounded-b-lg">{btnTXT}</div>
+        <div className="flex items-center font-tajawal text-sm justify-center w-full h-8 bg-gray-900 rounded-b-lg">
+          {btnTXT}
+        </div>
       </div>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/40" />
@@ -38,7 +40,7 @@ export default function MyDrawer({
 
 function DrawFooter() {
   return (
-    <div className="p-4 mt-auto bg-black border-t border-zinc-200" >
+    <div className="p-4 mt-auto bg-black border-t border-zinc-200">
       <div className="flex justify-end max-w-md gap-6 mx-auto"></div>
     </div>
   );
@@ -54,15 +56,15 @@ function DrawTItle({ headTitle }) {
   );
 }
 
-function ChipData({chip,viewer=0}) {
+function ChipData({ chip, viewer = 0 }) {
   return (
     <div className=" flex  justify-between items-center w-full p-2  rounded-t-lg shadow-sm border-1 bg-green-400/50">
       <span className="px-2 text-sm text-black rounded-t-sm  bg-green-400/50 ">
         {chip}
       </span>
       <div className="flex  gap-2 items-center">
-      <span className="text-sm  text-zinc-600">{viewer}</span>
-      <AiOutlineEye className=" text-zinc-600 w-4 h-4"/>
+        <span className="text-sm  text-zinc-600">{viewer}</span>
+        <AiOutlineEye className=" text-zinc-600 w-4 h-4" />
       </div>
     </div>
   );
@@ -73,32 +75,34 @@ function Triger({ btnIcon, btnTXT }) {
 
   return (
     <>
-    <Drawer.Trigger asChild>
-      <button
-        className="flex items-center justify-center flex-col
+      <Drawer.Trigger asChild>
+        <button
+          className="flex items-center justify-center flex-col
                            gap-4 p-4 min-w-[150px] min-h-[80px]
                            hover:ring-1  hover:ring-yellow-400
-                           rounded-sm hover:shadow-lg   bg-slate-300 dark:bg-zinc-800 capitalize"
-                           style={{ backgroundColor:colors.items[indexColor]?.backgroundColor,color:colors.items[indexColor]?.textColor}}
-      >
-        {/* {btnIcon } */}
-        {React.cloneElement(btnIcon, {
-        style: {
-          backgroundColor: colors.items[indexColor]?.backgroundColor,
-          color: colors.items[indexColor]?.textColor,
-          fontSize: '24px',
-          padding: '8px',
-          // borderRadius: '50%'
-        }
-      })}
-         {/* {btnTXT} */}
-      </button>
-
-    </Drawer.Trigger>
-    {/* <div>
+                           rounded-sm hover:shadow-lg   bg-sprimary "
+          style={{
+            backgroundColor: colors.items[indexColor]?.backgroundColor,
+            color: colors.items[indexColor]?.textColor,
+          }}
+        >
+          {/* {btnIcon } */}
+          {React.cloneElement(btnIcon, {
+            style: {
+              backgroundColor: colors.items[indexColor]?.backgroundColor,
+              color: colors.items[indexColor]?.textColor,
+              fontSize: "24px",
+              padding: "8px",
+              // borderRadius: '50%'
+            },
+          })}
+          {/* {btnTXT} */}
+        </button>
+      </Drawer.Trigger>
+      {/* <div>
 
     {btnTXT}
    </div> */}
-   </>
+    </>
   );
 }

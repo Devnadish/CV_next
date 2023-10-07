@@ -14,7 +14,7 @@ export const Section7 = async ({ lang }) => {
   return (
     <>
       <div id="section7" className={sectionStyle}>
-        <Title title={hint.title} />
+        <Title title={hint.title} flag="title" />
         <div className={sectionGridStyle}>
           {data.data.map((hint) => {
             return (

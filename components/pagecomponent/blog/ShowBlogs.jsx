@@ -15,7 +15,7 @@ import BlogSearchInput from "@/components/pagecomponent/blog/BlogSearchInput";
 
 async function ShowBlogs({ posts }) {
   return (
-    <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-zinc-200 dark:bg-zinc-800 ">
+    <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-background/25 ">
       <InputHeader length={posts.length} />
       <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-4 place-items-center">
         {posts.map(async (post) => {
@@ -68,7 +68,7 @@ const FileCard = ({ post }) => {
           <div className="flex items-center justify-between w-full mt-2 mb-1 text-card-foreground">
             <div className="flex items-end justify-between w-full ">
               <div className="flex items-center justify-between gap-2 px-4 py-1 rounded-md bg-accent">
-                <HiOutlineEye className="w-4 h-4 text-black/60 dark:text-white/50 " />
+                <HiOutlineEye className="w-4 h-4 text-primary-foreground/70  " />
                 <p className="text-[.7rem] font-normal flex items-center gap-2  text-accent-foreground/60">
                   {post.viewers}
                 </p>

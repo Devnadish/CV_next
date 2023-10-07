@@ -9,7 +9,7 @@ export const sectionStyle = [
   "datrk:border-gray-200",
   "center",
   "rounded-md",
-
+  "mt-4",
 ].join(" ");
 
 export const sectionGridStyle = [
@@ -21,5 +21,3 @@ export const sectionGridStyle = [
   "lg:grid-cols-3",
   "place-items-center",
 ].join(" ");
-
-
