@@ -5,10 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ModeToggle } from "@/components/toggoleMode/ChangeMode";
 
-function MyCv() {
+function MyCv({ lang }) {
   return (
     <Link
       href="/about"
+      as={`${lang}/about`}
       className={
         "flex items-center justify-center  rounded-full  animate-pulse duration-2000 "
       }
@@ -20,14 +21,15 @@ function MyCv() {
   );
 }
 
-function Footer() {
+function Footer({ lang }) {
+  console.log(lang);
   return (
     <div className="flex items-center h-10 text-gray-200 align-middle rounded-b-lg bg-primary  justify-evenly">
       <BsInboxes className="text-xl text-blue-gray-100" />
       <FaPaperPlane className="text-xl text-blue-gray-100" />
-      <ModeToggle />
-      <MyCv />
-      <LocaleSwitcher />
+      {/* <ModeToggle /> */}
+      <MyCv lang={lang} />
+      {/* <LocaleSwitcher /> */}
     </div>
   );
 }

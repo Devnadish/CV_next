@@ -12,8 +12,9 @@ function page({ params: { lang } }) {
     <>
       <PageContainer>
         <div className="flex flex-col justify-start w-full gap-4 px-4 py-6 overflow-auto">
-          <div className="flex flex-col items-center justify-between w-full gap-8 md:flex-row text-back text-md">
+          <div className="flex flex-col items-center justify-between w-full gap-5 md:flex-row text-back text-md">
             <HeroBanner lang={lang} />
+
             <AdvertisingText lang={lang} />
           </div>
           <WillDo lang={lang} />

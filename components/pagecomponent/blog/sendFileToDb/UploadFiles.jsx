@@ -14,14 +14,12 @@ export const UploadFiles = ({ files }) => {
     const btnAction = document.getElementById("upload");
     btnAction.disabled = true;
     btnAction.textContent = "Uploading...";
-
     for (const file of files) {
-      await createFileAction(file.slug, file.title);
+      await createFileAction(file.slug, file.title, file.slug.slice(0, 2));
       setCount((pre) => pre - 1);
     }
     setCount(0);
     btnAction.textContent = "Files Uploaded Done Refresh Page";
-    // btnAction.disabled = false;
   };
   useEffect(() => {
     const btnAction = document.getElementById("upload");
@@ -29,7 +27,7 @@ export const UploadFiles = ({ files }) => {
     count === 0
       ? (btnAction.textContent = "No Files To Upload")
       : (btnAction.textContent = "UPLOAD New Files...");
-  }, []);
+  }, [count]);
   return (
     <>
       <div className="flex-col items-center justify-between w-full px-4 py-2 bg-purple-500 md:flex-row rounded-t-md ">

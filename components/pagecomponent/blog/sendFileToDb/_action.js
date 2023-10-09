@@ -8,8 +8,8 @@ export async function getAllBlog() {
   return await getAllFiles();
 }
 
-export async function createFileAction(slug, title) {
-  await createFiles(slug, title);
+export async function createFileAction(slug, title, language) {
+  await createFiles(slug, title, language);
 }
 
 export async function checkFileIsExistAction(slug) {

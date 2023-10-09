@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CardLink } from "./CardLink";
-import { Description } from "../title/Description";
+import Description from "@/components/shared/description/Description";
 import Title from "@/components/shared/title/Title";
 import base64 from "@/lib/base64";
 import {
@@ -20,6 +20,7 @@ const CardWithImage = ({
   w = "250px",
   h = "250px",
   fitType = "contain",
+  lang = "ar",
 }) => {
   return (
     <>
@@ -28,7 +29,7 @@ const CardWithImage = ({
           <CardTitle className="flex items-center justify-between w-full ">
             <Title title={title} flag="subtitle" />
             {link !== null ? (
-              <CardLink link={link} linkText={linkText} />
+              <CardLink link={link} linkText={linkText} lang={lang} />
             ) : null}
           </CardTitle>
         </CardHeader>

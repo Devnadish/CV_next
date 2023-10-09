@@ -15,12 +15,15 @@ import BlogSearchInput from "@/components/pagecomponent/blog/BlogSearchInput";
 
 async function ShowBlogs({ posts }) {
   return (
-    <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-background/25 ">
+    <div
+      id="blogContainer"
+      className="flex flex-col items-center justify-start w-full h-full p-4 overflow-auto bg-background/25 "
+    >
       <InputHeader length={posts.length} />
-      <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-4 place-items-center">
+      <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {posts.map(async (post) => {
           return (
-            <div className="text-sm text-black rounded-lg">
+            <div key={post.slug} className="text-sm text-black rounded-lg">
               <FileCard post={post} key={post.slug} />
             </div>
           );
@@ -34,9 +37,11 @@ export default ShowBlogs;
 function InputHeader(props) {
   return (
     <div className="flex items-center justify-between w-full ">
-      <div className="flex items-center flex-1 w-full gap-4">
+      <div className="flex flex-col items-start justify-start w-full gap-2">
         <BlogSearchInput />
-        <p>{props.length} Blog</p>
+        <p className="text-[.71rem] ml-4 text-accent-foreground/50">
+          {props.length} Blog
+        </p>
       </div>
     </div>
   );
@@ -45,7 +50,7 @@ function InputHeader(props) {
 const FileCard = ({ post }) => {
   return (
     <>
-      <Card className="flex flex-col items-cener justify-between bg-card  min-h-[200px]   min-w-[250px] overflow-hidden">
+      <Card className="flex flex-col items-cener justify-between bg-card  min-h-[200px]   min-w-[300px] overflow-hidden">
         <CardHeader className="p-2 bg-accent ">
           <CardTitle
             className="flex items-center justify-between text-lg font-normal"
@@ -55,7 +60,6 @@ const FileCard = ({ post }) => {
             <LinkClick slug={post.slug} id={post.id} />
           </CardTitle>
         </CardHeader>
-
         <CardContent>
           <div className="flex items-center justify-start mt-4 text-sm font-light line-clamp-1 hover:line-clamp-none">
             <h5 className="text-xs text-blue-100 font-tajawal text-md line-clamp-3 hover:line-clamp-none">
@@ -68,7 +72,7 @@ const FileCard = ({ post }) => {
           <div className="flex items-center justify-between w-full mt-2 mb-1 text-card-foreground">
             <div className="flex items-end justify-between w-full ">
               <div className="flex items-center justify-between gap-2 px-4 py-1 rounded-md bg-accent">
-                <HiOutlineEye className="w-4 h-4 text-primary-foreground/70  " />
+                <HiOutlineEye className="w-4 h-4 text-primary-foreground/70 " />
                 <p className="text-[.7rem] font-normal flex items-center gap-2  text-accent-foreground/60">
                   {post.viewers}
                 </p>

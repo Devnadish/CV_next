@@ -2,7 +2,8 @@ export const sectionStyle = [
   "flex",
   "flex-col",
   "justify-between",
-  "w-[calc(100%-15px)]",
+  "w-full",
+  // "w-[calc(100%-15px)]",
   "p-4",
   "border",
   "border-gray-400",
@@ -10,6 +11,7 @@ export const sectionStyle = [
   "center",
   "rounded-md",
   "mt-4",
+  "gap-4",
 ].join(" ");
 
 export const sectionGridStyle = [

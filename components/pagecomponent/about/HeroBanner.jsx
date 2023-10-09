@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FaHandshake } from "@react-icons/all-files/fa/FaHandshake";
 import { FiDownload } from "@react-icons/all-files/fi/FiDownload";
-
+import MyWorkSample from "@/components/pagecomponent/worksample/MyWorkSample";
 import { Button } from "@/components/ui/button";
 import { getDictionary } from "@/lib/dictionary";
 
@@ -13,7 +13,8 @@ async function HeroBanner({ lang }) {
   } = await getDictionary(lang);
   return (
     <>
-      <div className="flex flex-col  w-[calc(100%-15px)] border rounded-lg bg-neutral-800 lg:flex-row lg:justify-evenly lg:bg-blue-gray-900">
+      {/* w-[calc(100%-15px)] */}
+      <div className="flex flex-col w-full  border rounded-lg bg-accent lg:flex-row lg:justify-evenly  ">
         <div className="flex flex-col flex-1 w-full rounded-lg">
           <div className="relative w-full h-32 overflow-hidden rounded-lg md:h-52">
             <Image
@@ -31,6 +32,7 @@ async function HeroBanner({ lang }) {
             waitingForyou={heroSection.waitingForyou}
             download={heroSection.download}
           />
+          <MyWorkSample />
         </div>
       </div>
       {/* medea area */}

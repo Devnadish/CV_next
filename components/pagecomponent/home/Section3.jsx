@@ -1,4 +1,4 @@
-import Description from "../../shared/description/Description";
+import Description from "@/components/shared/description/Description";
 import Title from "../../shared/title/Title";
 import { getDictionary } from "@/lib/dictionary";
 import { sectionStyle } from "@/styles/homeSectionStyle";

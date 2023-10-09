@@ -25,7 +25,8 @@ export default function RootLayout({ children, params }) {
     <html
       lang={params.lang}
       dir={params.lang === "ar" ? "rtl" : "ltr"}
-      style={{ colorScheme: "light" }}
+      style={{ colorScheme: "dark" }}
+      className="dark"
     >
       <body
         className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  px-8   `}
@@ -49,7 +50,7 @@ export default function RootLayout({ children, params }) {
               </div>
               <div> {children}</div>
               <div>
-                <Footer />
+                <Footer lang={params.lang} />
               </div>
             </div>
           </Providers>

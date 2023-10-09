@@ -21,7 +21,7 @@ function ShowReusltBlog({ search, posts }) {
     <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-background/25 ">
       <InputHeader length={posts.length} />
 
-      <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-4 place-items-center">
+      <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-3 place-items-center">
         {posts.map(async (post) => {
           return <FileCard post={post} key={post.slug} />;
         })}

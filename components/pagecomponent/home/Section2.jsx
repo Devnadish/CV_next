@@ -36,6 +36,7 @@ export const Section2 = async ({ lang }) => {
                 imageUrl={Imageurl + section2.imageUrl}
                 des={section2.des}
                 link={section2.link}
+                lang={lang}
               />
             );
           })}

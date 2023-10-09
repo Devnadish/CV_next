@@ -14,9 +14,7 @@ function EditTitle({ id, title, Desctription }) {
         <AiFillEdit className="text-white" />
       </Button>
       <Button size="xs" variant="grayGhost">
-        {/* <Link href={`/app/blog/ ${props.id}`}> */}
         <AiFillEye />
-        {/* </Link> */}
       </Button>
 
       {open ? (
@@ -24,16 +22,23 @@ function EditTitle({ id, title, Desctription }) {
           open={open}
           setOpen={setOpen}
           title={`old Title : ${title}`}
-          children={
-            <UpdateTitleForm
-              title={title}
-              Desctription={Desctription}
-              id={id}
-              setOpen={setOpen}
-            />
-          }
+          // children={
+          // <UpdateTitleForm
+          //   title={title}
+          //   Desctription={Desctription}
+          //   id={id}
+          //   setOpen={setOpen}
+          // />
+          // }
           Description="This action cannot be undone. This will permanently Updatedy Your."
-        />
+        >
+          <UpdateTitleForm
+            title={title}
+            Desctription={Desctription}
+            id={id}
+            setOpen={setOpen}
+          />
+        </Modal>
       ) : null}
     </div>
   );

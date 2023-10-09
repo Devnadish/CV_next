@@ -1,22 +1,21 @@
 import { Button } from "@/components/ui/button";
 function Title({ title, icon, children, withBtn = false, flag }) {
-  let styleTitle;
+  let styleTitle =
+    "flex items-center h-full center justify-between w-full  py-2 px-4  transition-all ease duration-500";
   switch (flag) {
     case "subtitle":
-      styleTitle =
-        "flex items-center justify-between w-full  py-2 px-4  transition-all ease duration-500  bg-accent  hover:scale-95  ";
+      styleTitle = styleTitle + "    hover:scale-95  ";
       break;
     case "title":
-      styleTitle =
-        "flex items-center justify-between w-full  py-2 px-4 bg-accent border-1s  border-accent-foreground/30  rounded-md hover:border-accent-foreground";
+      styleTitle = styleTitle + " bg-popover  hover:scale-95 round-,d ";
       break;
   }
   return (
     <div className={styleTitle}>
-      <h1 className=" text-accent-foreground  text-[.8rem]  md:text-[1rem] font-tajawal ">
+      <h1 className=" w-fit text-accent-foreground  text-[.8rem]  md:text-[1rem] font-tajawal  capitalize">
         {title}
       </h1>
-      {children}
+      {/* <div>{children}</div> */}
       {/* {icon}
       {withBtn && <Button>more</Button>} */}
     </div>
