@@ -29,13 +29,13 @@ export default function RootLayout({ children, params }) {
       className="dark"
     >
       <body
-        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}  px-8   `}
+        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}     `}
       >
         <section
           id="childrenxx"
           // className="flex flex-col    justify-start items-start h-[calc(100vh_-_170px)] "
-          // className="flex flex-col    justify-start items-start h-screen "
-          // className="flex flex-col    justify-start items-start h-screen "
+          // className="flex flex-col items-start justify-start h-screen "
+          // className="flex flex-col items-start justify-start h-screen "
         >
           <Providers
             // attributes="class"
@@ -44,7 +44,7 @@ export default function RootLayout({ children, params }) {
             enableSystem
             disableTransitionOnChange
           >
-            <div className="h-screen grid grid-rows-[auto_minmax(0,1fr)] p-5">
+            <div className="h-screen grid grid-rows-[auto_minmax(0,1fr)] ">
               <div className="row-span-1">
                 <Navbar lang={params.lang} />
               </div>
