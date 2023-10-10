@@ -7,7 +7,7 @@ import { LoginBar } from "@/components/header/loginBar/LoginBar";
 import { getDictionary } from "@/lib/dictionary";
 // import Profile from "./Profile";
 
-const Profile = dynamic(() => import("./Profile"), {
+const Profile = dynamic(() => import("../profile/Profile"), {
   loading: () => <p>Loading...</p>,
 });
 

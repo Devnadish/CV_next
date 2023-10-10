@@ -3,9 +3,8 @@ import { BiLogOut } from "@react-icons/all-files/bi/BiLogOut";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { Moon, Sun } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+
+import ThemeSwitcher from "./ThemeSwitcher";
 import { IoPersonCircleSharp } from "@react-icons/all-files/io5/IoPersonCircleSharp";
 import {
   Sheet,
@@ -57,26 +56,15 @@ export default function Profile() {
 
         <div className="grid gap-4 py-4 text-[.8rem]">
           <div className="flex flex-col gap-4">
-            <Separator className="mb-2 w-full" />
-            <div className="flex gap-4 items-center justify-evenly">
-              <Button variant="ghost" className="flex items-center gap-4">
-                <Sun className="h-[1.2rem] w-[1.2rem] mr-2 rotate-0 scale-100 transition-all  " />
-                <h2>Darak</h2>
-              </Button>
-              <Button variant="ghost" className="flex items-center gap-4">
-                <Moon className="h-[1.2rem] w-[1.2rem] mr-2 rotate-90 scale-100 transition-all dark:rotate-0 " />
-                <h2>Ligth</h2>
-              </Button>
-            </div>
+            <Separator className="w-full mb-2" />
+            <ThemeSwitcher />
           </div>
-
           <div className="flex flex-col gap-4">
-            <Separator className="mb-2 w-full" />
-            <div className="flex gap-4 items-center justify-evenly">
+            <Separator className="w-full mb-2" />
+            <div className="flex items-center gap-4 justify-evenly">
               <Button
                 onClick={() => {
                   router.push(redirectedPathName("ar"));
-                  // redirectedPathName("en");
                 }}
                 variant="ghost"
                 className="flex items-center gap-4"
@@ -111,12 +99,12 @@ export default function Profile() {
             </div>
           </div>
 
-          <Separator className="mb-2 w-full" />
-          <div className="flex justify-start items-center gap-4 ">
+          <Separator className="w-full mb-2" />
+          <div className="flex items-center justify-start gap-4 ">
             <BiLogOut size={24} />
             <h2>Logout</h2>
           </div>
-          <div className="grid grid-cols-4 items-center gap-4"></div>
+          <div className="grid items-center grid-cols-4 gap-4"></div>
         </div>
         <SheetFooter>
           {/* <SheetClose asChild>
