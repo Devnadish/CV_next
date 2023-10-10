@@ -59,9 +59,6 @@ const FileCard = ({ post }) => {
               <h5 className="text-xs text-blue-100 font-tajawal text-md line-clamp-3 hover:line-clamp-none">
                 {post.Desctription}
               </h5>
-              {/* <p className="flex items-center justify-start text-sm font-light">
-                {post.Desctription}
-              </p> */}
               <EditTitle
                 id={post.id}
                 title={post.title}

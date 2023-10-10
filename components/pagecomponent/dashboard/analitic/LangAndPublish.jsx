@@ -17,11 +17,6 @@ function LangAndPublish(props) {
     }
   };
 
-  const handleChange = async (id, checked) => {
-    await toggleChecked();
-    await puplitIT(id, checked);
-  };
-
   const ShowBlog = async (id) => {
     await puplitIT(id, true);
   };
