@@ -29,7 +29,7 @@ export default function RootLayout({ children, params }) {
       className="dark"
     >
       <body
-        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}     `}
+        className={`${cairo.variable} ${lateef.variable}  ${tajawal.variable}    h-[dvh] `}
       >
         <section
           id="childrenxx"
@@ -44,7 +44,7 @@ export default function RootLayout({ children, params }) {
             enableSystem
             disableTransitionOnChange
           >
-            <div className="h-screen grid grid-rows-[auto_minmax(0,1fr)] ">
+            <div className="h-[calc(100dvh)]   grid grid-rows-[auto_minmax(0,1fr)] ">
               <div className="row-span-1">
                 <Navbar lang={params.lang} />
               </div>
