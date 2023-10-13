@@ -6,7 +6,6 @@ export const dynamic = "force-dynamic";
 export async function GET(request) {
   try {
     const blogs = await Blog.find({}, { _id: 0, __v: 0, ip: 0 });
-    console.log("show all blogs:", request.url);
     return NextResponse.json({ allblogs: blogs }, { status: 200 });
   } catch (error) {
     return NextResponse.json({

@@ -51,21 +51,19 @@ const FileCard = ({ post }) => {
   return (
     <>
       <Card className="flex flex-col items-cener justify-between bg-card  min-h-[200px]   min-w-[300px] overflow-hidden">
-        <CardHeader className="p-2 bg-accent ">
+        <CardHeader className="p-2">
           <CardTitle
-            className="flex items-center justify-between text-lg font-normal"
+            className="flex items-center justify-between text-lg font-normal "
             style={{ lineClamp: 1, textWarp: "balance" }}
           >
             {post.title}
             <LinkClick slug={post.slug} id={post.id} />
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="flex items-center justify-start mt-4 text-sm font-light line-clamp-1 hover:line-clamp-none">
-            <h5 className="text-xs text-blue-100 font-tajawal text-md line-clamp-3 hover:line-clamp-none">
-              {post.Desctription}
-            </h5>
-          </div>
+        <CardContent className="flex items-center justify-start mt-4 text-sm font-light line-clamp-1 hover:line-clamp-none">
+          <h5 className="text-xs text-foreground font-tajawal text-md line-clamp-3 hover:line-clamp-none">
+            {post.Desctription}
+          </h5>
         </CardContent>
         <Separator />
         <CardFooter className="py-2">

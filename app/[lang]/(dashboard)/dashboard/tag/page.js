@@ -9,7 +9,6 @@ export const dynamic = "force-dynamic";
 
 async function page() {
   const tags = await getAllTags();
-  console.log(tags);
 
   return (
     <>

@@ -1,78 +1,9 @@
 import db from "@/lib/prisma";
 
-export async function increaseViewers(id) {
-  try {
-    await db.BlogTable.update({
-      where: {
-        id: id,
-      },
-      data: {
-        viewers: { increment: 1 },
-      },
-    });
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-export async function puplitITonDb(id, checked) {
-  console.log(id, checked);
-  try {
-    await db.BlogTable.update({
-      where: {
-        id: id,
-      },
-      data: {
-        published: checked,
-      },
-    });
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-export async function updateDbTitle(id, title, Desctription) {
-  try {
-    await db.BlogTable.update({
-      where: {
-        id: id,
-      },
-      data: {
-        title: title,
-        Desctription: Desctription,
-      },
-    });
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-export async function decreaseViewers(id) {
-  try {
-    await db.BlogTable.update({
-      where: {
-        id: id,
-      },
-      data: {
-        viewers: { decrement: 1 },
-      },
-    });
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-export async function deleteBlog(id) {
-  try {
-    await db.BlogTable.delete({ where: { id: id } });
-  } catch (error) {
-    console.log(error.message);
-  }
-}
-
-export async function getDataAfterSearchFromDb(text, location) {
+export async function getDataAfterSearchFromDb(text, location, lang) {
   try {
     if (text.toLowerCase() === "all") {
-      return await db.BlogTable.findMany();
+      return await db.BlogTable.findMany({ where: { language: lang } });
     }
     if (text.toLowerCase() === "99999") {
       return await db.BlogTable.findMany({
@@ -93,9 +24,79 @@ export async function getDataAfterSearchFromDb(text, location) {
     return await db.BlogTable.findMany({
       where: {
         title: { contains: text, mode: "insensitive" },
+        language: lang,
       },
     });
   } catch (error) {
     console.log(error.message);
   }
 }
+
+// export async function increaseViewers(id) {
+//   try {
+//     await db.BlogTable.update({
+//       where: {
+//         id: id,
+//       },
+//       data: {
+//         viewers: { increment: 1 },
+//       },
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// export async function puplitITonDb(id, checked) {
+//   console.log(id, checked);
+//   try {
+//     await db.BlogTable.update({
+//       where: {
+//         id: id,
+//       },
+//       data: {
+//         published: checked,
+//       },
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// export async function updateDbTitle(id, title, Desctription) {
+//   try {
+//     await db.BlogTable.update({
+//       where: {
+//         id: id,
+//       },
+//       data: {
+//         title: title,
+//         Desctription: Desctription,
+//       },
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+// export async function decreaseViewers(id) {
+//   try {
+//     await db.BlogTable.update({
+//       where: {
+//         id: id,
+//       },
+//       data: {
+//         viewers: { decrement: 1 },
+//       },
+//     });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }
+
+// export async function deleteBlog(id) {
+//   try {
+//     await db.BlogTable.delete({ where: { id: id } });
+//   } catch (error) {
+//     console.log(error.message);
+//   }
+// }

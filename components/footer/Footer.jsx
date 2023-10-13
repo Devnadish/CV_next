@@ -22,14 +22,11 @@ function MyCv({ lang }) {
 }
 
 function Footer({ lang }) {
-  console.log(lang);
   return (
-    <div className="flex items-center h-10 text-gray-200 align-middle rounded-b-lg bg-primary  justify-evenly">
+    <div className="flex items-center h-10 text-gray-200 align-middle bg-primary justify-evenly">
       <BsInboxes className="text-xl text-blue-gray-100" />
       <FaPaperPlane className="text-xl text-blue-gray-100" />
-      {/* <ModeToggle /> */}
       <MyCv lang={lang} />
-      {/* <LocaleSwitcher /> */}
     </div>
   );
 }
@@ -42,7 +39,6 @@ const MyAvatar = () => {
       <Image
         src={"/assets/about/avatar.jpg"}
         alt={"خالد دبش khalid nadish مطور مبرمج مصمم مواقع"}
-        // fill
         width={29}
         height={29}
         style={{ objectFit: "cover" }}

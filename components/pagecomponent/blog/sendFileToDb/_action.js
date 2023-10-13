@@ -1,11 +1,16 @@
 "use server";
 
 import { increaseViewers } from "../../dashboard/analitic/dbAction/dbAction";
-import { createFiles, FileIsExist, getAllFiles } from "./tag";
+import {
+  createFiles,
+  FileIsExist,
+  getAllFiles,
+  AddBlogLinkToDB,
+} from "./DBaction";
 import { revalidatePath } from "next/cache";
 
-export async function getAllBlog() {
-  return await getAllFiles();
+export async function getAllBlog(lang) {
+  return await getAllFiles(lang);
 }
 
 export async function createFileAction(slug, title, language) {
@@ -27,12 +32,8 @@ export async function increaseBlogViewers(id) {
   revalidatePath("/blog");
 }
 
-// export async function deleteTagAction(id) {
-//   await deleteTag(id);
-//   revalidatePath("/dashboard/tag");
-// }
-
-// export async function updateTagAction(id, title) {
-//   await editTag(id, title);
-//   revalidatePath("/");
-// }
+export async function AddBlogLink(id, targetlink) {
+  const result = targetlink.toLowerCase();
+  await AddBlogLinkToDB(id, result);
+  revalidatePath("/dashboard/linkblog");
+}

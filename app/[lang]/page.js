@@ -6,8 +6,10 @@ import { Section5 } from "@/components/pagecomponent/home/Section5";
 import { Section6 } from "@/components/pagecomponent/home/Section6";
 import { Section7 } from "@/components/pagecomponent/home/Section7";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
+import { getIp } from "@/components/pagecomponent/home/iplog/_action";
 
 export default async function Home({ params: { lang } }) {
+  const test = await getIp();
   return (
     <PageContainer>
       <Section2 lang={lang} />

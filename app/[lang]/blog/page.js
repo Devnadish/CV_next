@@ -4,8 +4,8 @@ export const dynamics = "force-dynamic";
 
 import ShowBlogs from "@/components/pagecomponent/blog/ShowBlogs";
 
-async function Blogs() {
-  const posts = await getAllBlog();
+async function Blogs({ params }) {
+  const posts = await getAllBlog(params.lang);
   return (
     <>
       <PageContainer>

@@ -30,6 +30,7 @@ model BlogTable {
   title       String   @default("khalid")
   Desctription String @default("No description")
   viewers     Int @default(0)
+  targetlinks String[]
   published   Boolean @default(true)
   language    String @default("ar")
   createdDate DateTime @default(now())
@@ -41,3 +42,20 @@ model BlogTable {
   // blogTagId   String? @db.ObjectId
 }
 
+model BlogLink{
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String  @default("")
+  slug        String  @default("")
+  language    String @default("")
+}
+model Iplog{
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  ip          String  @default("")
+  counter     Int     @default(0)
+  city        String  @default("")
+  region      String  @default("")
+  country     String  @default("")
+  loc         String  @default("")
+  org         String  @default("")
+  timezone    String  @default("")
+}

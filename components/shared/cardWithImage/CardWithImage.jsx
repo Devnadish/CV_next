@@ -25,11 +25,17 @@ const CardWithImage = ({
   return (
     <>
       <Card className="flex flex-col items-cener justify-between bg-card  min-h-[200px]   min-w-[250px] overflow-hidden">
-        <CardHeader className="p-2 bg-accent ">
+        <CardHeader className="p-2">
           <CardTitle className="flex items-center justify-between w-full ">
             <Title title={title} flag="subtitle" />
             {link !== null ? (
-              <CardLink link={link} linkText={linkText} lang={lang} />
+              // <CardLink link={link} linkText={linkText} lang={lang} />
+              <CardLink
+                searchPath={title}
+                // link={link}
+                // linkText={linkText}
+                lang={lang}
+              />
             ) : null}
           </CardTitle>
         </CardHeader>

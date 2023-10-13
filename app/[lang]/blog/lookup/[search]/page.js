@@ -3,11 +3,8 @@ import ShowBlogs from "@/components/pagecomponent/blog/ShowBlogs";
 import PageContainer from "@/components/shared/pagecontainer/PageContainer";
 import NoDataToshow from "@/components/shared/nodatatoshow/NoDataToshow";
 async function page({ params }) {
-  console.log(params);
   const search = decodeURI(params.search);
-  console.log(search);
-  const posts = await getDataAfterSearch(search, "title");
-  console.log(posts);
+  const posts = await getDataAfterSearch(search, "title", params.lang);
 
   return (
     <>

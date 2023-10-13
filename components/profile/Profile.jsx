@@ -34,19 +34,19 @@ export default function Profile() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="ghost">
+        <Button variant="menughost">
           <IoPersonCircleSharp size={24} />
         </Button>
       </SheetTrigger>
 
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
+          <SheetTitle>Welcome</SheetTitle>
           <div className="flex items-center justify-center w-full">
             <Image
-              src={"/assets/locales/united-states.png"}
+              src={"/assets/blank-profile-picture.webp"}
               alt="language selected"
-              width={112}
+              width={150}
               height={112}
             />
           </div>
