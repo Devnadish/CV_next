@@ -1,6 +1,8 @@
 import { HiOutlineEye } from "@react-icons/all-files/hi/HiOutlineEye";
 import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 import { Separator } from "@/components/ui/separator";
+import { Badge } from "@/components/ui/badge";
+
 import {
   Card,
   CardContent,
@@ -37,11 +39,8 @@ export default ShowBlogs;
 function InputHeader(props) {
   return (
     <div className="flex items-center justify-between w-full ">
-      <div className="flex flex-col items-start justify-start w-full gap-2">
-        <BlogSearchInput />
-        <p className="text-[.71rem] ml-4 text-accent-foreground/50">
-          {props.length} Blog
-        </p>
+      <div className="flex flex-col items-center justify-center w-full gap-2">
+        <BlogSearchInput blogCont={props.length} />
       </div>
     </div>
   );
@@ -60,6 +59,7 @@ const FileCard = ({ post }) => {
             <LinkClick slug={post.slug} id={post.id} />
           </CardTitle>
         </CardHeader>
+        <Separator />
         <CardContent className="flex items-center justify-start mt-4 text-sm font-light line-clamp-1 hover:line-clamp-none">
           <h5 className="text-xs text-foreground font-tajawal text-md line-clamp-3 hover:line-clamp-none">
             {post.Desctription}
@@ -68,18 +68,23 @@ const FileCard = ({ post }) => {
         <Separator />
         <CardFooter className="py-2">
           <div className="flex items-center justify-between w-full mt-2 mb-1 text-card-foreground">
-            <div className="flex items-end justify-between w-full ">
-              <div className="flex items-center justify-between gap-2 px-4 py-1 rounded-md bg-accent">
-                <HiOutlineEye className="w-4 h-4 text-primary-foreground/70 " />
-                <p className="text-[.7rem] font-normal flex items-center gap-2  text-accent-foreground/60">
-                  {post.viewers}
-                </p>
-              </div>
-              <div className="flex items-center justify-between gap-2 px-4 py-1 rounded-md bg-accent">
-                <p className="text-[.7rem] font-normal flex items-center gap-2 text-accent-foreground/60">
+            <div className="flex items-center justify-between w-full ">
+              <Badge
+                className="flex items-center justify-between gap-2 "
+                variant="secondary"
+              >
+                <HiOutlineEye className="w-4 h-4 text-primary/50 " />
+                <p className="text-primary/70">{post.viewers}</p>
+              </Badge>
+
+              <Badge
+                className="flex items-center justify-between gap-2 "
+                variant="secondary"
+              >
+                <p className="text-primary/70">
                   {getTimeElapsed(post.updatedDate)}
                 </p>
-              </div>
+              </Badge>
             </div>
           </div>
         </CardFooter>
