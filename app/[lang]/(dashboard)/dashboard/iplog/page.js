@@ -4,7 +4,7 @@ async function page() {
   const ips = await getAllIp();
 
   return (
-    <div className="flex p-4">
+    <div className="flex flex-wrap items-center justify-between w-full gap-4 p-4">
       {ips.map((ip) => {
         return (
           <div className="flex flex-col p-4 rounded-md bg-primary" key={ip.id}>
