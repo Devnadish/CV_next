@@ -1,5 +1,9 @@
 {
-  "loginBar": {"login": "Login","register": "register","loginHint":"Login please"},
+  "loginBar": {
+    "login": "Login",
+    "register": "register",
+    "loginHint": "Login please"
+  },
 
   "navigation": {
     "home": "Home",
@@ -151,14 +155,20 @@
     "pricePkg": {
       "standerd": {
         "title": "Standard",
-        "price": "1000",
+        "subtitle": "Prices do not include content and image management",
+        "price": "320",
+        "cur": "$",
         "facility": [
-          { "id": 1, "icon": "", "title": "20 pages" },
+          { "id": 1, "icon": "", "title": "15 page" },
           { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "Arabic language website" },
-          { "id": 4, "icon": "", "title": "Domain name reservation" },
+          { "id": 3, "icon": "", "title": "one language website" },
+          { "id": 4, "icon": "", "title": "Domain Name For one Year " },
           { "id": 5, "icon": "", "title": "Free hosting for one year" },
-          { "id": 6, "icon": "", "title": "Support and maintenance for six months" },
+          {
+            "id": 6,
+            "icon": "",
+            "title": "Support and maintenance for six months"
+          },
           { "id": 7, "icon": "", "title": "Integration with social media" },
           { "id": 8, "icon": "", "title": "One official email" },
           { "id": 9, "icon": "", "title": "Search engine optimization" }
@@ -166,38 +176,59 @@
       },
       "plus": {
         "title": "Premium",
+        "subtitle": "Prices do not include content and image management",
+        "hint": "Recommended",
+
         "price": "1000",
+        "cur": "$",
         "facility": [
-          { "id": 1, "icon": "", "title": "30 pages" },
+          { "id": 1, "icon": "", "title": "25 page" },
           { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "Arabic language website" },
-          { "id": 4, "icon": "", "title": "Domain name reservation" },
-          { "id": 5, "icon": "", "title": "Free hosting for one year" },
-          { "id": 6, "icon": "", "title": "Support and maintenance for twelve months" },
+          { "id": 3, "icon": "", "title": "One Language Support" },
+          { "id": 4, "icon": "", "title": "Free Domain Name For One Year" },
+          { "id": 5, "icon": "", "title": "Free Hosting For One Year" },
+          {
+            "id": 6,
+            "icon": "",
+            "title": "Support and maintenance for One Year "
+          },
           { "id": 7, "icon": "", "title": "Integration with social media" },
           { "id": 8, "icon": "", "title": "Five official emails" },
           { "id": 9, "icon": "", "title": "Search engine optimization" },
-          { "id": 10, "icon": "", "title": "Contact, services and about us pages" }
+          {
+            "id": 10,
+            "icon": "",
+            "title": "Contact, services and about us pages"
+          }
         ]
       },
       "advance": {
         "title": "Custom",
+        "subtitle": "Special requests determine final price.",
         "price": "Contact",
         "facility": [
-          { "id": 0, "icon": "", "title": "Unlimited" },
-          { "id": 1, "icon": "", "title": "More than 20 pages" },
+          { "id": 1, "icon": "", "title": "More than 30 page" },
           { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "Arabic language website" },
-          { "id": 4, "icon": "", "title": "Domain name reservation" },
-          { "id": 5, "icon": "", "title": "Free hosting for one year" },
-          { "id": 6, "icon": "", "title": "Support and maintenance for two years" },
+          { "id": 3, "icon": "", "title": "Two language Support" },
+          { "id": 4, "icon": "", "title": "Free Domain Name For One Year" },
+          { "id": 5, "icon": "", "title": "Free Hosting For One Year" },
+          {
+            "id": 6,
+            "icon": "",
+            "title": "Support and maintenance for two years"
+          },
           { "id": 7, "icon": "", "title": "Integration with social media" },
           { "id": 8, "icon": "", "title": "Unlimited official emails" },
           { "id": 9, "icon": "", "title": "Search engine optimization" },
-          { "id": 10, "icon": "", "title": "Contact, services and about us pages" }
+          {
+            "id": 10,
+            "icon": "",
+            "title": "Contact, services and about us pages"
+          }
         ]
       }
-    },"mywork":{
+    },
+    "mywork": {
       "smMenuTilte": "Social Media",
       "uiUxMenuTitle": "User Interface",
       "identityMenuTitle": "Visual Identity",
@@ -212,6 +243,6 @@
       "menu": "Menu",
       "package": "Package",
       "poster": "Poster"
-      }
+    }
   }
 }

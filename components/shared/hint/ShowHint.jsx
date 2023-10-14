@@ -4,7 +4,7 @@ const ShowHint = ({ icon, txt, link, title }) => {
   return (
     <>
       <Link
-        className="flex flex-col  items-center justify-start  w-[300px]  gap-1 py-4 text-sm border border-border rounded-md   hover:shadow-xl "
+        className="flex flex-col  items-center justify-start  w-[300px]  gap-1 py-4 text-sm border border-primary/30 rounded-md   hover:shadow-xl "
         href={link}
       >
         <div className="h-[70px]">{icon}</div>

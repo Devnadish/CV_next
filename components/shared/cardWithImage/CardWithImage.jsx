@@ -28,15 +28,7 @@ const CardWithImage = ({
         <CardHeader className="p-2">
           <CardTitle className="flex items-center justify-between w-full ">
             <Title title={title} flag="subtitle" />
-            {link !== null ? (
-              // <CardLink link={link} linkText={linkText} lang={lang} />
-              <CardLink
-                searchPath={title}
-                // link={link}
-                // linkText={linkText}
-                lang={lang}
-              />
-            ) : null}
+            {link !== null ? <CardLink searchPath={title} lang={lang} /> : null}
           </CardTitle>
         </CardHeader>
 
@@ -47,12 +39,7 @@ const CardWithImage = ({
             width={1200}
             height={550}
             style={{ maxWidth: "100%", height: "auto", margin: "auto" }}
-            // className="w-full h-auto mx-auto "
-            // fill
             sizes="calc(100vw - 114px)"
-            // placeholder="blur"
-            // blurDataURL={myBlurDataUrl}
-            // style={{ objectFit: props.fitType }}
           />
         </CardContent>
         <Separator />

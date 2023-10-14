@@ -1,13 +1,13 @@
 import { Button } from "@/components/ui/button";
 function Title({ title, icon, children, withBtn = false, flag }) {
   let styleTitle =
-    "flex items-center h-full center justify-between w-full  py-2 px-4  transition-all ease duration-500";
+    "flex items-center h-full center justify-between w-full  py-2 px-4  transition-all ease duration-500 ";
   switch (flag) {
     case "subtitle":
       styleTitle = styleTitle + "    hover:scale-95  ";
       break;
     case "title":
-      styleTitle = styleTitle + " bg-popover  hover:scale-95 round-,d ";
+      styleTitle = styleTitle + " bg-primary/20   hover:scale-95 round-,d ";
       break;
   }
   return (

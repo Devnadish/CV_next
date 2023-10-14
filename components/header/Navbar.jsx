@@ -13,8 +13,7 @@ const Profile = dynamic(() => import("../profile/Profile"), {
 const Navbar = async ({ lang }) => {
   const { navigation } = await getDictionary(lang);
   return (
-    <div className="sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary">
-      {/* <LoginBar lang={lang} /> */}
+    <div className="sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary h-16 text-primary-foreground ">
       <MenuItems navigation={navigation} lang={lang} />
       <Profile />
     </div>
@@ -35,13 +34,7 @@ function MenuItems({ navigation, lang }) {
           {navigation.price}
         </Link>
       </Button>
-      {/* <Link
-          href={`/${lang}/worksample`}
-          className={`${navbarMenuItem}  bg-yellow-600 text-white`}
-          prefetch={false}
-        >
-          <li>{navigation.sample}</li>
-        </Link> */}
+
       <Button variant="menughost">
         <Link href={`/${lang}/blog`} as={`/${lang}/blog`} prefetch={false}>
           {navigation.blog}
