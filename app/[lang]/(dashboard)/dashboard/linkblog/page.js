@@ -56,7 +56,7 @@ function BlogData(props) {
         <NewTargetLink id={props.post.id} />
         <div className="w-full">
           {props.post.targetlinks.map((link) => {
-            return <p>{link}</p>;
+            return <p key={link.id}>{link}</p>;
           })}
         </div>
       </div>

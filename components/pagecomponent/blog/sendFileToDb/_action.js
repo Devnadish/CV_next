@@ -5,7 +5,7 @@ import {
   createFiles,
   FileIsExist,
   getAllFiles,
-  AddBlogLinkToDB,
+  // AddBlogLinkToDB,
 } from "./DBaction";
 import { revalidatePath } from "next/cache";
 
@@ -32,8 +32,8 @@ export async function increaseBlogViewers(id) {
   revalidatePath("/blog");
 }
 
-export async function AddBlogLink(id, targetlink) {
-  const result = targetlink.toLowerCase();
-  await AddBlogLinkToDB(id, result);
-  revalidatePath("/dashboard/linkblog");
-}
+// export async function AddBlogLink(id, targetlink) {
+//   const result = targetlink.toLowerCase();
+//   await AddBlogLinkToDB(id, result);
+//   revalidatePath("/dashboard/linkblog");
+// }
