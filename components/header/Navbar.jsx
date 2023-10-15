@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
+import Image from "next/image";
 import dynamic from "next/dynamic";
 
 import { LoginBar } from "@/components/header/loginBar/LoginBar";
@@ -13,9 +13,12 @@ const Profile = dynamic(() => import("../profile/Profile"), {
 const Navbar = async ({ lang }) => {
   const { navigation } = await getDictionary(lang);
   return (
-    <div className="sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary h-16 text-primary-foreground ">
-      <MenuItems navigation={navigation} lang={lang} />
-      <Profile />
+    <div className="sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary h-16 text-primary-foreground px-4">
+      <div className="flex items-center">
+        <Profile />
+        <MenuItems navigation={navigation} lang={lang} />
+      </div>
+      <Logo />
     </div>
   );
 };
@@ -43,3 +46,19 @@ function MenuItems({ navigation, lang }) {
     </div>
   );
 }
+
+const Logo = () => {
+  return (
+    <>
+      <div className="bg-white/50 border border-green-300 shadow-2xl p-4 flex items-center justify-center rounded-lg  w-[100px] h-[50px]">
+        <Image
+          src={"/assets/logo.png"}
+          alt={"خالد دبش khalid nadish مطور مبرمج مصمم مواقع"}
+          width={129}
+          height={129}
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+    </>
+  );
+};
