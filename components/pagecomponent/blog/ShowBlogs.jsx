@@ -9,6 +9,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  CardDescription,
 } from "@/components/ui/card";
 export const dynamics = "force-dynamic";
 
@@ -56,13 +57,15 @@ const FileCard = ({ post }) => {
             style={{ lineClamp: 1, textWarp: "balance" }}
           >
             {post.title}
+
             <LinkClick slug={post.slug} id={post.id} />
           </CardTitle>
+          <CardDescription> {post.subtitle}</CardDescription>
         </CardHeader>
         <Separator />
         <CardContent className="flex items-center justify-start mt-4 text-sm font-light line-clamp-1 hover:line-clamp-none">
           <h5 className="text-xs text-foreground font-tajawal text-md line-clamp-3 hover:line-clamp-none">
-            {post.Desctription}
+            {post.description}
           </h5>
         </CardContent>
         <Separator />

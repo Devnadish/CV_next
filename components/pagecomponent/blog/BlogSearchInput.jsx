@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { AiOutlineCloseCircle } from "@react-icons/all-files/ai/AiOutlineCloseCircle";
 
 const BlogSearchInput = ({ blogCont }) => {
@@ -22,6 +23,12 @@ const BlogSearchInput = ({ blogCont }) => {
 
   return (
     <>
+      <div className="flex gap-4 items-center justify-end text-sm  w-[85%] ">
+        <Button size="xs" variant="blue">
+          Requist
+        </Button>
+        If you Need Any Informattion About Any Artical just Request it
+      </div>
       <form onSubmit={onSearch} className="flex justify-center w-full ">
         <Input
           value={searchQuery || ""}

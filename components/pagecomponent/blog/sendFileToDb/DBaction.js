@@ -26,10 +26,17 @@ export async function getAllFiles(lang) {
   }
 }
 
-export async function createFiles(slug, title, language) {
+export async function createFiles(
+  slug,
+  title,
+  language,
+  description,
+  crDate,
+  subtitle
+) {
   try {
     const BlogTable = await db.BlogTable.create({
-      data: { slug, title, language },
+      data: { slug, title, language, description, crDate, subtitle },
     });
     return { BlogTable };
   } catch (error) {

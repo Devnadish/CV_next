@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { UpdateTitleForm } from "./UpdateTitleForm";
 import { AiFillEye } from "@react-icons/all-files/ai/AiFillEye";
 
-function EditTitle({ id, title, Desctription }) {
+function EditTitle({ id, title, description }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex items-center justify-start w-full gap-4 pt-4 ">
@@ -25,7 +25,7 @@ function EditTitle({ id, title, Desctription }) {
           // children={
           // <UpdateTitleForm
           //   title={title}
-          //   Desctription={Desctription}
+          //   description={description}
           //   id={id}
           //   setOpen={setOpen}
           // />
@@ -34,7 +34,7 @@ function EditTitle({ id, title, Desctription }) {
         >
           <UpdateTitleForm
             title={title}
-            Desctription={Desctription}
+            description={description}
             id={id}
             setOpen={setOpen}
           />

@@ -57,12 +57,12 @@ const FileCard = ({ post }) => {
                 {post.title}
               </p>
               <h5 className="text-xs text-blue-100 font-tajawal text-md line-clamp-3 hover:line-clamp-none">
-                {post.Desctription}
+                {post.description}
               </h5>
               <EditTitle
                 id={post.id}
                 title={post.title}
-                Desctription={post.Desctription}
+                description={post.description}
               />
             </div>
             <Separator className="space-y-4" />

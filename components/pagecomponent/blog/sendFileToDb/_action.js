@@ -13,8 +13,15 @@ export async function getAllBlog(lang) {
   return await getAllFiles(lang);
 }
 
-export async function createFileAction(slug, title, language) {
-  await createFiles(slug, title, language);
+export async function createFileAction(
+  slug,
+  title,
+  language,
+  description,
+  subtitle,
+  crDate
+) {
+  await createFiles(slug, title, language, description, crDate, subtitle);
 }
 
 export async function checkFileIsExistAction(slug) {

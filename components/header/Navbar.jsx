@@ -57,6 +57,7 @@ const Logo = () => {
           width={129}
           height={129}
           style={{ objectFit: "cover" }}
+          priority
         />
       </div>
     </>

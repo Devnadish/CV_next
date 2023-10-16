@@ -22,6 +22,9 @@ export function Files(props) {
                 key={post.slug}
                 slug={post.slug}
                 title={post.title}
+                subtitle={post.subtitle}
+                description={post.description}
+                crDate={post.date}
                 lang={getLanguage(post.slug)}
                 isAvlibal={dbExist}
               />
@@ -33,12 +36,24 @@ export function Files(props) {
   );
 }
 
-const FileCard = ({ slug, title, lang, isAvlibal }) => {
+const FileCard = ({
+  slug,
+  title,
+  lang,
+  isAvlibal,
+  description,
+  crDate,
+  subtitle,
+}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-center p-4 border rounded-lg min-w-[250px] gap-1">
         <p className="font-normal">File : {slug}</p>
         <p className="font-normal">Title : {title}</p>
+        <p className="font-normal">subTitle : {subtitle}</p>
+        <p className="font-normal">description : {description}</p>
+        <p className="font-normal">Creation Date : {crDate}</p>
+
         <p className="font-normal">Lang : {lang}</p>
         <p className="flex mt-1 font-normal">
           Exsit :

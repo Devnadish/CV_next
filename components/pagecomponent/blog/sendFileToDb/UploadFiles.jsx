@@ -15,7 +15,14 @@ export const UploadFiles = ({ files }) => {
     btnAction.disabled = true;
     btnAction.textContent = "Uploading...";
     for (const file of files) {
-      await createFileAction(file.slug, file.title, file.slug.slice(0, 2));
+      await createFileAction(
+        file.slug,
+        file.title,
+        file.slug.slice(0, 2),
+        file.description,
+        file.subtitle,
+        file.crDate
+      );
       setCount((pre) => pre - 1);
     }
     setCount(0);
@@ -35,7 +42,6 @@ export const UploadFiles = ({ files }) => {
           <p className="flex items-center justify-center p-1 px-2 text-xs text-white bg-green-600 rounded-lg">
             Blogs : {files.length}
           </p>
-          {/* <div className="flex items-start justify-between w-full p-1 text-sm"> */}
           <p className="flex items-center justify-center p-1 px-2 text-xs text-white bg-green-600 rounded-lg">
             En/B : {countLanguage(files, "en")}
           </p>

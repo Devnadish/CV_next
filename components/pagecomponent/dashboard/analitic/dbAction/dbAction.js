@@ -31,7 +31,7 @@ export async function puplitITonDb(id, checked) {
   }
 }
 
-export async function updateDbTitle(id, title, Desctription) {
+export async function updateDbTitle(id, title, description) {
   try {
     await db.BlogTable.update({
       where: {
@@ -39,7 +39,7 @@ export async function updateDbTitle(id, title, Desctription) {
       },
       data: {
         title: title,
-        Desctription: Desctription,
+        description: description,
       },
     });
   } catch (error) {
@@ -165,7 +165,7 @@ export async function getDataAfterSearchFromDb(text, location) {
 //   }
 // }
 
-// export async function updateDbTitle(id, title, Desctription) {
+// export async function updateDbTitle(id, title, description) {
 //   try {
 //     await db.BlogTable.update({
 //       where: {
@@ -173,7 +173,7 @@ export async function getDataAfterSearchFromDb(text, location) {
 //       },
 //       data: {
 //         title: title,
-//         Desctription: Desctription,
+//         description: description,
 //       },
 //     });
 //   } catch (error) {
