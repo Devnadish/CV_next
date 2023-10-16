@@ -17,7 +17,6 @@ const Navbar = async ({ lang }) => {
       <div className="flex items-center">
         <Profile />
         <MenuItems navigation={navigation} lang={lang} />
-        <p className="text-xs text-white self-end">beta Version 1.0.12</p>
       </div>
       <Logo />
     </div>
