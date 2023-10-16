@@ -23,10 +23,19 @@ function MyCv({ lang }) {
 
 function Footer({ lang }) {
   return (
-    <div className="flex items-center h-10 text-gray-200 align-middle bg-primary justify-evenly">
-      <BsInboxes className="text-xl text-blue-gray-100" />
-      <FaPaperPlane className="text-xl text-blue-gray-100" />
-      <MyCv lang={lang} />
+    <div className="flex flex-col bg-primary  justify-center h-12">
+      <div className="flex items-center  text-gray-200 align-middle bg-primary justify-evenly">
+        <BsInboxes className="text-xl text-blue-gray-100" />
+        <FaPaperPlane className="text-xl text-blue-gray-100" />
+        <MyCv lang={lang} />
+      </div>
+      <div className="flex  bg-primary w-full justify-between">
+        <p className="text-xs text-white px-4">beta Version 1.0.12</p>
+        <p className="text-xs text-black px-4">
+          Waiting for your suggestions or feedback on e-mail
+          (devnadish@gmail.com)-(whatsApp +966502699023){" "}
+        </p>
+      </div>
     </div>
   );
 }
