@@ -2,7 +2,9 @@
 title: "Adobe primer"
 subtitle: "Creating Professional-Quality Videos"
 date: "2020-12-22"
+description: "Master Adobe's creative suite. Valuable insights, tutorials, and tips. Create stunning graphics, edit photos, design layouts, and produce videos. Unlock your creativity with Adobe Primer."
 ---
+
 If you're a video editor looking to create professional-quality videos, then look no further than Premiere Pro, a powerful video editing software developed by Adobe Systems. With its wide range of tools and features, Premiere Pro is a versatile tool for video editors, filmmakers, and content creators.
 
 In this article, we'll explore some tips and tricks for mastering Premiere Pro as a video editor.
@@ -15,8 +17,7 @@ Spacebar: Play or pause the video
 J/K/L: Rewind, stop, or fast-forward the video
 I/O: Set the in or out point of a clip
 Ctrl/Cmd+C and Ctrl/Cmd+V: Copy and paste clips or effects
-Ctrl/Cmd+Z: Undo your last action
-2. Use the Lumetri Color Panel
+Ctrl/Cmd+Z: Undo your last action 2. Use the Lumetri Color Panel
 
 The Lumetri Color Panel in Premiere Pro allows users to color grade their footage to achieve a specific look or mood. To access the Lumetri Color Panel, select the clip you want to color grade and go to Color > Lumetri Color. From there, you can adjust the exposure, contrast, saturation, and other color settings to achieve the desired effect.
 

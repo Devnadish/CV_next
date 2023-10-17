@@ -2,6 +2,7 @@
 title: "Visual Identity"
 subtitle: "What is Visual Identity"
 date: "2020-12-22"
+description: "Visual identity: Crucial for brand recognition. Establishes cohesive brand image. Creates memorable impression on customers. Essential for effective branding and marketing."
 ---
 
 # What is Visual Identity and Why is it Important for Your Business?

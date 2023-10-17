@@ -2,7 +2,9 @@
 title: "Html5"
 subtitle: " Building Modern Websites"
 date: "2020-12-22"
+description: "HTML5: Create advanced web apps and content. Rich and interactive experiences. Mobile-friendly and responsive design. Essential tool for modern web development."
 ---
+
 # HTML5
 
 HTML5 is the latest version of the Hypertext Markup Language (HTML), which is used to create web pages and web applications. HTML5 includes a number of new features and improvements over previous versions of HTML, making it easier for developers to create rich, interactive web content. Here are some of the key features of HTML5:

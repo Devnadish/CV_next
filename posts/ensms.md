@@ -2,6 +2,7 @@
 title: "SMS Campaigns"
 subtitle: "The Power of SMS Campaigns"
 date: "2020-12-22"
+description: "Discover the impact of SMS campaigns and how they can boost your business. Engage with your audience in a new way and achieve impressive results with this powerful marketing tool."
 ---
 
 ## The Power of SMS Campaigns
@@ -70,5 +71,5 @@ There are several metrics you can use to measure the success of an SMS campaign.
 
 By tracking these metrics over time, you can gain insights into the effectiveness of your SMS campaign and make adjustments as needed to improve performance.
 
->Conclusion
- SMS campaigns are a powerful tool for businesses looking to engage with their customers in a more personalized way. With high open rates…[omitted]
+> Conclusion
+> SMS campaigns are a powerful tool for businesses looking to engage with their customers in a more personalized way. With high open rates…[omitted]

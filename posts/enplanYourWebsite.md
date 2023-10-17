@@ -2,8 +2,8 @@
 title: "Planning Your Website"
 subtitle: "Planning Your Website: Tips and Best Practices"
 date: "2020-12-22"
+description: "Plan your website for success. Define purpose, audience, and content. Design elements and considerations. Achieve online goals with proper planning."
 ---
-
 
 ## Planning Your Website: Tips and Best Practices
 
@@ -33,4 +33,4 @@ Developing a content strategy is essential for creating high-quality content tha
 
 Choosing your design elements is essential for creating a website that is visually appealing and easy to use. This includes choosing colors, fonts, images, and other visual elements that reflect your brand identity and resonate with your target audience.
 
->conclusion, planning your website requires a combination of defining your goals, identifying your target audience, choosing your CMS, creating a site map, developing your content strategy, and choosing your design elements. By following these tips and best practices, you can create a website that meets the needs of your business and users and achieves your online objectives.
+> conclusion, planning your website requires a combination of defining your goals, identifying your target audience, choosing your CMS, creating a site map, developing your content strategy, and choosing your design elements. By following these tips and best practices, you can create a website that meets the needs of your business and users and achieves your online objectives.

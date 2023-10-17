@@ -2,6 +2,7 @@
 title: "Node.js"
 subtitle: "Building Modern Web Applications"
 date: "2020-12-22"
+description: "Node.js: Powerful JavaScript runtime. Build scalable server-side applications. Integrates with Express.js for streamlined development. Essential for high-performance web apps."
 ---
 
 # Node.js

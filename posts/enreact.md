@@ -2,6 +2,7 @@
 title: "React js primer"
 subtitle: "Creating Dynamic Web Applications"
 date: "2020-12-22"
+description: "React.js: Popular JavaScript library for building UI. Reusable components and efficient state management. Fast and scalable web applications. Rich ecosystem of tools and libraries."
 ---
 
 # React.js

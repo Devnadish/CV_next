@@ -2,7 +2,9 @@
 title: "Adobe XD"
 subtitle: "Creating Beautiful and Functional Interfaces"
 date: "2020-12-22"
+description: "Explore the world of Adobe XD and discover a powerful tool for designing and prototyping user interfaces. Learn how to create wireframes, high-fidelity designs, and interactive prototypes using XD's intuitive interface, and get tips on how to collaborate with team members and stakeholders to streamline the design process."
 ---
+
 # Adobe XD
 
 Adobe XD is a popular user experience (UX) and user interface (UI) design tool developed by Adobe Systems. It is used by designers and developers to create wireframes, prototypes, and user interfaces for web and mobile applications. Here are some of the key features of Adobe XD:

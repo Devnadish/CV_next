@@ -2,6 +2,7 @@
 title: "Keep It Simple"
 subtitle: "Creating User-Friendly Navigation for Your Website"
 date: "2020-12-22"
+description: "Design user-friendly website navigation with our guide. Learn key principles and best practices. Explore different navigation types and optimize for mobile. Create a seamless and effortless user experience."
 ---
 
 # Creating User-Friendly Navigation for Your Website
