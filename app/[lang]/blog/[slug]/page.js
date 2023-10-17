@@ -33,15 +33,16 @@ const Page = async ({ params }) => {
       <PageContainer>
         {/* {JSON.stringify(props)}{props.params.lang} */}
         <div className="w-full px-4 py-4 mx-auto">
-          <div className="flex items-center justify-between px-4 my-4 rounded-md shadow-xl bg-slate-700">
+          <div className="flex items-center justify-between px-4 my-4 rounded-md shadow-xl bg-primary/70">
             <GoBack />
-            <h1 className="p-2 text-2xl capitalize text-slate-200 ">
+            <h1 className="p-2 text-2xl capitalize text-foreground ">
               {post.data.title}
             </h1>
-            <p className="text-xs text-slate-400">{post.data.date}</p>
+            <p className="text-xs text-forground">{post.data.date}</p>
           </div>
-          <article className="flex items-center justify-center min-w-[80%] mx-auto prose font-tajawal text-foreground ">
-            <Markdown options={MDoptions}>{post.content}</Markdown>
+          <article className="flex items-center justify-center min-w-[100%] mx-auto prose font-tajawal text-foreground bg-primary/20 rounded-sm p-4">
+            {/* <Markdown options={MDoptions}>{post.content}</Markdown> */}
+            <Markdown>{post.content}</Markdown>
           </article>
         </div>
       </PageContainer>

@@ -33,7 +33,7 @@ const BlogSearchInput = ({ blogCont }) => {
         <Input
           value={searchQuery || ""}
           onChange={(event) => setSearchQuery(event.target.value)}
-          className="w-[90%] px-5 py-1  border sm:px-5 sm:py-3   text-foreground bg-primary/50 focus:bg-black rounded-full focus:outline-none focus:ring-[1px] focus:ring-green-700 placeholder:text-foreground  placeholder:text-[.7rem]"
+          className="w-[90%] px-5 py-1  border sm:px-5 sm:py-3   text-foreground bg-primary/50 focus:bg-primary focus:text-white rounded-full focus:outline-none focus:ring-[1px] focus:ring-green-700 placeholder:text-foreground  placeholder:text-[.7rem]"
           placeholder="What are you looking for? --> Or Type [ all ] "
         />
       </form>
