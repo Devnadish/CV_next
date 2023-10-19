@@ -31,7 +31,8 @@ export async function puplitITonDb(id, checked) {
   }
 }
 
-export async function updateDbTitle(id, title, description) {
+export async function updateDbTitle(id, title, description, tag) {
+  console.log(tag);
   try {
     await db.BlogTable.update({
       where: {
@@ -40,6 +41,7 @@ export async function updateDbTitle(id, title, description) {
       data: {
         title: title,
         description: description,
+        tag: tag,
       },
     });
   } catch (error) {

@@ -14,10 +14,7 @@ const SearchInput = () => {
       return;
     }
     const encodedSearchQuery = encodeURI(searchQuery);
-    console.log(encodedSearchQuery);
-    // router.push(`bloganalitic/search?q=${encodedSearchQuery}`);
     router.push(`/dashboard/bloganalitic/${encodedSearchQuery}`);
-    // <Link href={"/" + router.query.tenantId + "/jobdetails/12312"}></Link>
   };
 
   return (

@@ -7,9 +7,11 @@ export async function createIP(jsonResponse) {
   });
   if (check === null) {
     addNewOne(jsonResponse);
+    return { Acttion: "New Record" };
   } else {
     console.log(check.id);
-    increaseOne(jsonResponse, check.id);
+    increaseOne(check.id);
+    return { Acttion: "Increase" };
   }
 }
 
@@ -31,8 +33,9 @@ const addNewOne = async (jsonResponse) => {
     return { error };
   }
 };
-const increaseOne = async (jsonResponse, id) => {
+const increaseOne = async (id) => {
   try {
+    console.log(id);
     const Iplog = await db.Iplog.update({
       where: { id: id },
       data: { counter: { increment: 1 } },
@@ -41,6 +44,7 @@ const increaseOne = async (jsonResponse, id) => {
     return { error };
   }
 };
+
 export const displayIps = async () => {
   try {
     return await db.Iplog.findMany({ orderBy: { counter: "desc" } });

@@ -31,7 +31,6 @@ const Page = async ({ params }) => {
   return (
     <>
       <PageContainer>
-        {/* {JSON.stringify(props)}{props.params.lang} */}
         <div className="w-full px-4 py-4 mx-auto">
           <div className="flex items-center justify-between px-4 my-4 rounded-md shadow-xl bg-primary/70">
             <GoBack />
@@ -41,7 +40,6 @@ const Page = async ({ params }) => {
             <p className="text-xs text-forground">{post.data.date}</p>
           </div>
           <article className="flex items-center justify-center min-w-[100%] mx-auto prose font-tajawal text-foreground bg-primary/20 rounded-sm p-4">
-            {/* <Markdown options={MDoptions}>{post.content}</Markdown> */}
             <Markdown>{post.content}</Markdown>
           </article>
         </div>

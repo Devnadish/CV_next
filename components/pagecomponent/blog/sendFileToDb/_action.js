@@ -5,6 +5,7 @@ import {
   createFiles,
   FileIsExist,
   getAllFiles,
+  showTagfromDb,
   // AddBlogLinkToDB,
 } from "./DBaction";
 import { revalidatePath } from "next/cache";
@@ -30,8 +31,6 @@ export async function checkFileIsExistAction(slug) {
     return undefined;
   }
   return slugFromTable;
-
-  //   revalidatePath("/dashboard/tag");
 }
 
 export async function increaseBlogViewers(id) {
@@ -39,8 +38,9 @@ export async function increaseBlogViewers(id) {
   revalidatePath("/blog");
 }
 
-// export async function AddBlogLink(id, targetlink) {
-//   const result = targetlink.toLowerCase();
-//   await AddBlogLinkToDB(id, result);
-//   revalidatePath("/dashboard/linkblog");
-// }
+export async function showAllTag() {
+  const data = await showTagfromDb();
+  console.log(data);
+  revalidatePath("/blog");
+  return data;
+}

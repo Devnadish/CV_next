@@ -8,6 +8,13 @@ module.exports = {
     "./src/**/*.{js,jsx}",
   ],
   theme: {
+    // screens: {
+    //   // xs: "380px",
+    //   // sm: "500px",
+    //   tablet: "640px",
+    //   laptop: "1024px",
+    //   desktop: "1280px",
+    // },
     container: {
       center: true,
       padding: "2rem",
@@ -80,5 +87,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
+  ],
 };

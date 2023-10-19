@@ -6,8 +6,11 @@ import { revalidatePath } from "next/cache";
 export async function getIp() {
   const request = await fetch("https://ipinfo.io/json?token=87600d57a3b1fe");
   const jsonResponse = await request.json();
-  await createIP(jsonResponse);
-  revalidatePath("/");
+  const done = await createIP(jsonResponse);
+  console.log(jsonResponse);
+  console.log(done);
+
+  revalidatePath("/dashboard/iplog");
   return { data: jsonResponse };
 }
 

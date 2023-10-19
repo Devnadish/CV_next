@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { UpdateTitleForm } from "./UpdateTitleForm";
 import { AiFillEye } from "@react-icons/all-files/ai/AiFillEye";
 
-function EditTitle({ id, title, description }) {
+function EditTitle({ id, title, description, tags }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="flex items-center justify-start w-full gap-4 pt-4 ">
@@ -22,14 +22,6 @@ function EditTitle({ id, title, description }) {
           open={open}
           setOpen={setOpen}
           title={`old Title : ${title}`}
-          // children={
-          // <UpdateTitleForm
-          //   title={title}
-          //   description={description}
-          //   id={id}
-          //   setOpen={setOpen}
-          // />
-          // }
           Description="This action cannot be undone. This will permanently Updatedy Your."
         >
           <UpdateTitleForm
@@ -37,6 +29,7 @@ function EditTitle({ id, title, description }) {
             description={description}
             id={id}
             setOpen={setOpen}
+            tags={tags}
           />
         </Modal>
       ) : null}

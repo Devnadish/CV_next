@@ -16,14 +16,14 @@ import {
 
 import SearchInput from "@/components/shared/inputSearch/InputSearch";
 
-function ShowReusltBlog({ search, posts }) {
+function ShowReusltBlog({ search, posts, tags }) {
   return (
     <div className="flex flex-col items-center justify-start w-full p-4 overflow-auto bg-background/25 ">
       <InputHeader length={posts.length} />
 
       <div className="grid grid-cols-1 gap-6 mt-8 lg:grid-cols-3 place-items-center">
         {posts.map(async (post) => {
-          return <FileCard post={post} key={post.slug} />;
+          return <FileCard post={post} key={post.slug} tags={tags} />;
         })}
       </div>
     </div>
@@ -38,15 +38,15 @@ function InputHeader(props) {
         <SearchInput />
         <p>{props.length} Blog</p>
       </div>
-      <div className="flex items-center justify-between gap-1 ">
+      {/* <div className="flex items-center justify-between gap-1 ">
         <Button size="xs">Arabic</Button>
         <Button size="xs">English</Button>
-      </div>
+      </div> */}
     </div>
   );
 }
 
-const FileCard = ({ post }) => {
+const FileCard = ({ post, tags }) => {
   return (
     <>
       <Card className="flex flex-col items-cener justify-between bg-card   min-h-[350px]  min-w-[250px] ">
@@ -59,10 +59,14 @@ const FileCard = ({ post }) => {
               <h5 className="text-xs text-blue-100 font-tajawal text-md line-clamp-3 hover:line-clamp-none">
                 {post.description}
               </h5>
+              <h5 className=" text-blue-100 font-tajawal text-sm self-start bg-primary px-4 py-1 rounded-md mt-2">
+                {post.tag}
+              </h5>
               <EditTitle
                 id={post.id}
                 title={post.title}
                 description={post.description}
+                tags={tags}
               />
             </div>
             <Separator className="space-y-4" />

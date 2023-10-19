@@ -19,8 +19,8 @@ export async function decreaseBlogViewers(id) {
   revalidatePath("/dashboard/bloganalitic");
 }
 
-export async function updateTitle(id, title, description) {
-  await updateDbTitle(id, title, description);
+export async function updateTitle(id, title, description, tag) {
+  await updateDbTitle(id, title, description, tag);
   revalidatePath("/dashboard/bloganalitic");
 }
 

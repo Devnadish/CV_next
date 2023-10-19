@@ -2,6 +2,7 @@ import { HiOutlineEye } from "@react-icons/all-files/hi/HiOutlineEye";
 import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
+import LinkClick from "@/components/pagecomponent/blog/LinkClick";
 
 import {
   Card,
@@ -11,41 +12,24 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+
 export const dynamics = "force-dynamic";
 
-import LinkClick from "@/components/pagecomponent/blog/LinkClick";
-import BlogSearchInput from "@/components/pagecomponent/blog/BlogSearchInput";
-
-async function ShowBlogs({ posts }) {
+async function ShowBlogs({ posts, tags }) {
   return (
-    <div
-      id="blogContainer"
-      className="flex flex-col items-center justify-start w-full h-full p-4 overflow-auto bg-background/25 "
-    >
-      <InputHeader length={posts.length} />
-      <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-        {posts.map(async (post) => {
-          return (
-            <div key={post.slug} className="text-sm text-black rounded-lg">
-              <FileCard post={post} key={post.slug} />
-            </div>
-          );
-        })}
-      </div>
+    <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+      {posts.map(async (post) => {
+        return (
+          <div key={post.slug} className="text-sm text-black rounded-lg">
+            <FileCard post={post} key={post.slug} />
+          </div>
+        );
+      })}
     </div>
   );
 }
 
 export default ShowBlogs;
-function InputHeader(props) {
-  return (
-    <div className="flex items-center justify-between w-full ">
-      <div className="flex flex-col items-center justify-center w-full gap-2">
-        <BlogSearchInput blogCont={props.length} />
-      </div>
-    </div>
-  );
-}
 
 const FileCard = ({ post }) => {
   return (
@@ -56,9 +40,9 @@ const FileCard = ({ post }) => {
             className="flex items-center justify-between text-lg font-normal "
             style={{ lineClamp: 1, textWarp: "balance" }}
           >
-            {post.title}
-
-            <LinkClick slug={post.slug} id={post.id} />
+            <LinkClick slug={post.slug} id={post.id}>
+              {post.title}
+            </LinkClick>
           </CardTitle>
           <CardDescription> {post.subtitle}</CardDescription>
         </CardHeader>
@@ -87,6 +71,12 @@ const FileCard = ({ post }) => {
                 <p className="text-primary/70">
                   {getTimeElapsed(post.updatedDate)}
                 </p>
+              </Badge>
+              <Badge
+                className="flex items-center justify-between gap-2 bg-primary/40 "
+                variant="secondary"
+              >
+                <p className="text-foreground">{post.tag}</p>
               </Badge>
             </div>
           </div>

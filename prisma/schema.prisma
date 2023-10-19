@@ -28,9 +28,10 @@ model BlogTable {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   slug        String
   title       String   @default("khalid")
-  subtitle       String   @default("khalid")
+  subtitle    String   @default("khalid")
   description String  @default("No description")
-  crDate       String  @default("")
+  tag         String  @default("tag")
+  crDate      String  @default("")
   viewers     Int @default(0)
   targetlinks String[]
   published   Boolean @default(true)

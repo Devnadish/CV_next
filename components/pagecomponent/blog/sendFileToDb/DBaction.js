@@ -43,3 +43,13 @@ export async function createFiles(
     return { error };
   }
 }
+
+export async function showTagfromDb(lang) {
+  try {
+    return await db.Blogtag.findMany({
+      orderBy: { title: "desc" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
