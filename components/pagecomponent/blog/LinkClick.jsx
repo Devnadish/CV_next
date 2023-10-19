@@ -9,7 +9,7 @@ function LinkClick({ slug, id, children }) {
   const handleClick = async () => {
     router.push(`/blog/${slug}`);
     await increaseBlogViewers(id);
-    revalidatePath("/blog");
+    // revalidatePath("/blog");
   };
   return (
     <Button

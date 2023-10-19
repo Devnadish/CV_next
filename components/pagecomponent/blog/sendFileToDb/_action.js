@@ -6,7 +6,8 @@ import {
   FileIsExist,
   getAllFiles,
   showTagfromDb,
-  // AddBlogLinkToDB,
+  getDataAfterSearchFromDb,
+  getFreqBlog,
 } from "./DBaction";
 import { revalidatePath } from "next/cache";
 
@@ -40,7 +41,18 @@ export async function increaseBlogViewers(id) {
 
 export async function showAllTag() {
   const data = await showTagfromDb();
-  console.log(data);
   revalidatePath("/blog");
   return data;
+}
+
+export async function getDataAfterSearch(text, location, lang) {
+  const posts = await getDataAfterSearchFromDb(text, location, lang);
+  revalidatePath("/dashboard/bloganalitic");
+  return posts;
+}
+
+export async function showFreqBlog(lang) {
+  const posts = await getFreqBlog(lang);
+  revalidatePath("/blog");
+  return posts;
 }

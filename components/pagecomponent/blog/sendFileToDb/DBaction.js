@@ -53,3 +53,57 @@ export async function showTagfromDb(lang) {
     console.log(error);
   }
 }
+
+export async function getDataAfterSearchFromDb(text, location, lang) {
+  const tag = text.slice(0, 3);
+  const tagText = text.slice(6);
+  try {
+    if (text.toLowerCase() === "all") {
+      return await db.BlogTable.findMany({ where: { language: lang } });
+    }
+    if (text.toLowerCase() === "99999") {
+      return await db.BlogTable.findMany({
+        where: { language: lang },
+
+        orderBy: {
+          viewers: "asc",
+        },
+      });
+    }
+    if (tag === "tag") {
+      return await db.BlogTable.findMany({
+        where: { tag: tagText, language: lang },
+      });
+    }
+
+    if (text.toLowerCase() === "-99999") {
+      return await db.BlogTable.findMany({
+        where: { language: lang },
+        orderBy: {
+          viewers: "desc",
+        },
+      });
+    }
+
+    return await db.BlogTable.findMany({
+      where: {
+        title: { contains: text, mode: "insensitive" },
+        language: lang,
+      },
+    });
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+export async function getFreqBlog(lang) {
+  console.log(lang);
+  try {
+    return await db.BlogTable.findMany({
+      where: { viewers: { gt: 0 } },
+      orderBy: { viewers: "desc" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

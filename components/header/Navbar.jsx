@@ -13,7 +13,7 @@ const Profile = dynamic(() => import("../profile/Profile"), {
 const Navbar = async ({ lang }) => {
   const { navigation } = await getDictionary(lang);
   return (
-    <div className="sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary h-16 text-primary-foreground px-4">
+    <div className=" sticky left-0 z-50 flex items-center justify-between w-full overflow-hidden top-4 bg-primary h-16 text-primary-foreground px-4">
       <div className="flex items-center">
         <Profile />
         <MenuItems navigation={navigation} lang={lang} />

@@ -3,7 +3,8 @@ import { getTimeElapsed } from "@/lib/calculateTimeAndDate";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 import LinkClick from "@/components/pagecomponent/blog/LinkClick";
-
+import Tags from "@/components/pagecomponent/blog/Tags";
+import Freqantly from "@/components/pagecomponent/blog/Freqantly";
 import {
   Card,
   CardContent,
@@ -12,13 +13,32 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
+import BlogSearchInput from "@/components/pagecomponent/blog/BlogSearchInput";
 
 export const dynamics = "force-dynamic";
 
-async function ShowBlogs({ posts, tags }) {
+async function ShowBlogs({ posts, tags, freq }) {
   return (
-    <div className="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-      {posts.map(async (post) => {
+    <>
+      <BlogSearchInput blogCont={posts.length} />
+      <div className="flex  gap-6  ">
+        <div className="flex flex-col gap-8  w-[20%] ">
+          <Tags length={posts.length} tags={tags} />
+          <Freqantly length={posts.length} freq={freq} />
+        </div>
+        <div className="w-[75%] rounded-lg border px-8 pb-4 border-foreground/30">
+          <LoopIndata posts={posts} />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default ShowBlogs;
+function LoopIndata(props) {
+  return (
+    <div className="grid grid-cols-1 gap-6 mt-4 md:grid-cols-2 lg:grid-cols-2 place-items-center">
+      {props.posts.map(async (post) => {
         return (
           <div key={post.slug} className="text-sm text-black rounded-lg">
             <FileCard post={post} key={post.slug} />
@@ -28,9 +48,6 @@ async function ShowBlogs({ posts, tags }) {
     </div>
   );
 }
-
-export default ShowBlogs;
-
 const FileCard = ({ post }) => {
   return (
     <>
