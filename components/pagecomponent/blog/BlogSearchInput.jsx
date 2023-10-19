@@ -22,10 +22,10 @@ function ShowAll(props) {
 
 function ClearInpot(props) {
   return (
-    <div className="absolute right-0 flex items-center justify-center gap-4">
+    <div className="absolute right-0 top-1 translate-y-[50%] flex items-center justify-center gap-4">
       {props.searchQuery && (
         <div
-          className="cursor-pointer  text-foreground/70  px-2  "
+          className="cursor-pointer bg-white/20 rounded text-foreground/70  px-2 mr-2 "
           onClick={() => props.setSearchQuery("")}
         >
           <AiOutlineClose className="h-6 w-6" />
