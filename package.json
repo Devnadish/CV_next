@@ -15,11 +15,6 @@
         "check-lint": "eslint .  --ext jsx --ext js",
         "test-all": "npm run check-format && npm run check-lint &&  npm run devbuild"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "npm run format && git add -A ."
-        }
-    },
     "dependencies": {
         "@formatjs/intl-localematcher": "^0.4.0",
         "@next/bundle-analyzer": "^13.4.19",

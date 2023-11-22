@@ -64,14 +64,14 @@ function MenuItems({ navigation, lang }) {
             >
                 {navigation.blog}
             </Link>
-            <Link
+            {/* <Link
                 href={`/${lang}/dashboard`}
                 as={`/${lang}/dashboard`}
                 prefetch={false}
                 className='rounded-sm border-b-2 border-foreground/40  p-2 px-4 capitalize text-foreground hover:bg-primary'
             >
                 Dashboard
-            </Link>
+            </Link> */}
         </div>
     );
 }
