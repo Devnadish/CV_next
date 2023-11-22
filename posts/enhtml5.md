@@ -1,8 +1,8 @@
 ---
-title: "Html5"
-subtitle: " Building Modern Websites"
-date: "2020-12-22"
-description: "HTML5: Create advanced web apps and content. Rich and interactive experiences. Mobile-friendly and responsive design. Essential tool for modern web development."
+title: 'Html5'
+subtitle: ' Building Modern Websites'
+date: '2020-12-22'
+description: 'HTML5: Create advanced web apps and content. Rich and interactive experiences. Mobile-friendly and responsive design. Essential tool for modern web development.'
 ---
 
 # HTML5

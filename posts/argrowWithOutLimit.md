@@ -1,9 +1,8 @@
 ---
-title: "Grow Without Limits for Web Apps"
-subtitle: "Grow Without Limits for Web Apps"
-date: "2020-12-22"
+title: 'Grow Without Limits for Web Apps'
+subtitle: 'Grow Without Limits for Web Apps'
+date: '2020-12-22'
 ---
-
 
 **Growing Without Limits for Web Apps**
 

@@ -1,7 +1,7 @@
 ---
-title: "Visual Identity"
-subtitle: "What is Visual Identity"
-date: "2020-12-22"
+title: 'Visual Identity'
+subtitle: 'What is Visual Identity'
+date: '2020-12-22'
 ---
 
 # What is Visual Identity and Why is it Important for Your Business?
@@ -32,10 +32,10 @@ Visual identity enhances marketing efforts by providing a consistent image and m
 
 To develop a strong visual identity, it's important to:
 
-- Define your brand's values, personality, and voice
-- Choose a color scheme that reflects your brand personality
-- Select typography that complements your brand identity
-- Develop a logo that represents your brand values and personality
-- Use consistent design elements across all touchpoints
+-   Define your brand's values, personality, and voice
+-   Choose a color scheme that reflects your brand personality
+-   Select typography that complements your brand identity
+-   Develop a logo that represents your brand values and personality
+-   Use consistent design elements across all touchpoints
 
 > conclusion, visual identity is an essential component of building a successful business. By creating a consistent and memorable visual identity that reflects your brand personality and values, you can build recognition, establish trust and credibility with customers, differentiate your business from competitors, and enhance the effectiveness of your marketing efforts.

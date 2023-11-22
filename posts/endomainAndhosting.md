@@ -1,7 +1,7 @@
 ---
-title: " Domain and Hosting"
-subtitle: "Understanding Domain and Hosting for Your Website"
-date: "2020-12-22"
+title: ' Domain and Hosting'
+subtitle: 'Understanding Domain and Hosting for Your Website'
+date: '2020-12-22'
 description: "Get up to speed on domain and hosting and learn how to choose the right options for your website. Our comprehensive guide covers everything you need to know about domain registration, website hosting, and server management. Discover the differences between shared, VPS, and dedicated hosting, and learn how to optimize your website's performance and security. Learn how to choose the right domain name, configure your DNS settings, and set up email accounts. Discover the latest trends in web hosting and learn how to apply them to your website to enhance your online presence."
 ---
 

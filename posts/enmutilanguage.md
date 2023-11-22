@@ -1,8 +1,8 @@
 ---
-title: "Multilingual Support"
-subtitle: "Multilingual Support for Your Web App"
-date: "2020-12-22"
-description: "Expand web app reach with multilingual support. Increased engagement and satisfaction. Connect with users from diverse backgrounds. Optimize for global presence."
+title: 'Multilingual Support'
+subtitle: 'Multilingual Support for Your Web App'
+date: '2020-12-22'
+description: 'Expand web app reach with multilingual support. Increased engagement and satisfaction. Connect with users from diverse backgrounds. Optimize for global presence.'
 ---
 
 ## Multilingual Support for Your Web App

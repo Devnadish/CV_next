@@ -1,7 +1,7 @@
 ---
-title: "Effective Media "
-subtitle: "Why Use Social Media Posts"
-date: "2020-12-22"
+title: 'Effective Media '
+subtitle: 'Why Use Social Media Posts'
+date: '2020-12-22'
 ---
 
 ## How to Create Effective Social Media Posts
@@ -52,5 +52,6 @@ Posting regular updates is key to the success of your social media campaign. Use
 
 Engaging with your followers is an important part of building a strong social media presence. Respond to comments and messages promptly and use social listening tools to monitor conversations about your brand.
 
->Conclusion
+> Conclusion
+
     Creating effective social media posts is an essential component of building a successful social media campaign. By defining your goals, choosing the right platforms, creating engaging content, using hashtags, posting regularly, and engaging with your followers, you can build brand awareness, drive traffic and sales, and connect with customers all over the world.

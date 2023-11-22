@@ -1,8 +1,8 @@
 ---
-title: "eCommerce"
-subtitle: "The Benefits of eCommerce for Your Business"
-date: "2020-12-22"
-description: "Discover the benefits of eCommerce and learn how to leverage them to grow your business. Our expert tips and best practices cover everything from choosing the right eCommerce platform and setting up your online store to optimizing your product pages and driving traffic to your website. Learn how to increase your online sales, reach new customers, and improve customer experience with eCommerce. Discover the latest trends in online shopping and learn how to apply them to your eCommerce strategy to achieve your business goals."
+title: 'eCommerce'
+subtitle: 'The Benefits of eCommerce for Your Business'
+date: '2020-12-22'
+description: 'Discover the benefits of eCommerce and learn how to leverage them to grow your business. Our expert tips and best practices cover everything from choosing the right eCommerce platform and setting up your online store to optimizing your product pages and driving traffic to your website. Learn how to increase your online sales, reach new customers, and improve customer experience with eCommerce. Discover the latest trends in online shopping and learn how to apply them to your eCommerce strategy to achieve your business goals.'
 ---
 
 ```

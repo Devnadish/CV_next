@@ -1,22 +1,15 @@
-import { getAllBlog } from "@/components/pagecomponent/blog/sendFileToDb/_action";
-import ShowReusltBlog from "@/components/pagecomponent/dashboard/analitic/ShowReusltBlog";
-import { showAllTag } from "@/components/pagecomponent/blog/sendFileToDb/_action";
-async function page() {
-  // // const posts = await getAllBlog();
-  // const posts =   getAllBlog();
-  // const tagData = showAllTag();
+/*eslint no-undef: 0*/
+import { getAllBlog, ShowReusltBlog, showAllTag } from './export';
+async function page({ params }) {
+    const postData = getAllBlog(params.lang);
+    const tagData = showAllTag();
+    const [posts, tags] = await Promise.all([postData, tagData]);
 
-  // const [posts, tags] = await Promise.all([postData, tagData]);
-
-  const postData = getAllBlog();
-  const tagData = showAllTag();
-  const [posts, tags] = await Promise.all([postData, tagData]);
-
-  return (
-    <>
-      <ShowReusltBlog posts={posts} tags={tags} />
-    </>
-  );
+    return (
+        <>
+            <ShowReusltBlog posts={posts} tags={tags} lang={params.lang} />
+        </>
+    );
 }
 
 export default page;

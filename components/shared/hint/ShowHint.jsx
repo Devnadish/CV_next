@@ -1,21 +1,21 @@
-const { default: Link } = require("next/link");
-
+import Link from 'next/link';
 const ShowHint = ({ icon, txt, link, title }) => {
-  return (
-    <>
-      <Link
-        className="flex flex-col  items-center justify-start  w-[300px]  gap-1 py-4 text-sm border border-primary/30 rounded-md   hover:shadow-xl "
-        href={link}
-      >
-        <div className="h-[70px]">{icon}</div>
-        <p className="font-semibold text-foreground text-md   font-tajawal">
-          {title}
-        </p>
-        <p className="p-4   text-md font-tajawal line-clamp-4 hover:line-clamp-none">
-          {txt}
-        </p>
-      </Link>
-    </>
-  );
+    return (
+        <>
+            <Link
+                className='flex w-[300px]  flex-col items-center  justify-start  gap-1 rounded-md border border-primary/30 py-4 text-sm   hover:shadow-xl '
+                href={link}
+                prefetch={false}
+            >
+                <div className='h-[70px]'>{icon}</div>
+                <p className='text-md font-tajawal font-semibold   text-foreground'>
+                    {title}
+                </p>
+                <p className='text-md   font-tajawal line-clamp-4 p-4 hover:line-clamp-none'>
+                    {txt}
+                </p>
+            </Link>
+        </>
+    );
 };
 export default ShowHint;

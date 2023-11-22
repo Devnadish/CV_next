@@ -1,9 +1,8 @@
 ---
-title: "Multilingual Support"
-subtitle: "Multilingual Support for Your Web App"
-date: "2020-12-22"
+title: 'Multilingual Support'
+subtitle: 'Multilingual Support for Your Web App'
+date: '2020-12-22'
 ---
-
 
 ## Multilingual Support for Your Web App
 
@@ -29,4 +28,4 @@ Testing your multilingual support is essential for ensuring that your web app is
 
 If you're offering multilingual support for languages that are written from right-to-left (such as Arabic or Hebrew), it's important to provide support for these languages. This includes adjusting the layout of your web app to accommodate right-to-left text and ensuring that all elements of your web app are working properly in these languages.
 
->conclusion, offering multilingual support is essential for expanding your web app to a global audience. By choosing a translation method, implementing a language switcher, localizing your content, testing your multilingual support, and providing support for right-to-left languages, you can ensure that your web app is accessible and engaging for users around the world.
+> conclusion, offering multilingual support is essential for expanding your web app to a global audience. By choosing a translation method, implementing a language switcher, localizing your content, testing your multilingual support, and providing support for right-to-left languages, you can ensure that your web app is accessible and engaging for users around the world.

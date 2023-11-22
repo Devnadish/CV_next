@@ -1,8 +1,8 @@
 ---
-title: "Portfolio"
-subtitle: "Portfolio is Important for Your Career"
-date: "2020-12-22"
-description: "Portfolio is crucial for career advancement. Visual representation of skills and accomplishments. Key elements: select best work, organize and present effectively. Tailor to target audience and maintain regularly."
+title: 'Portfolio'
+subtitle: 'Portfolio is Important for Your Career'
+date: '2020-12-22'
+description: 'Portfolio is crucial for career advancement. Visual representation of skills and accomplishments. Key elements: select best work, organize and present effectively. Tailor to target audience and maintain regularly.'
 ---
 
 ## Why Having a Portfolio is Important for Your Career

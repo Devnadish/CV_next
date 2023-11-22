@@ -1,7 +1,7 @@
 ---
-title: "powerful infrastructure"
-subtitle: "powerful infrastructure for web applications:"
-date: "2020-12-22"
+title: 'powerful infrastructure'
+subtitle: 'powerful infrastructure for web applications:'
+date: '2020-12-22'
 ---
 
 powerful infrastructure for web applications:

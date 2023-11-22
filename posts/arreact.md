@@ -1,7 +1,7 @@
 ---
-title: "React js primer"
-subtitle: "Creating Dynamic Web Applications"
-date: "2020-12-22"
+title: 'React js primer'
+subtitle: 'Creating Dynamic Web Applications'
+date: '2020-12-22'
 ---
 
 # React.js

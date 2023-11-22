@@ -1,8 +1,8 @@
 ---
-title: "Chat Support"
-subtitle: "Live Chat Support for Your Web App"
-date: "2020-12-22"
-description: "Enhance web app support with live chat. Real-time assistance for users. Improved satisfaction and conversion rates. Engage, gather feedback, build relationships."
+title: 'Chat Support'
+subtitle: 'Live Chat Support for Your Web App'
+date: '2020-12-22'
+description: 'Enhance web app support with live chat. Real-time assistance for users. Improved satisfaction and conversion rates. Engage, gather feedback, build relationships.'
 ---
 
 # Live Chat Support for Your Web App

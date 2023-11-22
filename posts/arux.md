@@ -1,9 +1,8 @@
 ---
-title: "UX"
-subtitle: "Creating Intuitive and Engaging Experiences"
-date: "2020-12-22"
+title: 'UX'
+subtitle: 'Creating Intuitive and Engaging Experiences'
+date: '2020-12-22'
 ---
-
 
 # User Experience (UX)
 

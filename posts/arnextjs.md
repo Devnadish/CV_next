@@ -1,8 +1,9 @@
 ---
-title: "Next.js"
-subtitle: "Taking Your React Development to the Next Level"
-date: "2020-12-22"
+title: 'Next.js'
+subtitle: 'Taking Your React Development to the Next Level'
+date: '2020-12-22'
 ---
+
 # Next.js
 
 Next.js is a popular open-source framework for building server-side rendered (SSR) React applications. It provides a number of powerful features that make it easier to create fast, scalable, and SEO-friendly web applications. Here are some of the key features of Next.js:

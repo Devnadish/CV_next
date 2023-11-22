@@ -1,7 +1,7 @@
 ---
-title: " WhatsApp Ads"
-subtitle: "Why Use WhatsApp Ads?"
-date: "2020-12-22"
+title: ' WhatsApp Ads'
+subtitle: 'Why Use WhatsApp Ads?'
+date: '2020-12-22'
 ---
 
 ## How to Use WhatsApp Ads for Your Business

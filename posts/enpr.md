@@ -1,7 +1,7 @@
 ---
-title: "Adobe primer"
-subtitle: "Creating Professional-Quality Videos"
-date: "2020-12-22"
+title: 'Adobe primer'
+subtitle: 'Creating Professional-Quality Videos'
+date: '2020-12-22'
 description: "Master Adobe's creative suite. Valuable insights, tutorials, and tips. Create stunning graphics, edit photos, design layouts, and produce videos. Unlock your creativity with Adobe Primer."
 ---
 

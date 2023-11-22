@@ -1,18 +1,17 @@
-import BlogSkelton from "@/components/shared/skelton/BlogSkelton"
-
+import BlogSkelton from '@/components/shared/skelton/BlogSkelton';
 
 export default function Loading() {
     // Or a custom loading skeleton component
     return (
-      <>
-        <div className="flex p-4 justify-evenly items-center flex-wrap    gap-4">
-          <BlogSkelton />
-          <BlogSkelton />
-          <BlogSkelton />
-          <BlogSkelton />
-          <BlogSkelton />
-          <BlogSkelton />
-        </div>
-      </>
+        <>
+            <div className='flex flex-wrap items-center justify-evenly gap-4    p-4'>
+                <BlogSkelton />
+                <BlogSkelton />
+                <BlogSkelton />
+                <BlogSkelton />
+                <BlogSkelton />
+                <BlogSkelton />
+            </div>
+        </>
     );
-  }
+}

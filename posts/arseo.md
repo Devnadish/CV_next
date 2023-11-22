@@ -1,9 +1,8 @@
 ---
-title: "Know Your Audience"
-subtitle: "Creating Compelling Content for Your Website"
-date: "2020-12-22"
+title: 'Know Your Audience'
+subtitle: 'Creating Compelling Content for Your Website'
+date: '2020-12-22'
 ---
-
 
 ## Creating Compelling Content for Your Website
 

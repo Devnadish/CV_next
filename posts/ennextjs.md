@@ -1,8 +1,8 @@
 ---
-title: "Next.js"
-subtitle: "Taking Your React Development to the Next Level"
-date: "2020-12-22"
-description: "Next.js: React-based framework for SSR web apps. Fast loading times, improved SEO, seamless user experiences. Integrates with popular front-end libraries and frameworks. Essential for scalable and performant web apps."
+title: 'Next.js'
+subtitle: 'Taking Your React Development to the Next Level'
+date: '2020-12-22'
+description: 'Next.js: React-based framework for SSR web apps. Fast loading times, improved SEO, seamless user experiences. Integrates with popular front-end libraries and frameworks. Essential for scalable and performant web apps.'
 ---
 
 # Next.js

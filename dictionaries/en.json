@@ -1,248 +1,313 @@
 {
-  "loginBar": {
-    "login": "Login",
-    "register": "register",
-    "loginHint": "Login please"
-  },
-
-  "navigation": {
-    "home": "Home",
-    "price": "Prices",
-    "sample": "My works",
-    "blog": "Blog"
-  },
-  "page": {
-    "home": {
-      "section2": {
-        "title": "one platform, endless possibilities",
-        "S2L1": "unlimited growth of your project",
-        "S2D1": "there are no limits to the growth of your project, always imagine the success that can be achieved and stay committed to hard work and insist on continuous improvement.        ",
-
-        "S2L2": "the latest technology",
-        "S2D2": "Next.js is a great framework based on React and allows web applications to be developed easily and with high efficiency. Features Next.js with the ability to handle navigation and generate pages dynamically, as well as its support for SSR (server-side experience), SSG (static-side experience) and Auto",
-
-        "S2L3": "tips for achieving success",
-        "S2D3": "you should have a clear goal for your site and a strategic plan to achieve it, and you should pay attention to user experience and loading speed. It should also take into account the use of responsive design and content marketing strategies, maintain site security, track its performance, communicate with users, use SEO and track developments in the field.",
-
-        "S2L4": "attractive content ",
-        "S2D4": "content is a crucial element in the success of any website. Content helps to attract and retain visitors and achieve your business goals. The content should be of high quality, useful to users and compatible with your marketing strategy to increase site traffic and improve its position in search engine results.",
-
-        "S2L5": "multiple languages",
-        "S2D5": "providing a multilingual website helps expand the site's audience and increase international reach. In addition, multilingualism enhances the user experience and increases the chances of communicating with a global audience.",
-
-        "S2L6": "successful marketing plan",
-        "S2D6": "a marketing plan is essential for the success of any business or project. The plan serves to identify your business goals, target category and appropriate marketing strategies to reach this category. By developing a well-thought-out marketing plan, you can achieve effective results, enhance brand awareness and increase sales.",
-
-        "S2L7": "safety and protection",
-        "S2D7": "security and protection are essential elements of any activity or project on the internet. By providing tight security procedures and policies, it is possible to maintain the safety of users, protect their personal data and sensitive information, and avoid security threats and electronic hacks. Investing in security and protection ensures a good reputation of the enterprise, increases customer confidence and reduces the risks associated with security attacks.",
-
-        "S2L8": "landing page of the site",
-        "S2D8": "the landing page is important in attracting attention and increasing the conversion rate of the site or marketing campaign.",
-
-        "S2L9": "technical support",
-        "S2D9": "the technical support of the site is necessary to achieve a good user experience and ensure the reliability of the site, in addition to supporting the marketing strategy and growth, by providing immediate assistance to users, improving the performance of the site and avoiding unplanned downtime ."
-      },
-      "section3": {
-        "title": "make your site shine now",
-        "S3L1": "user interface design is an essential element of the user experience on websites. When a person visits a site, his first impression is the general presentation of the page. Therefore, it is necessary that the user interface is attractive and easy to use. The overall presentation of the site refers to the overall layout and distribution of sections, buttons and links within the pages of the site. These things do not have to be mysterious or confusing for the visitor. Instead, they should be easy to navigate and have visual indicators that will help determine the location of each item. In addition, the responsiveness of the design should also be taken into account, since the screen size of the user's device should not affect his ability to easily use the site."
-      },
-      "section4": {
-        "title": "build more than one website",
-        "S4L1": "from selling online, starting a blog and organizing events to promoting your business and building your community, create a website that can grow with you"
-      },
-      "section5": {
-        "title": "the most important reasons for the success of the site ",
-
-        "S5L1": "proper site planning",
-        "S5D1": "proper site planning is the design and arrangement of content within the site in a thoughtful way to facilitate access to information and enhance the user experience.",
-
-        "S5L2": "easy navigation",
-        "S5D2": "easy navigation and navigation between pages means providing clear and organized links and menus, enabling users to navigate between different sections of the site efficiently and with pleasure.",
-
-        "S5L3": "image quality",
-        "S5D3": "the quality of the images and its focus on exciting the customer the use of high-quality images and attractive visuals that enhance the user experience and arouse his interest to stay and interact with the content.",
-
-        "S5L4": "site responsiveness",
-        "S5D4": "the responsiveness of the site to all devices indicates the adaptability of the site design to different screen sizes, such as smartphones, tablets and desktop computers, to ensure a premium user experience.",
-
-        "S5L5": "attractive content",
-        "S5D5": "engaging and customer-serving content is content that provides valuable and useful information in an interesting and attention-grabbing style, while meeting the needs and expectations of customers for an excellent experience.",
-
-        "S5L6": "search engine optimization",
-        "S5D6": "search engine optimization (SEO) is the process that enhances the appearance of a website in search results by improving the content, user experience and compliance with the guidelines of search engines."
-      },
-      "hint": {
-        "title": "promote your business and reach the right audience",
-        "S8L1": "search engine optimization",
-        "S8D1": "is a technique for increasing the presence of a website in unpaid search results. This includes creating relevant content, improving the speed of the site user experience, building quality external links. SEO requires patience and commitment to get sustainable results.",
-
-        "S8L2": "WhatsApp ads",
-        "S8D2": "using innovative ways to support your products and services via WhatsApp, such as using direct links, posting on other platforms, creating a channel for business applications and promoting among friends. The privacy of users and their preferences must be taken into account.",
-
-        "S8L3": "text message campaigns",
-        "S8D3": "SMS is used for marketing products and services. Includes sending special offers, reminders, questionnaires, personal messages",
-
-        "S8L4": "email campaigns",
-        "S8D4": "marketing strategies based on sending e-mails to subscribers, including newsletters, promotions, transaction confirmations, and auto-reply messages",
-
-        "S8L5": "social media",
-        "S8D5": "promotion through social media includes choosing suitable platforms, creating attractive content, using hashtags, interacting with the audience, and taking advantage of paid advertising to increase brand awareness and attract customers",
-
-        "S8L6": "supported backlinks",
-        "S8D6": "are the links that your site receives from other websites. These links are of great importance in improving the ranking of your site in the results of search engines, as search movements consider them an indicator of the quality of your content"
-      },
-      "section6": {
-        "title": "expand your business to where it needs to be",
-        "S6L1": "e-commerce",
-        "S6D1": "e-commerce has made shopping more convenient than ever. As an owner of an online business, it is important to have a website that looks good and is easy to find in search engines. By using keywords related to your products or services throughout your website, you can improve your search engine rankings and make it easier for potential customers to find you. This can lead to more traffic, more sales, and more revenue. By focusing on customer experience and SEO best practices, you can succeed in the competitive world of ecommerce",
-        "S6L2": "blog",
-        "S6D2": "when creating a blog, it is important to choose the right keywords to optimize your content for search engines. By doing keyword research and choosing relevant, high-traffic keywords, you can increase the visibility of your blog and attract more readers. However, it is important to remember that your blog should be easy to read and attractive to readers . By writing in an easy conversational tone and using headings, dots, and images to segment your content, to make your blog more fun to read. Including internal links to other relevant pages on your website and external links to trusted sources can improve the SEO of your blog. ",
-        "S6L3": "types of web applications",
-        "S6D3": "there are many different types of web applications, including e-commerce sites, social media platforms, electronic banking systems, productivity tools such as email and project management software. Web applications are accessible via a web browser and are designed to work on various devices, including desktops, laptops, tablets and smartphones. ",
-
-        "S6L4": "biography",
-        "S6D4": "an electronic resume provides a lot of benefits for individuals and companies, it saves time and effort and facilitates the process of easy access and updating, it also saves the costs associated with the design of a traditional resume. So individuals and companies can take advantage of these benefits and use an electronic resume as an alternative to a traditional resume.",
-        "S6L5": "domain name and hosting",
-        "S6D5": "domain name and hosting are essential things to know when starting to create a website. A domain name is the address of a website on the internet, and it must be unique and easy to memorize. The domain name is purchased from special sites for this.         As for hosting, it is a service that enables you to store site files on the internet, where the site is hosted on special servers. Hosting services vary in terms of price and available specifications, and you should choose the service that best suits the needs of the site.         And the choice of domain name and hosting service should be done carefully, as they significantly affect the user experience and site performance.",
-        "S6L6": "visual identity and brand",
-        "S6D6": "visual identity and branding refers to the visual representation and design elements used to create a distinctive brand image"
-      },
-      "inspire": {
-        "title": "getting inspiration from global websites for web design",
-        "S7L1": "Behance",
-        "S7D1": "Behance is an online platform for displaying the works of creators and communicating with the creative community, characterized by an attractive design and ease of use. Behance can inspire you in designing your site by using attractive images and videos to showcase your work, and make the design easy to use and attractive to achieve a positive user experience.",
-        "S7L2": "Dribbble",
-        "S7D2": "Dribbble is an online platform for showcasing the work of designers and creators, characterized by an attractive, modern design and ease of use. Dribbble can inspire you in the design of your site by using new and innovative ideas in design, colors and fonts, and provide an easy and smooth user experience through attractive and clear design.",
-        "S7L3": "Pintrest",
-        "S7D3": "Pinterest is a social media platform for sharing photos, ideas and personal interests, characterized by its good organization and ease of use. Pinterest can inspire you in the design of your site by collecting ideas and images, organizing them on different boards, providing attractive and diverse content to users. Pinterest can also be used to search for inspiration in various fields and use it as a source of new ideas in designing your site uniquely and creatively."
-      }
+    "loginBar": {
+        "login": "Login",
+        "register": "register",
+        "loginHint": "Login please"
     },
 
-    "about": {
-      "heroSection": {
-        "himsg": "Hello...",
-        "iamKhalid": "I am Khalid",
-        "develepor": "Website Developer and Designer",
-        "develoerSince": "Since 1998",
-        "download": "Download"
-      },
-      "advTxt": {
-        "ask1": "Are you looking for a website that perfectly represents your brand?",
-        "ask2": "Don't miss the opportunity to turn your idea into reality. Contact us today!"
-      },
-      "willdo": {
-        "waitingForyou": "Waiting for you",
-        "Ui": "Innovative and Engaging Design",
-        "UiDetail": "Our professional team designs innovative and engaging websites that professionally reflect your brand identity.",
-        "Ux": "Excellent User Experience",
-        "UxDetail": "We pay close attention to user experience details to ensure an easy and seamless experience for visitors to your website.",
-        "perfomance": "Fast and High-Performance",
-        "perfomanceTitle": "We guarantee that your website works quickly and efficiently on all devices and screens.",
-        "seo": "Optimized Search Engine (SEO)",
-        "seoTitle": "We use best practices to improve your website's search engine optimization and increase its visibility in search results.",
-        "help": "Continuous Technical Support",
-        "helpTitle": "We provide you with continuous technical support to help solve any issues you may encounter and ensure your website continues to work perfectly.",
-        "freeConsultaion": "Free Consultations",
-        "freeConsultaionTitle": "I'm happy to provide free consultations in the field of website design, programming, or mobile applications, and to work with you to find the right solutions for your business."
-      },
-      "skills": {
-        "devlopingtitle": "Programming Languages",
-        "desigtitle": "Design Technology",
-        "uiux": "User Experience Technology",
-        "database": "Database Technology"
-      }
+    "navigation": {
+        "home": "Home",
+        "price": "Prices",
+        "sample": "My works",
+        "blog": "Blog",
+        "serves": "service"
     },
-    "pricePkg": {
-      "standerd": {
-        "title": "Standard",
-        "subtitle": "Prices do not include content and image management",
-        "price": "320",
-        "cur": "$",
-        "facility": [
-          { "id": 1, "icon": "", "title": "15 page" },
-          { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "one language website" },
-          { "id": 4, "icon": "", "title": "Domain Name For one Year " },
-          { "id": 5, "icon": "", "title": "Free hosting for one year" },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for six months"
-          },
-          { "id": 7, "icon": "", "title": "Integration with social media" },
-          { "id": 8, "icon": "", "title": "One official email" },
-          { "id": 9, "icon": "", "title": "Search engine optimization" }
-        ]
-      },
-      "plus": {
-        "title": "Premium",
-        "subtitle": "Prices do not include content and image management",
-        "hint": "Recommended",
+    "page": {
+        "home": {
+            "section2": {
+                "title": "one platform, endless possibilities",
+                "S2L1": "unlimited growth of your project",
+                "S2D1": "there are no limits to the growth of your project, always imagine the success that can be achieved and stay committed to hard work and insist on continuous improvement.        ",
 
-        "price": "1000",
-        "cur": "$",
-        "facility": [
-          { "id": 1, "icon": "", "title": "25 page" },
-          { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "One Language Support" },
-          { "id": 4, "icon": "", "title": "Free Domain Name For One Year" },
-          { "id": 5, "icon": "", "title": "Free Hosting For One Year" },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for One Year "
-          },
-          { "id": 7, "icon": "", "title": "Integration with social media" },
-          { "id": 8, "icon": "", "title": "Five official emails" },
-          { "id": 9, "icon": "", "title": "Search engine optimization" },
-          {
-            "id": 10,
-            "icon": "",
-            "title": "Contact, services and about us pages"
-          }
-        ]
-      },
-      "advance": {
-        "title": "Custom",
-        "subtitle": "Special requests determine final price.",
-        "price": "Contact",
-        "facility": [
-          { "id": 1, "icon": "", "title": "More than 30 page" },
-          { "id": 2, "icon": "", "title": "Compatible with all devices" },
-          { "id": 3, "icon": "", "title": "Two language Support" },
-          { "id": 4, "icon": "", "title": "Free Domain Name For One Year" },
-          { "id": 5, "icon": "", "title": "Free Hosting For One Year" },
-          {
-            "id": 6,
-            "icon": "",
-            "title": "Support and maintenance for two years"
-          },
-          { "id": 7, "icon": "", "title": "Integration with social media" },
-          { "id": 8, "icon": "", "title": "Unlimited official emails" },
-          { "id": 9, "icon": "", "title": "Search engine optimization" },
-          {
-            "id": 10,
-            "icon": "",
-            "title": "Contact, services and about us pages"
-          }
-        ]
-      }
-    },
-    "mywork": {
-      "smMenuTilte": "Social Media",
-      "uiUxMenuTitle": "User Interface",
-      "identityMenuTitle": "Visual Identity",
-      "mixedMenuTitl": "Multimedia",
-      "singBoardMEnuTitle": "Bulletin Board",
-      "cncMenuTitle": "CNC Work",
-      "Character": "Character",
-      "Coverpage": "Cover Page",
-      "Logo": "Logo",
-      "flyer": "Flyer",
-      "infograph": "Infographic",
-      "menu": "Menu",
-      "package": "Package",
-      "poster": "Poster"
+                "S2L2": "the latest technology",
+                "S2D2": "Next.js is a great framework based on React and allows web applications to be developed easily and with high efficiency. Features Next.js with the ability to handle navigation and generate pages dynamically, as well as its support for SSR (server-side experience), SSG (static-side experience) and Auto",
+
+                "S2L3": "tips for achieving success",
+                "S2D3": "you should have a clear goal for your site and a strategic plan to achieve it, and you should pay attention to user experience and loading speed. It should also take into account the use of responsive design and content marketing strategies, maintain site security, track its performance, communicate with users, use SEO and track developments in the field.",
+
+                "S2L4": "attractive content ",
+                "S2D4": "content is a crucial element in the success of any website. Content helps to attract and retain visitors and achieve your business goals. The content should be of high quality, useful to users and compatible with your marketing strategy to increase site traffic and improve its position in search engine results.",
+
+                "S2L5": "multiple languages",
+                "S2D5": "providing a multilingual website helps expand the site's audience and increase international reach. In addition, multilingualism enhances the user experience and increases the chances of communicating with a global audience.",
+
+                "S2L6": "successful marketing plan",
+                "S2D6": "a marketing plan is essential for the success of any business or project. The plan serves to identify your business goals, target category and appropriate marketing strategies to reach this category. By developing a well-thought-out marketing plan, you can achieve effective results, enhance brand awareness and increase sales.",
+
+                "S2L7": "safety and protection",
+                "S2D7": "security and protection are essential elements of any activity or project on the internet. By providing tight security procedures and policies, it is possible to maintain the safety of users, protect their personal data and sensitive information, and avoid security threats and electronic hacks. Investing in security and protection ensures a good reputation of the enterprise, increases customer confidence and reduces the risks associated with security attacks.",
+
+                "S2L8": "landing page of the site",
+                "S2D8": "the landing page is important in attracting attention and increasing the conversion rate of the site or marketing campaign.",
+
+                "S2L9": "technical support",
+                "S2D9": "the technical support of the site is necessary to achieve a good user experience and ensure the reliability of the site, in addition to supporting the marketing strategy and growth, by providing immediate assistance to users, improving the performance of the site and avoiding unplanned downtime ."
+            },
+            "section3": {
+                "title": "make your site shine now",
+                "S3L1": "user interface design is an essential element of the user experience on websites. When a person visits a site, his first impression is the general presentation of the page. Therefore, it is necessary that the user interface is attractive and easy to use. The overall presentation of the site refers to the overall layout and distribution of sections, buttons and links within the pages of the site. These things do not have to be mysterious or confusing for the visitor. Instead, they should be easy to navigate and have visual indicators that will help determine the location of each item. In addition, the responsiveness of the design should also be taken into account, since the screen size of the user's device should not affect his ability to easily use the site."
+            },
+            "section4": {
+                "title": "build more than one website",
+                "S4L1": "from selling online, starting a blog and organizing events to promoting your business and building your community, create a website that can grow with you"
+            },
+            "section5": {
+                "title": "the most important reasons for the success of the site ",
+
+                "S5L1": "proper site planning",
+                "S5D1": "proper site planning is the design and arrangement of content within the site in a thoughtful way to facilitate access to information and enhance the user experience.",
+
+                "S5L2": "easy navigation",
+                "S5D2": "easy navigation and navigation between pages means providing clear and organized links and menus, enabling users to navigate between different sections of the site efficiently and with pleasure.",
+
+                "S5L3": "image quality",
+                "S5D3": "the quality of the images and its focus on exciting the customer the use of high-quality images and attractive visuals that enhance the user experience and arouse his interest to stay and interact with the content.",
+
+                "S5L4": "site responsiveness",
+                "S5D4": "the responsiveness of the site to all devices indicates the adaptability of the site design to different screen sizes, such as smartphones, tablets and desktop computers, to ensure a premium user experience.",
+
+                "S5L5": "attractive content",
+                "S5D5": "engaging and customer-serving content is content that provides valuable and useful information in an interesting and attention-grabbing style, while meeting the needs and expectations of customers for an excellent experience.",
+
+                "S5L6": "search engine optimization",
+                "S5D6": "search engine optimization (SEO) is the process that enhances the appearance of a website in search results by improving the content, user experience and compliance with the guidelines of search engines."
+            },
+            "hint": {
+                "title": "promote your business and reach the right audience",
+                "S8L1": "search engine optimization",
+                "S8D1": "is a technique for increasing the presence of a website in unpaid search results. This includes creating relevant content, improving the speed of the site user experience, building quality external links. SEO requires patience and commitment to get sustainable results.",
+
+                "S8L2": "WhatsApp ads",
+                "S8D2": "using innovative ways to support your products and services via WhatsApp, such as using direct links, posting on other platforms, creating a channel for business applications and promoting among friends. The privacy of users and their preferences must be taken into account.",
+
+                "S8L3": "text message campaigns",
+                "S8D3": "SMS is used for marketing products and services. Includes sending special offers, reminders, questionnaires, personal messages",
+
+                "S8L4": "email campaigns",
+                "S8D4": "marketing strategies based on sending e-mails to subscribers, including newsletters, promotions, transaction confirmations, and auto-reply messages",
+
+                "S8L5": "social media",
+                "S8D5": "promotion through social media includes choosing suitable platforms, creating attractive content, using hashtags, interacting with the audience, and taking advantage of paid advertising to increase brand awareness and attract customers",
+
+                "S8L6": "supported backlinks",
+                "S8D6": "are the links that your site receives from other websites. These links are of great importance in improving the ranking of your site in the results of search engines, as search movements consider them an indicator of the quality of your content"
+            },
+            "section6": {
+                "title": "expand your business to where it needs to be",
+                "S6L1": "e-commerce",
+                "S6D1": "e-commerce has made shopping more convenient than ever. As an owner of an online business, it is important to have a website that looks good and is easy to find in search engines. By using keywords related to your products or services throughout your website, you can improve your search engine rankings and make it easier for potential customers to find you. This can lead to more traffic, more sales, and more revenue. By focusing on customer experience and SEO best practices, you can succeed in the competitive world of ecommerce",
+                "S6L2": "blog",
+                "S6D2": "when creating a blog, it is important to choose the right keywords to optimize your content for search engines. By doing keyword research and choosing relevant, high-traffic keywords, you can increase the visibility of your blog and attract more readers. However, it is important to remember that your blog should be easy to read and attractive to readers . By writing in an easy conversational tone and using headings, dots, and images to segment your content, to make your blog more fun to read. Including internal links to other relevant pages on your website and external links to trusted sources can improve the SEO of your blog. ",
+                "S6L3": "types of web applications",
+                "S6D3": "there are many different types of web applications, including e-commerce sites, social media platforms, electronic banking systems, productivity tools such as email and project management software. Web applications are accessible via a web browser and are designed to work on various devices, including desktops, laptops, tablets and smartphones. ",
+
+                "S6L4": "biography",
+                "S6D4": "an electronic resume provides a lot of benefits for individuals and companies, it saves time and effort and facilitates the process of easy access and updating, it also saves the costs associated with the design of a traditional resume. So individuals and companies can take advantage of these benefits and use an electronic resume as an alternative to a traditional resume.",
+                "S6L5": "domain name and hosting",
+                "S6D5": "domain name and hosting are essential things to know when starting to create a website. A domain name is the address of a website on the internet, and it must be unique and easy to memorize. The domain name is purchased from special sites for this.         As for hosting, it is a service that enables you to store site files on the internet, where the site is hosted on special servers. Hosting services vary in terms of price and available specifications, and you should choose the service that best suits the needs of the site.         And the choice of domain name and hosting service should be done carefully, as they significantly affect the user experience and site performance.",
+                "S6L6": "visual identity and brand",
+                "S6D6": "visual identity and branding refers to the visual representation and design elements used to create a distinctive brand image"
+            },
+            "inspire": {
+                "title": "getting inspiration from global websites for web design",
+                "S7L1": "Behance",
+                "S7D1": "Behance is an online platform for displaying the works of creators and communicating with the creative community, characterized by an attractive design and ease of use. Behance can inspire you in designing your site by using attractive images and videos to showcase your work, and make the design easy to use and attractive to achieve a positive user experience.",
+                "S7L2": "Dribbble",
+                "S7D2": "Dribbble is an online platform for showcasing the work of designers and creators, characterized by an attractive, modern design and ease of use. Dribbble can inspire you in the design of your site by using new and innovative ideas in design, colors and fonts, and provide an easy and smooth user experience through attractive and clear design.",
+                "S7L3": "Pintrest",
+                "S7D3": "Pinterest is a social media platform for sharing photos, ideas and personal interests, characterized by its good organization and ease of use. Pinterest can inspire you in the design of your site by collecting ideas and images, organizing them on different boards, providing attractive and diverse content to users. Pinterest can also be used to search for inspiration in various fields and use it as a source of new ideas in designing your site uniquely and creatively."
+            }
+        },
+
+        "about": {
+            "heroSection": {
+                "himsg": "Hello...",
+                "iamKhalid": "I am Khalid",
+                "develepor": "Website Developer and Designer",
+                "develoerSince": "Since 1998",
+                "download": "Download"
+            },
+            "advTxt": {
+                "ask1": "Are you looking for a website that perfectly represents your brand?",
+                "ask2": "Don't miss the opportunity to turn your idea into reality. Contact us today!"
+            },
+            "willdo": {
+                "waitingForyou": "Waiting for you",
+                "Ui": "Innovative and Engaging Design",
+                "UiDetail": "Our professional team designs innovative and engaging websites that professionally reflect your brand identity.",
+                "Ux": "Excellent User Experience",
+                "UxDetail": "We pay close attention to user experience details to ensure an easy and seamless experience for visitors to your website.",
+                "perfomance": "Fast and High-Performance",
+                "perfomanceTitle": "We guarantee that your website works quickly and efficiently on all devices and screens.",
+                "seo": "Optimized Search Engine (SEO)",
+                "seoTitle": "We use best practices to improve your website's search engine optimization and increase its visibility in search results.",
+                "help": "Continuous Technical Support",
+                "helpTitle": "We provide you with continuous technical support to help solve any issues you may encounter and ensure your website continues to work perfectly.",
+                "freeConsultaion": "Free Consultations",
+                "freeConsultaionTitle": "I'm happy to provide free consultations in the field of website design, programming, or mobile applications, and to work with you to find the right solutions for your business."
+            },
+            "skills": {
+                "devlopingtitle": "Programming Languages",
+                "desigtitle": "Design Technology",
+                "uiux": "User Experience Technology",
+                "database": "Database Technology"
+            }
+        },
+        "pricePkg": {
+            "standerd": {
+                "title": "Standard",
+                "subtitle": "Prices do not include content and image management",
+                "price": "320",
+                "cur": "$",
+                "facility": [
+                    { "id": 1, "icon": "", "title": "15 page" },
+                    {
+                        "id": 2,
+                        "icon": "",
+                        "title": "Compatible with all devices"
+                    },
+                    { "id": 3, "icon": "", "title": "one language website" },
+                    {
+                        "id": 4,
+                        "icon": "",
+                        "title": "Domain Name For one Year "
+                    },
+                    {
+                        "id": 5,
+                        "icon": "",
+                        "title": "Free hosting for one year"
+                    },
+                    {
+                        "id": 6,
+                        "icon": "",
+                        "title": "Support and maintenance for six months"
+                    },
+                    {
+                        "id": 7,
+                        "icon": "",
+                        "title": "Integration with social media"
+                    },
+                    { "id": 8, "icon": "", "title": "One official email" },
+                    {
+                        "id": 9,
+                        "icon": "",
+                        "title": "Search engine optimization"
+                    }
+                ]
+            },
+            "plus": {
+                "title": "Premium",
+                "subtitle": "Prices do not include content and image management",
+                "hint": "Recommended",
+
+                "price": "1000",
+                "cur": "$",
+                "facility": [
+                    { "id": 1, "icon": "", "title": "25 page" },
+                    {
+                        "id": 2,
+                        "icon": "",
+                        "title": "Compatible with all devices"
+                    },
+                    { "id": 3, "icon": "", "title": "One Language Support" },
+                    {
+                        "id": 4,
+                        "icon": "",
+                        "title": "Free Domain Name For One Year"
+                    },
+                    {
+                        "id": 5,
+                        "icon": "",
+                        "title": "Free Hosting For One Year"
+                    },
+                    {
+                        "id": 6,
+                        "icon": "",
+                        "title": "Support and maintenance for One Year "
+                    },
+                    {
+                        "id": 7,
+                        "icon": "",
+                        "title": "Integration with social media"
+                    },
+                    { "id": 8, "icon": "", "title": "Five official emails" },
+                    {
+                        "id": 9,
+                        "icon": "",
+                        "title": "Search engine optimization"
+                    },
+                    {
+                        "id": 10,
+                        "icon": "",
+                        "title": "Contact, services and about us pages"
+                    }
+                ]
+            },
+            "advance": {
+                "title": "Custom",
+                "subtitle": "Special requests determine final price.",
+                "price": "Contact",
+                "facility": [
+                    { "id": 1, "icon": "", "title": "More than 30 page" },
+                    {
+                        "id": 2,
+                        "icon": "",
+                        "title": "Compatible with all devices"
+                    },
+                    { "id": 3, "icon": "", "title": "Two language Support" },
+                    {
+                        "id": 4,
+                        "icon": "",
+                        "title": "Free Domain Name For One Year"
+                    },
+                    {
+                        "id": 5,
+                        "icon": "",
+                        "title": "Free Hosting For One Year"
+                    },
+                    {
+                        "id": 6,
+                        "icon": "",
+                        "title": "Support and maintenance for two years"
+                    },
+                    {
+                        "id": 7,
+                        "icon": "",
+                        "title": "Integration with social media"
+                    },
+                    {
+                        "id": 8,
+                        "icon": "",
+                        "title": "Unlimited official emails"
+                    },
+                    {
+                        "id": 9,
+                        "icon": "",
+                        "title": "Search engine optimization"
+                    },
+                    {
+                        "id": 10,
+                        "icon": "",
+                        "title": "Contact, services and about us pages"
+                    }
+                ]
+            }
+        },
+        "mywork": {
+            "smMenuTilte": "Social Media",
+            "uiUxMenuTitle": "User Interface",
+            "identityMenuTitle": "Visual Identity",
+            "mixedMenuTitl": "Multimedia",
+            "singBoardMEnuTitle": "Bulletin Board",
+            "cncMenuTitle": "CNC Work",
+            "Character": "Character",
+            "Coverpage": "Cover Page",
+            "Logo": "Logo",
+            "flyer": "Flyer",
+            "infograph": "Infographic",
+            "menu": "Menu",
+            "package": "Package",
+            "poster": "Poster"
+        }
     }
-  }
 }

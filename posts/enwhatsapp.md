@@ -1,8 +1,8 @@
 ---
-title: " WhatsApp Ads"
-subtitle: "Why Use WhatsApp Ads?"
-date: "2020-12-22"
-description: "Discover the power of WhatsApp Ads and learn how they can help you reach your target audience effectively. Explore the benefits of using WhatsApp Ads, including increased engagement, higher conversion rates, and improved ROI, and get tips on how to create effective ad campaigns that deliver results."
+title: ' WhatsApp Ads'
+subtitle: 'Why Use WhatsApp Ads?'
+date: '2020-12-22'
+description: 'Discover the power of WhatsApp Ads and learn how they can help you reach your target audience effectively. Explore the benefits of using WhatsApp Ads, including increased engagement, higher conversion rates, and improved ROI, and get tips on how to create effective ad campaigns that deliver results.'
 ---
 
 ## How to Use WhatsApp Ads for Your Business

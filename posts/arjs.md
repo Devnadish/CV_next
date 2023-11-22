@@ -1,9 +1,8 @@
 ---
-title: "JavaScript"
-subtitle: "Creating Dynamic Web Applications with JavaScript"
-date: "2020-12-22"
+title: 'JavaScript'
+subtitle: 'Creating Dynamic Web Applications with JavaScript'
+date: '2020-12-22'
 ---
-
 
 # JavaScript
 

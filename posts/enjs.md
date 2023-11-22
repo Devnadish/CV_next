@@ -1,8 +1,8 @@
 ---
-title: "JavaScript"
-subtitle: "Creating Dynamic Web Applications with JavaScript"
-date: "2020-12-22"
-description: "JavaScript: Versatile programming language. Creates interactive web content. Integrates with HTML and CSS. Essential for modern and dynamic web development."
+title: 'JavaScript'
+subtitle: 'Creating Dynamic Web Applications with JavaScript'
+date: '2020-12-22'
+description: 'JavaScript: Versatile programming language. Creates interactive web content. Integrates with HTML and CSS. Essential for modern and dynamic web development.'
 ---
 
 # JavaScript

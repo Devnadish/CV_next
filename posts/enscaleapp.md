@@ -1,8 +1,8 @@
 ---
-title: "Scaling Web Applications"
-subtitle: "Scaling Web Applications: Tips and Best Practices"
-date: "2020-12-22"
-description: "Scaling web apps: Critical for modern web development. Horizontal and vertical scaling, load balancing, caching, and optimization. Leverage cloud computing platforms for quick and efficient scaling. Automate and streamline your scaling processes with popular tools and frameworks."
+title: 'Scaling Web Applications'
+subtitle: 'Scaling Web Applications: Tips and Best Practices'
+date: '2020-12-22'
+description: 'Scaling web apps: Critical for modern web development. Horizontal and vertical scaling, load balancing, caching, and optimization. Leverage cloud computing platforms for quick and efficient scaling. Automate and streamline your scaling processes with popular tools and frameworks.'
 ---
 
 ## Scaling Web Applications: Tips and Best Practices

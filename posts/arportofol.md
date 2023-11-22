@@ -1,9 +1,8 @@
 ---
-title: "Portfolio"
-subtitle: "Portfolio is Important for Your Career"
-date: "2020-12-22"
+title: 'Portfolio'
+subtitle: 'Portfolio is Important for Your Career'
+date: '2020-12-22'
 ---
-
 
 ## Why Having a Portfolio is Important for Your Career
 

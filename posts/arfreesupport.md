@@ -1,7 +1,7 @@
 ---
-title: "Free Technical Support"
-subtitle: "Offering Free Technical Support for Your Web App"
-date: "2020-12-22"
+title: 'Free Technical Support'
+subtitle: 'Offering Free Technical Support for Your Web App'
+date: '2020-12-22'
 ---
 
 ## Offering Free Technical Support for Your Web App
@@ -28,4 +28,4 @@ Offering timely responses is essential for providing effective technical support
 
 Monitoring and analyzing your support metrics is essential for identifying areas for improvement and optimizing your technical support strategy. This includes tracking metrics such as response time, resolution time, and user satisfaction. By analyzing this data, you can identify areas for improvement and make data-driven decisions to improve your technical support.
 
->conclusion, offering free technical support is a powerful way to improve user experience and drive engagement for your web app. By choosing a support channel, creating a knowledge base, training your support team, offering timely responses, and monitoring and analyzing your support metrics, you can provide effective technical support to your users and improve customer satisfaction and retention.
+> conclusion, offering free technical support is a powerful way to improve user experience and drive engagement for your web app. By choosing a support channel, creating a knowledge base, training your support team, offering timely responses, and monitoring and analyzing your support metrics, you can provide effective technical support to your users and improve customer satisfaction and retention.

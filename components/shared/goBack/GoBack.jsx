@@ -1,20 +1,19 @@
-"use client";
-import { useRouter } from "next/navigation";
-import { AiOutlineRollback } from "@react-icons/all-files/ai/AiOutlineRollback";
-import { revalidatePath } from "next/cache";
+'use client';
+import { useRouter } from 'next/navigation';
+import { AiOutlineRollback } from '@react-icons/all-files/ai/AiOutlineRollback';
 export default function GoBack() {
-  const router = useRouter();
-  const handleBack = () => {
-    router.back();
-  };
+    const router = useRouter();
+    const handleBack = () => {
+        router.back();
+    };
 
-  return (
-    <button
-      className="p-1 text-white bg-red-500 rounded-md "
-      type="button"
-      onClick={handleBack}
-    >
-      <AiOutlineRollback />
-    </button>
-  );
+    return (
+        <button
+            className='rounded-md bg-red-500 p-1 text-white '
+            type='button'
+            onClick={handleBack}
+        >
+            <AiOutlineRollback />
+        </button>
+    );
 }

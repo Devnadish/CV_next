@@ -1,39 +1,41 @@
+/*eslint no-undef: 0*/
 import {
-  getDataAfterSearch,
-  showAllTag,
-  showFreqBlog,
-} from "@/components/pagecomponent/blog/sendFileToDb/_action";
+    getDataAfterSearch,
+    showAllTag,
+    showFreqBlog,
+    PageContainer,
+    NoDataToshow,
+    BlogsWithSearch,
+} from './export.js';
 
-import ShowBlogs from "@/components/pagecomponent/blog/ShowBlogs";
-import PageContainer from "@/components/shared/pagecontainer/PageContainer";
-import NoDataToshow from "@/components/shared/nodatatoshow/NoDataToshow";
-async function page({ params }) {
-  const search = decodeURI(params.search);
-  const lookupposts = await getDataAfterSearch(search, "title", params.lang);
-  const freqData = showFreqBlog(params.lang);
-  const tagData = showAllTag();
-  const [posts, tags, freq] = await Promise.all([
-    lookupposts,
-    tagData,
-    freqData,
-  ]);
+export const dynamic = 'force-dynamic';
+async function page(props) {
+    const search = decodeURI(props.params.search);
+    const q = props.searchParams?.q || '';
+    const lookupposts = getDataAfterSearch(search, props.params.lang, q);
+    const freqData = showFreqBlog(props.params.lang);
+    const tagData = showAllTag();
+    const [posts, tags, freq] = await Promise.all([
+        lookupposts,
+        tagData,
+        freqData,
+    ]);
 
-  return (
-    <>
-      <PageContainer>
-        {posts.length === 0 ? (
-          <NoDataToshow />
-        ) : (
-          <ShowBlogs
-            posts={posts}
-            tags={tags}
-            blogCont={posts.length}
-            freq={freq}
-          />
-        )}
-      </PageContainer>
-    </>
-  );
+    return (
+        <PageContainer>
+            {posts.length === 0 ? (
+                <NoDataToshow />
+            ) : (
+                <BlogsWithSearch
+                    posts={posts}
+                    tags={tags}
+                    blogCont={posts.length}
+                    freq={freq}
+                    lang={props.params.lang}
+                />
+            )}
+        </PageContainer>
+    );
 }
 
 export default page;

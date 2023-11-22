@@ -1,8 +1,8 @@
 ---
-title: "Increase Your Client"
-subtitle: "How Web Applications Can Increase  Client Base"
-date: "2020-12-22"
-description: "Grow your business with web applications. Enhance online presence and streamline processes. Increase user engagement and drive conversions. Reach new audiences and achieve business goals."
+title: 'Increase Your Client'
+subtitle: 'How Web Applications Can Increase  Client Base'
+date: '2020-12-22'
+description: 'Grow your business with web applications. Enhance online presence and streamline processes. Increase user engagement and drive conversions. Reach new audiences and achieve business goals.'
 ---
 
 ## How Web Applications Can Increase Client Base

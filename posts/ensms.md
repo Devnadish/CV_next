@@ -1,8 +1,8 @@
 ---
-title: "SMS Campaigns"
-subtitle: "The Power of SMS Campaigns"
-date: "2020-12-22"
-description: "Discover the impact of SMS campaigns and how they can boost your business. Engage with your audience in a new way and achieve impressive results with this powerful marketing tool."
+title: 'SMS Campaigns'
+subtitle: 'The Power of SMS Campaigns'
+date: '2020-12-22'
+description: 'Discover the impact of SMS campaigns and how they can boost your business. Engage with your audience in a new way and achieve impressive results with this powerful marketing tool.'
 ---
 
 ## The Power of SMS Campaigns

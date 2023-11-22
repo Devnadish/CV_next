@@ -1,8 +1,8 @@
 ---
-title: "Email Campaign"
-subtitle: "Why Use Email Campaigns?"
-date: "2020-12-22"
-description: "Unlock the power of email campaigns with our comprehensive guide. Learn how to create effective campaigns, personalize your emails, and measure success. Discover the benefits of email marketing, including increased engagement and conversions."
+title: 'Email Campaign'
+subtitle: 'Why Use Email Campaigns?'
+date: '2020-12-22'
+description: 'Unlock the power of email campaigns with our comprehensive guide. Learn how to create effective campaigns, personalize your emails, and measure success. Discover the benefits of email marketing, including increased engagement and conversions.'
 ---
 
 ```

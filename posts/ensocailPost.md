@@ -1,7 +1,7 @@
 ---
-title: "Effective Media "
-subtitle: "Why Use Social Media Posts"
-date: "2020-12-22"
+title: 'Effective Media '
+subtitle: 'Why Use Social Media Posts'
+date: '2020-12-22'
 description: "Learn how to create effective media that captures your audience's attention. From eye-catching visuals to compelling messaging, discover the key elements that make your media stand out and drive results."
 ---
 

@@ -1,9 +1,8 @@
 ---
-title: "Firbase"
-subtitle: "Building Scalable Apps with Firebase"
-date: "2020-12-22"
+title: 'Firbase'
+subtitle: 'Building Scalable Apps with Firebase'
+date: '2020-12-22'
 ---
-
 
 # Firebase
 

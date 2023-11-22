@@ -1,8 +1,8 @@
 ---
-title: "Firbase"
-subtitle: "Building Scalable Apps with Firebase"
-date: "2020-12-22"
-description: "Build scalable apps with Firebase. Our guide covers everything from setup to best practices. Learn to integrate Firebase services and optimize performance. Stay updated with the latest features to ensure your app stays efficient."
+title: 'Firbase'
+subtitle: 'Building Scalable Apps with Firebase'
+date: '2020-12-22'
+description: 'Build scalable apps with Firebase. Our guide covers everything from setup to best practices. Learn to integrate Firebase services and optimize performance. Stay updated with the latest features to ensure your app stays efficient.'
 ---
 
 # Firebase

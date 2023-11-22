@@ -1,8 +1,8 @@
 ---
-title: "Figma"
-subtitle: "Maximizing Your Web Design Potential"
-date: "2020-12-22"
-description: "Unlock the power of Figma, the collaborative design tool. Create beautiful designs for web and mobile. Collaborate in real-time and streamline your workflow. Stay updated with the latest features and integrations."
+title: 'Figma'
+subtitle: 'Maximizing Your Web Design Potential'
+date: '2020-12-22'
+description: 'Unlock the power of Figma, the collaborative design tool. Create beautiful designs for web and mobile. Collaborate in real-time and streamline your workflow. Stay updated with the latest features and integrations.'
 ---
 
 Figma is a cloud-based design tool that allows designers, developers, and other stakeholders to collaborate in real-time on design projects. With its intuitive interface, powerful design tools, and collaborative features, Figma has become a popular choice for design teams of all sizes. Here are some of the key features of Figma:

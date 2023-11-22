@@ -1,7 +1,7 @@
 ---
-title: "Keep It Simple"
-subtitle: "Creating User-Friendly Navigation for Your Website"
-date: "2020-12-22"
+title: 'Keep It Simple'
+subtitle: 'Creating User-Friendly Navigation for Your Website'
+date: '2020-12-22'
 ---
 
 # Creating User-Friendly Navigation for Your Website

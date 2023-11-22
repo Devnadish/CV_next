@@ -1,7 +1,7 @@
 ---
-title: "Node.js"
-subtitle: "Building Modern Web Applications"
-date: "2020-12-22"
+title: 'Node.js'
+subtitle: 'Building Modern Web Applications'
+date: '2020-12-22'
 ---
 
 # Node.js

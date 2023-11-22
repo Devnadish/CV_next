@@ -2,7 +2,7 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider =  "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -11,54 +11,68 @@ datasource db {
 }
 
 model User {
-  id          String      @id @default(auto()) @map("_id") @db.ObjectId
-  name      String
-  email     String
-  password  String
-  // BlogTable BlogTable[]
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  email       String
+  password    String
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
 }
 
-model Blogtag{
+model Blogtag {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   title       String
-  // BlogTable BlogTable[]
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
 }
 
 model BlogTable {
   id          String   @id @default(auto()) @map("_id") @db.ObjectId
   slug        String
-  title       String   @default("khalid")
-  subtitle    String   @default("khalid")
-  description String  @default("No description")
-  tag         String  @default("tag")
-  crDate      String  @default("")
-  viewers     Int @default(0)
+  title       String   @default("")
+  subtitle    String   @default("")
+  description String   @default("")
+  body        String   @default("")
+  tag         String   @default("")
+  crDate      String   @default("")
+  viewers     Int      @default(0)
   targetlinks String[]
-  published   Boolean @default(true)
-  language    String @default("ar")
+  published   Boolean  @default(true)
+  language    String   @default("ar")
+  comments    String[]
   createdDate DateTime @default(now())
   updatedDate DateTime @updatedAt
-
-  // User        User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  // userId      String?   @db.ObjectId
-  // Blogtag     Blogtag?     @relation(fields: [blogTagId], references: [id], onDelete: Cascade)
-  // blogTagId   String? @db.ObjectId
 }
 
-model BlogLink{
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  title       String  @default("")
-  slug        String  @default("")
-  language    String @default("")
+model BlogComment {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  title     String @default("")
+  like      Int    @default(0)
+  dislike    Int    @default(0)
+  postID    String @default("")
+  postTitle String @default("")
+
+  userID      String   @default("")
+  useerAvatar String   @default("")
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
 }
-model Iplog{
-  id          String  @id @default(auto()) @map("_id") @db.ObjectId
-  ip          String  @default("")
-  counter     Int     @default(0)
-  city        String  @default("")
-  region      String  @default("")
-  country     String  @default("")
-  loc         String  @default("")
-  org         String  @default("")
-  timezone    String  @default("")
+
+model BlogLink {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  title    String @default("")
+  slug     String @default("")
+  language String @default("")
+}
+
+model Iplog {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  ip       String @default("")
+  counter  Int    @default(0)
+  city     String @default("")
+  region   String @default("")
+  country  String @default("")
+  loc      String @default("")
+  org      String @default("")
+  timezone String @default("")
 }

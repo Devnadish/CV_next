@@ -1,8 +1,9 @@
 ---
-title: "Adobe XD"
-subtitle: "Creating Beautiful and Functional Interfaces"
-date: "2020-12-22"
+title: 'Adobe XD'
+subtitle: 'Creating Beautiful and Functional Interfaces'
+date: '2020-12-22'
 ---
+
 # Adobe XD
 
 Adobe XD is a popular user experience (UX) and user interface (UI) design tool developed by Adobe Systems. It is used by designers and developers to create wireframes, prototypes, and user interfaces for web and mobile applications. Here are some of the key features of Adobe XD:

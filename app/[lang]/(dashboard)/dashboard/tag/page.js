@@ -1,23 +1,21 @@
-import NewTagForm from "@/components/pagecomponent/tag/new/NewTagForm";
-import PageContainer from "@/components/shared/pagecontainer/PageContainer";
-import { getAllTags } from "@/components/pagecomponent/tag/helper/tag";
-import React from "react";
-
-import Taglist from "@/components/pagecomponent/tag/home/Taglist";
-
-export const dynamic = "force-dynamic";
-
+import {
+    NewTagForm,
+    PageContainer,
+    Taglist,
+    collectTagWithPost,
+} from './export';
 async function page() {
-  const tags = await getAllTags();
-
-  return (
-    <>
-      <PageContainer>
-        <NewTagForm />
-        <Taglist tags={tags} />
-      </PageContainer>
-    </>
-  );
+    // const tags = await getAllTags();
+    const tags = await collectTagWithPost();
+    return (
+        <>
+            <PageContainer>
+                <div className='flex flex-col items-center justify-center gap-8 '>
+                    <NewTagForm />
+                    <Taglist tags={tags} />
+                </div>
+            </PageContainer>
+        </>
+    );
 }
-
 export default page;

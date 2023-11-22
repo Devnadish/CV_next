@@ -1,8 +1,8 @@
 ---
-title: "Content"
-subtitle: "Compelling Content for Your Website"
-date: "2020-12-22"
-description: "Discover the secrets of creating compelling content that engages your audience and drives conversions. Our expert tips and best practices cover everything from crafting attention-grabbing headlines and writing persuasive copy to optimizing your content for search engines and social media. Learn how to create content that resonates with your target audience, establishes your brand as a thought leader, and inspires action. Discover the latest trends in content marketing and learn how to apply them to your website to achieve your business goals."
+title: 'Content'
+subtitle: 'Compelling Content for Your Website'
+date: '2020-12-22'
+description: 'Discover the secrets of creating compelling content that engages your audience and drives conversions. Our expert tips and best practices cover everything from crafting attention-grabbing headlines and writing persuasive copy to optimizing your content for search engines and social media. Learn how to create content that resonates with your target audience, establishes your brand as a thought leader, and inspires action. Discover the latest trends in content marketing and learn how to apply them to your website to achieve your business goals.'
 ---
 
 ```

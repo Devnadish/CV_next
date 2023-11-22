@@ -1,41 +1,35 @@
 {
-  "editor.acceptSuggestionOnEnter": "on",
-  "files.exclude": {
-    "**/my-custom-folder": true,
-    // "**/node_modules": true,
-    "**/.vercel": true,
-    // "**/build": true,
-    "**/.DS_Store": true,
-    "**/*.xyz": true
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma-insider"
-  },
-  "editor.formatOnSave": true,
-  "favorites.resources": [
-    {
-      "filePath": "prisma",
-      "group": "Default"
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.format": true
     },
-    {
-      "filePath": "app\\[lang]\\dashboard\\tag",
-      "group": "Default"
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".vercel": true,
+        "node_modules": true,
+        ".husky": true,
+        ".idea": true,
+        ".vscode": true,
+        ".gitignore": true,
+        ".prettierignore": true
     },
-    {
-      "filePath": "dbcontrol\\tag.js",
-      "group": "Default"
+    "explorerExclude.backup": {},
+    "autoimport.doubleQuotes": true,
+    "autoimport.filesToScan": "**/*.{ts,tsx,js,jsx}",
+    "emmet.includeLanguages": {
+        "\"javascript\"": "\"javascriptreact\""
     },
-    {
-      "filePath": "components\\tagcomponet",
-      "group": "Default"
-    },
-    {
-      "filePath": "dbcontrol",
-      "group": "Default"
-    },
-    {
-      "filePath": "components\\forms\\tags\\new\\_actions.js",
-      "group": "Default"
-    }
-  ]
+    "emmet.preferences": {},
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+    "css.lint.unknownAtRules": "ignore"
 }

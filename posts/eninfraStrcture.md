@@ -1,7 +1,7 @@
 ---
-title: "powerful infrastructure"
-subtitle: "powerful infrastructure for web applications:"
-date: "2020-12-22"
+title: 'powerful infrastructure'
+subtitle: 'powerful infrastructure for web applications:'
+date: '2020-12-22'
 description: "Powerful infrastructure enhances web app performance. Foundation for seamless user experience. Leverage cloud computing and virtualization for scalability. Optimize for success in today's digital landscape."
 ---
 

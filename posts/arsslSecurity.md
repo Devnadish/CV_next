@@ -1,8 +1,9 @@
 ---
-title: "SSL Security"
-subtitle: "SSL Security Certificate for Your Web App"
-date: "2020-12-22"
+title: 'SSL Security'
+subtitle: 'SSL Security Certificate for Your Web App'
+date: '2020-12-22'
 ---
+
 ## SSL Security Certificate for Your Web App
 
 If you're running a web app that requires users to submit sensitive information (such as credit card details or personal information), it's important to secure your web app with an SSL security certificate. An SSL security certificate encrypts the data transmitted between the user's browser and your web app, ensuring that the data is protected from unauthorized access. In this article, we'll explore some strategies for securing your web app with an SSL security certificate.
@@ -27,4 +28,4 @@ Once you've received the SSL security certificate from the CA, you need to insta
 
 Testing your SSL security certificate is essential for ensuring that your web app is properly secured. You can test your SSL security certificate by visiting your web app using HTTPS and checking that the browser displays a green padlock icon and "https" in the URL bar. You can also use online tools such as Qualys SSL Labs to test the strength of your SSL security certificate.
 
->conclusion, securing your web app with an SSL security certificate is essential for protecting user data and ensuring trust in your web app. By choosing a certificate authority, generating a certificate signing request, submitting the CSR to the CA, installing the SSL security certificate, and testing your SSL security certificate, you can ensure that your web app is properly secured with an SSL security certificate.
+> conclusion, securing your web app with an SSL security certificate is essential for protecting user data and ensuring trust in your web app. By choosing a certificate authority, generating a certificate signing request, submitting the CSR to the CA, installing the SSL security certificate, and testing your SSL security certificate, you can ensure that your web app is properly secured with an SSL security certificate.

@@ -1,7 +1,7 @@
 ---
-title: "SSL Security"
-subtitle: "SSL Security Certificate for Your Web App"
-date: "2020-12-22"
+title: 'SSL Security'
+subtitle: 'SSL Security Certificate for Your Web App'
+date: '2020-12-22'
 description: "Protect your web app and your users' sensitive information with an SSL security certificate. Learn why SSL is crucial for online security, and how to obtain and install a certificate to ensure your website is safe and trustworthy."
 ---
 

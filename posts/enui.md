@@ -1,8 +1,8 @@
 ---
-title: "UI"
-subtitle: "Creating Beautiful and Intuitive Interfaces"
-date: "2021-07-12"
-description: "Discover the art of creating beautiful and intuitive interfaces that captivate users. Learn essential design principles, techniques, and best practices to craft interfaces that are visually stunning, user-friendly, and enhance the overall user experience."
+title: 'UI'
+subtitle: 'Creating Beautiful and Intuitive Interfaces'
+date: '2021-07-12'
+description: 'Discover the art of creating beautiful and intuitive interfaces that captivate users. Learn essential design principles, techniques, and best practices to craft interfaces that are visually stunning, user-friendly, and enhance the overall user experience.'
 ---
 
 # User Interface (UI)

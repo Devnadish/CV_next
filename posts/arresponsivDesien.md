@@ -1,9 +1,8 @@
 ---
-title: "Responsive Design"
-subtitle: "Improved User Experience"
-date: "2020-12-22"
+title: 'Responsive Design'
+subtitle: 'Improved User Experience'
+date: '2020-12-22'
 ---
-
 
 # Why Responsive Design is Important for Your Website
 

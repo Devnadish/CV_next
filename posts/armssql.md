@@ -1,7 +1,7 @@
 ---
-title: "MySQL"
-subtitle: "Taking Your Data Management to the Next Level"
-date: "2020-12-22"
+title: 'MySQL'
+subtitle: 'Taking Your Data Management to the Next Level'
+date: '2020-12-22'
 ---
 
 # MySQL

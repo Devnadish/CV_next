@@ -1,8 +1,8 @@
 ---
-title: "Types of Web Applications"
-subtitle: "Understanding the Different Types of Web Applications"
-date: "2020-12-22"
-description: "Delve into the world of web applications and gain a comprehensive understanding of the different types available. Explore the distinctions between static, dynamic, and single-page applications, and discover their unique features, use cases, and benefits to determine the best fit for your specific needs."
+title: 'Types of Web Applications'
+subtitle: 'Understanding the Different Types of Web Applications'
+date: '2020-12-22'
+description: 'Delve into the world of web applications and gain a comprehensive understanding of the different types available. Explore the distinctions between static, dynamic, and single-page applications, and discover their unique features, use cases, and benefits to determine the best fit for your specific needs.'
 ---
 
 ## Understanding the Different Types of Web Applications

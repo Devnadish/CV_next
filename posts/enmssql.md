@@ -1,8 +1,8 @@
 ---
-title: "MySQL"
-subtitle: "Taking Your Data Management to the Next Level"
-date: "2020-12-22"
-description: "MySQL: Open-source database management system. Essential for web applications. Integrates with popular programming languages. Mastering MySQL unlocks power for web development."
+title: 'MySQL'
+subtitle: 'Taking Your Data Management to the Next Level'
+date: '2020-12-22'
+description: 'MySQL: Open-source database management system. Essential for web applications. Integrates with popular programming languages. Mastering MySQL unlocks power for web development.'
 ---
 
 # MySQL

@@ -1,7 +1,7 @@
 ---
-title: "Scaling Web Applications"
-subtitle: "Scaling Web Applications: Tips and Best Practices"
-date: "2020-12-22"
+title: 'Scaling Web Applications'
+subtitle: 'Scaling Web Applications: Tips and Best Practices'
+date: '2020-12-22'
 ---
 
 ## Scaling Web Applications: Tips and Best Practices
@@ -29,4 +29,4 @@ Databases are often a bottleneck when it comes to scaling web applications. To o
 Cloud computing platforms such as Amazon Web Services (AWS) and Microsoft Azure provide scalable infrastructure for web applications. By using cloud computing, you can easily scale up or down based on your needs. You can also take advantage of other cloud services such as load balancers, databases, and caching.
 
 > Conclusion
-Scaling a web application can be a challenging task, but by following these tips and best practices, you can ensure that your web application can handle more traffic and users. Remember to test your web application regularly to ensure that it performs well under load.
+> Scaling a web application can be a challenging task, but by following these tips and best practices, you can ensure that your web application can handle more traffic and users. Remember to test your web application regularly to ensure that it performs well under load.

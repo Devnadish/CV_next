@@ -1,7 +1,7 @@
 ---
-title: "Marketing Your Web App"
-subtitle: "Seamlessly Running and Marketing Your Web App"
-date: "2020-12-22"
+title: 'Marketing Your Web App'
+subtitle: 'Seamlessly Running and Marketing Your Web App'
+date: '2020-12-22'
 ---
 
 ## Seamlessly Running and Marketing Your Web App

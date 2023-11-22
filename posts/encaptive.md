@@ -1,8 +1,8 @@
 ---
-title: "Captivating Visuals"
-subtitle: "Improve User Experience on Your Website"
-date: "2020-12-22"
-description: "Learn how to create captivating visuals that engage your audience and enhance your content. Our expert tips and tutorials cover everything from choosing the right colors and fonts to designing eye-catching graphics and videos. Discover the latest trends in visual communication and learn how to apply them to your marketing strategy to increase brand awareness, improve engagement, and drive conversions."
+title: 'Captivating Visuals'
+subtitle: 'Improve User Experience on Your Website'
+date: '2020-12-22'
+description: 'Learn how to create captivating visuals that engage your audience and enhance your content. Our expert tips and tutorials cover everything from choosing the right colors and fonts to designing eye-catching graphics and videos. Discover the latest trends in visual communication and learn how to apply them to your marketing strategy to increase brand awareness, improve engagement, and drive conversions.'
 ---
 
 # Using Captivating Visuals to Improve User Experience on Your Website

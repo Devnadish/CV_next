@@ -1,3 +1,38 @@
+// {
+//     "extends": ["next/core-web-vitals", "next", "prettier"]
+// }
+
+// {
+//     "extends": [
+//         "eslint:recommended",
+//         "plugin:prettier/recommended",
+//         "next/core-web-vitals",
+//         "next"
+//     ],
+//     "plugins": ["prettier"],
+//     "rules": {
+//         "prettier/prettier": "error"
+//     },
+//     "parserOptions": {
+//         "sourceType": "module"
+//     }
+// }
+
 {
-  "extends": "next/core-web-vitals"
+    "extends": [
+        "eslint:recommended",
+        "plugin:prettier/recommended",
+        "next/core-web-vitals",
+        "next"
+    ],
+    "plugins": ["prettier", "promise"], // Add the "promise" plugin
+    "rules": {
+        "prettier/prettier": "error",
+        "promise/no-native": "off", // Disable the "promise/no-native" rule
+        "no-undef": "error" // Enable the "no-undef" rule
+        // Add other ESLint rules as needed
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
 }

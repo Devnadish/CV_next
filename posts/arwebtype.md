@@ -1,7 +1,7 @@
 ---
-title: "Types of Web Applications"
-subtitle: "Understanding the Different Types of Web Applications"
-date: "2020-12-22"
+title: 'Types of Web Applications'
+subtitle: 'Understanding the Different Types of Web Applications'
+date: '2020-12-22'
 ---
 
 ## Understanding the Different Types of Web Applications
@@ -29,4 +29,4 @@ Progressive web applications (PWAs) are web applications that use modern web tec
 Web services are software systems designed to support interoperable machine-to-machine interaction over a network. Web services can be used to integrate different systems or applications, share data between different organizations, or provide access to remote resources. Web services can be implemented using a variety of technologies, including XML, JSON, and REST.
 
 > Conclusion
-Web applications come in many different forms, each with its own strengths and weaknesses. Understanding the different types of web applications can help you choose the right type for your needs. Whether you need a simple static website or a complex progressive web application, there is a type of web application that can meet your needs.
+> Web applications come in many different forms, each with its own strengths and weaknesses. Understanding the different types of web applications can help you choose the right type for your needs. Whether you need a simple static website or a complex progressive web application, there is a type of web application that can meet your needs.

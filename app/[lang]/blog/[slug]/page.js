@@ -1,51 +1,55 @@
-import Markdown from "markdown-to-jsx";
-import allgetPostMetadata from "@/lib/allgetPostMetadata";
-import PageContainer from "@/components/shared/pagecontainer/PageContainer";
-import dynamic from "next/dynamic";
-import { NEWSLUG } from "@/lib/slugWithLang";
-import { MDoptions } from "@/lib/MDoption/mdOption";
-import { getPostContent } from "@/lib/blog/getPostContent";
-const GoBack = dynamic(() => import("@/components/shared/goBack/GoBack"));
-export const dynamicParams = false;
-
-export async function generateMetadata({ params }) {
-  const post = getPostContent(params.slug, params.lang);
-
-  return {
-    title: post.data.title,
-    description: post.data.subtitle,
-  };
-}
+import {
+    PageContainer,
+    Comments,
+    getBlogByslugfromDb,
+    getTimeElapsed,
+    Blog,
+    GETALLBLOG,
+} from './export.js';
 
 export const generateStaticParams = async () => {
-  const posts = await allgetPostMetadata();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+    const posts = await GETALLBLOG();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
 };
 
 const Page = async ({ params }) => {
-  // await visitSlug(props.params.slug)
-  const { slug } = params;
-  const post = getPostContent(NEWSLUG(params.slug, params.lang), params.lang);
-  return (
-    <>
-      <PageContainer>
-        <div className="w-full px-4 py-4 mx-auto">
-          <div className="flex items-center justify-between px-4 my-4 rounded-md shadow-xl bg-primary/70">
-            <GoBack />
-            <h1 className="p-2 text-2xl capitalize text-foreground ">
-              {post.data.title}
-            </h1>
-            <p className="text-xs text-forground">{post.data.date}</p>
-          </div>
-          <article className="flex items-center justify-center min-w-[100%] mx-auto prose font-tajawal text-foreground bg-primary/20 rounded-sm p-4">
-            <Markdown>{post.content}</Markdown>
-          </article>
-        </div>
-      </PageContainer>
-    </>
-  );
+    const { slug } = params;
+    const decodedSlug = decodeURIComponent(slug);
+    const postID = await getBlogByslugfromDb(decodedSlug);
+    if (!postID) {
+        // Handle the case when the postID is undefined or null
+        return <div>Error: Post not found</div>;
+    }
+    return (
+        <>
+            <PageContainer>
+                <div className='relative mt-4 flex w-full flex-col items-start justify-between gap-4 sm:flex-row '>
+                    <div className='w-[75%]'>
+                        <Blog
+                            body={postID.body}
+                            title={postID.title}
+                            crDate={getTimeElapsed(postID.createdDate)}
+                            updDate={getTimeElapsed(postID.updatedDate)}
+                        />
+                    </div>
+                    <div className='sticky right-0   top-0 h-[73vh] w-[25%] overflow-auto px-2'>
+                        <Comments
+                            postSlug={slug}
+                            posttitle={postID.title}
+                            postID={postID.id}
+                        />
+                    </div>
+                </div>
+
+                {/* <div className="flex flex-col sm:flex-row justify-between items-start w-full mt-4 gap-4">
+
+
+        </div> */}
+            </PageContainer>
+        </>
+    );
 };
 
 export default Page;

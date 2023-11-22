@@ -1,8 +1,8 @@
 ---
-title: "Responsive Design"
-subtitle: "Improved User Experience"
-date: "2020-12-22"
-description: "Responsive design: Essential approach to web design. Optimized for all devices and screen sizes. Fluid grids, flexible images, and media queries. Create modern and user-friendly websites with responsive design."
+title: 'Responsive Design'
+subtitle: 'Improved User Experience'
+date: '2020-12-22'
+description: 'Responsive design: Essential approach to web design. Optimized for all devices and screen sizes. Fluid grids, flexible images, and media queries. Create modern and user-friendly websites with responsive design.'
 ---
 
 # Why Responsive Design is Important for Your Website

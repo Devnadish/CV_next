@@ -1,8 +1,8 @@
 ---
-title: "Know Your Audience"
-subtitle: "Creating Compelling Content for Your Website"
-date: "2020-12-22"
-description: "Understanding your audience is crucial for effective communication and marketing. This involves knowing their needs, preferences, and behaviors. Strategies like surveys, data analysis, and user personas help gain audience insights. Creating compelling content and utilizing tools like Google Analytics and CRM systems further enhance audience understanding."
+title: 'Know Your Audience'
+subtitle: 'Creating Compelling Content for Your Website'
+date: '2020-12-22'
+description: 'Understanding your audience is crucial for effective communication and marketing. This involves knowing their needs, preferences, and behaviors. Strategies like surveys, data analysis, and user personas help gain audience insights. Creating compelling content and utilizing tools like Google Analytics and CRM systems further enhance audience understanding.'
 ---
 
 ## Creating Compelling Content for Your Website

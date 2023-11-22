@@ -1,9 +1,8 @@
 ---
-title: "SEO"
-subtitle: "Why is SEO Important"
-date: "2020-12-22"
+title: 'SEO'
+subtitle: 'Why is SEO Important'
+date: '2020-12-22'
 ---
-
 
 ## The Importance of SEO for Your Business
 

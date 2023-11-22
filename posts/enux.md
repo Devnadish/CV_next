@@ -1,8 +1,8 @@
 ---
-title: "UX"
-subtitle: "Creating Intuitive and Engaging Experiences"
-date: "2020-12-22"
-description: "Unlock the secrets to creating intuitive and engaging experiences that leave a lasting impression. Explore user-centric design principles, interactive elements, and psychological insights to craft experiences that delight users, drive engagement, and foster long-term customer loyalty."
+title: 'UX'
+subtitle: 'Creating Intuitive and Engaging Experiences'
+date: '2020-12-22'
+description: 'Unlock the secrets to creating intuitive and engaging experiences that leave a lasting impression. Explore user-centric design principles, interactive elements, and psychological insights to craft experiences that delight users, drive engagement, and foster long-term customer loyalty.'
 ---
 
 # User Experience (UX)

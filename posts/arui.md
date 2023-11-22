@@ -1,8 +1,9 @@
 ---
-title: "UI"
-subtitle: "Creating Beautiful and Intuitive Interfaces"
-date: "2021-07-12"
+title: 'UI'
+subtitle: 'Creating Beautiful and Intuitive Interfaces'
+date: '2021-07-12'
 ---
+
 # User Interface (UI)
 
 User Interface (UI) refers to the visual and interactive elements of a software application or website. The UI is what users interact with when they use an application or website. A well-designed UI can improve the user experience and make it easier for users to accomplish their goals. Here are some of the key elements of UI design:

@@ -1,8 +1,8 @@
 ---
-title: "Planning Your Website"
-subtitle: "Planning Your Website: Tips and Best Practices"
-date: "2020-12-22"
-description: "Plan your website for success. Define purpose, audience, and content. Design elements and considerations. Achieve online goals with proper planning."
+title: 'Planning Your Website'
+subtitle: 'Planning Your Website: Tips and Best Practices'
+date: '2020-12-22'
+description: 'Plan your website for success. Define purpose, audience, and content. Design elements and considerations. Achieve online goals with proper planning.'
 ---
 
 ## Planning Your Website: Tips and Best Practices

@@ -1,108 +1,109 @@
-"use client";
-import React from "react";
-import { Drawer } from "vaul";
-import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
-import colors from "../../../utl/colors.json";
+'use client';
+import React from 'react';
+import { Drawer } from 'vaul';
+import { AiOutlineEye } from '@react-icons/all-files/ai/AiOutlineEye';
+import colors from '@/constant/colors.json';
 
 export default function MyDrawer({
-  headTitle = "sample",
-  subTitle = "SubTitle",
-  btnTXT = "test",
-  btnIcon,
-  children,
-  chip,
+    headTitle = 'sample',
+    btnTXT = 'test',
+    btnIcon,
+    children,
+    chip,
 }) {
-  return (
-    <Drawer.Root shouldScaleBackground>
-      <div className="flex flex-col items-center justify-between">
-        <ChipData chip={chip} />
-        <Triger btnIcon={btnIcon} btnTXT={btnTXT} />
-        <div className="flex items-center font-tajawal text-sm justify-center w-full h-8 bg-gray-900 rounded-b-lg">
-          {btnTXT}
-        </div>
-      </div>
-      <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 bg-black/40" />
-        <Drawer.Content className="bg-zinc-100 flex flex-col rounded-t-[10px] h-[70%] mt-24 fixed bottom-0 left-0 right-0 ">
-          <div className="p-4 bg-white rounded-t-[10px] flex-1 overflow-auto ">
-            <div className="flex-shrink-0 w-12 mx-auto mb-8 rounded-full h-15 bg-zinc-900 " />
-            <div className="mx-auto max-w-fit ">
-              <DrawTItle headTitle={headTitle} />
-              {children}
+    return (
+        <Drawer.Root shouldScaleBackground>
+            <div className='flex flex-col items-center justify-between'>
+                <ChipData chip={chip} />
+                <Triger btnIcon={btnIcon} btnTXT={btnTXT} />
+                <div className='font-tajawal flex h-8 w-full items-center justify-center rounded-b-lg bg-gray-900 text-sm'>
+                    {btnTXT}
+                </div>
             </div>
-          </div>
-          <DrawFooter></DrawFooter>
-        </Drawer.Content>
-      </Drawer.Portal>
-    </Drawer.Root>
-  );
+            <Drawer.Portal>
+                <Drawer.Overlay className='fixed inset-0 bg-black/40' />
+                <Drawer.Content className='fixed bottom-0 left-0 right-0 mt-24 flex h-[70%] flex-col rounded-t-[10px] bg-zinc-100 '>
+                    <div className='flex-1 overflow-auto rounded-t-[10px] bg-white p-4 '>
+                        <div className='h-15 mx-auto mb-8 w-12 flex-shrink-0 rounded-full bg-zinc-900 ' />
+                        <div className='mx-auto max-w-fit '>
+                            <DrawTItle headTitle={headTitle} />
+                            {children}
+                        </div>
+                    </div>
+                    <DrawFooter></DrawFooter>
+                </Drawer.Content>
+            </Drawer.Portal>
+        </Drawer.Root>
+    );
 }
 
 function DrawFooter() {
-  return (
-    <div className="p-4 mt-auto bg-black border-t border-zinc-200">
-      <div className="flex justify-end max-w-md gap-6 mx-auto"></div>
-    </div>
-  );
+    return (
+        <div className='mt-auto border-t border-zinc-200 bg-black p-4'>
+            <div className='mx-auto flex max-w-md justify-end gap-6'></div>
+        </div>
+    );
 }
 
 function DrawTItle({ headTitle }) {
-  return (
-    <Drawer.Title className="mb-4 font-medium">
-      <div className="flex items-center h-8 px-8 mb-4 bg-black border-b-4 border-black w-fit ">
-        <h1>{headTitle} </h1>
-      </div>
-    </Drawer.Title>
-  );
+    return (
+        <Drawer.Title className='mb-4 font-medium'>
+            <div className='mb-4 flex h-8 w-fit items-center border-b-4 border-black bg-black px-8 '>
+                <h1>{headTitle} </h1>
+            </div>
+        </Drawer.Title>
+    );
 }
 
 function ChipData({ chip, viewer = 0 }) {
-  return (
-    <div className=" flex  justify-between items-center w-full p-2  rounded-t-lg shadow-sm border-1 bg-green-400/50">
-      <span className="px-2 text-sm text-black rounded-t-sm  bg-green-400/50 ">
-        {chip}
-      </span>
-      <div className="flex  gap-2 items-center">
-        <span className="text-sm  text-zinc-600">{viewer}</span>
-        <AiOutlineEye className=" text-zinc-600 w-4 h-4" />
-      </div>
-    </div>
-  );
+    return (
+        <div className=' border-1  flex w-full items-center justify-between  rounded-t-lg bg-green-400/50 p-2 shadow-sm'>
+            <span className='rounded-t-sm bg-green-400/50 px-2 text-sm  text-black '>
+                {chip}
+            </span>
+            <div className='flex  items-center gap-2'>
+                <span className='text-sm  text-zinc-600'>{viewer}</span>
+                <AiOutlineEye className=' h-4 w-4 text-zinc-600' />
+            </div>
+        </div>
+    );
 }
 
-function Triger({ btnIcon, btnTXT }) {
-  let indexColor = Math.floor(Math.random() * 10) + 1;
+function Triger({ btnIcon }) {
+    let indexColor = Math.floor(Math.random() * 10) + 1;
 
-  return (
-    <>
-      <Drawer.Trigger asChild>
-        <button
-          className="flex items-center justify-center flex-col
-                           gap-4 p-4 min-w-[150px] min-h-[80px]
-                           hover:ring-1  hover:ring-yellow-400
-                           rounded-sm hover:shadow-lg   bg-sprimary "
-          style={{
-            backgroundColor: colors.items[indexColor]?.backgroundColor,
-            color: colors.items[indexColor]?.textColor,
-          }}
-        >
-          {/* {btnIcon } */}
-          {React.cloneElement(btnIcon, {
-            style: {
-              backgroundColor: colors.items[indexColor]?.backgroundColor,
-              color: colors.items[indexColor]?.textColor,
-              fontSize: "24px",
-              padding: "8px",
-              // borderRadius: '50%'
-            },
-          })}
-          {/* {btnTXT} */}
-        </button>
-      </Drawer.Trigger>
-      {/* <div>
+    return (
+        <>
+            <Drawer.Trigger asChild>
+                <button
+                    className='bg-sprimary flex min-h-[80px] min-w-[150px]
+                           flex-col items-center justify-center gap-4
+                           rounded-sm  p-4
+                           hover:shadow-lg hover:ring-1   hover:ring-yellow-400 '
+                    style={{
+                        backgroundColor:
+                            colors.items[indexColor]?.backgroundColor,
+                        color: colors.items[indexColor]?.textColor,
+                    }}
+                >
+                    {/* {btnIcon } */}
+                    {React.cloneElement(btnIcon, {
+                        style: {
+                            backgroundColor:
+                                colors.items[indexColor]?.backgroundColor,
+                            color: colors.items[indexColor]?.textColor,
+                            fontSize: '24px',
+                            padding: '8px',
+                            // borderRadius: '50%'
+                        },
+                    })}
+                    {/* {btnTXT} */}
+                </button>
+            </Drawer.Trigger>
+            {/* <div>
 
     {btnTXT}
    </div> */}
-    </>
-  );
+        </>
+    );
 }
