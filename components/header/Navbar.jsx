@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from '@/components/header/Logo';
+// import Logo from '@/components/header/Logo';
 import dynamic from 'next/dynamic';
 
 import { getDictionary } from '@/lib/dictionary';
