@@ -26,7 +26,7 @@ function VersionControl() {
                     <AlertDialogContent>
                         <AlertDialogHeader>
                             <AlertDialogTitle>
-                                beta Version 2.0.12
+                                beta Version 3.0.0
                             </AlertDialogTitle>
                             <AlertDialogDescription>
                                 <div className='flex flex-col gap-2'>
