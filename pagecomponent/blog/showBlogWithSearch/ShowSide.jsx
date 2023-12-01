@@ -12,6 +12,7 @@ import {
     SheetHeader,
     SheetTitle,
 } from '@/components/ui/sheet';
+import Link from 'next/link';
 
 function ShowSide({ tags, freq }) {
     const [open, setOpen] = useState(false);
@@ -20,10 +21,10 @@ function ShowSide({ tags, freq }) {
         <>
             <div
                 id='toggleButton'
-                className='mt-0 flex   items-center shadow-md sm:hidden md:mt-4 md:w-11/12 '
+                className='mt-0 flex items-center  shadow-md md:mt-4  md:hidden md:w-11/12 '
             >
                 <Button size='xs' onClick={() => setOpen(true)}>
-                    <AiOutlineMenu className='text-white' size={15} />
+                    <AiOutlineMenu className=' text-foreground' size={15} />
                 </Button>
             </div>
             {open ? (
@@ -41,12 +42,21 @@ const Drawer = ({ open, setOpen, tags, freq }) => {
             <Sheet open={open} onOpenChange={setOpen}>
                 <SheetContent>
                     <SheetHeader>
-                        <SheetTitle>Select</SheetTitle>
+                        {/* <SheetTitle>Select</SheetTitle>
 
-                        <SheetDescription></SheetDescription>
+                        <SheetDescription>
+
+                        </SheetDescription> */}
+                        <Link
+                            className='mt-1 w-10/12 self-center rounded-md bg-destructive p-2 text-center hover:bg-destructive/50'
+                            href='/dashboard/post/new'
+                            as='/dashboard/post/new'
+                        >
+                            New Post
+                        </Link>
                     </SheetHeader>
                     <div
-                        className='flex flex-col gap-8'
+                        className='mt-8 flex flex-col gap-8'
                         onClick={() => setOpen(false)}
                     >
                         <Tags tags={tags} />

@@ -19,7 +19,11 @@ export const UpdateTitleForm = ({ description, title, id, setOpen, tags }) => {
     return (
         <>
             <div className='flex flex-col p-4'>
-                <form action={updData} className='flex flex-col gap-6 p-4'>
+                <form
+                    action={updData}
+                    className='flex flex-col gap-6 p-4'
+                    id='updatetitleform'
+                >
                     <Input name='title' type='text' defaultValue={title} />
                     <Textarea
                         name='description'

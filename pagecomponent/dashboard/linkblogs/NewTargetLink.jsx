@@ -10,7 +10,11 @@ function NewTargetLink({ id }) {
     };
     return (
         <div className='flex w-full items-center justify-between gap-4'>
-            <form action={handleAddLink} className='flex items-center gap-4'>
+            <form
+                id='targetlink'
+                action={handleAddLink}
+                className='flex w-full items-center gap-4'
+            >
                 <Input
                     type='text'
                     className='w-full'
@@ -20,7 +24,7 @@ function NewTargetLink({ id }) {
 
                 <Button
                     type='submit'
-                    className='ml-2 px-2 py-1 text-sm  disabled:bg-red-400'
+                    className='ml-2 px-2 py-1 text-sm  disabled:bg-destructive'
                     size='sm'
                 >
                     +

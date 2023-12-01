@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { createFileAction, deleteAllPOst } from './_action';
+import { createFileAction, deleteAllPOst } from './blog_action';
 import { countLanguage } from './helper';
 import { convertToSlug } from '@/lib/slug';
 
@@ -54,24 +54,24 @@ export const UploadFiles = ({ files, lang }) => {
         <>
             <div className='w-full flex-col items-center justify-between rounded-t-md bg-purple-500 px-4 py-2 md:flex-row '>
                 <div className='mb-2 flex items-start justify-evenly text-sm'>
-                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs text-white'>
+                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs  text-foreground'>
                         Blogs : {files.length}
                     </p>
-                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs text-white'>
+                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs  text-foreground'>
                         En/B : {countLanguage(files, 'en')}
                     </p>
-                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs text-white'>
+                    <p className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs  text-foreground'>
                         Ar/B : {countLanguage(files, 'ar')}
                     </p>
                     <button
-                        className='rounded-lg border bg-red-500 px-8 '
+                        className='rounded-lg border bg-destructive px-8 '
                         onClick={deleteAll}
                     >
                         del
                     </button>
                     {/* </div> */}
                 </div>
-                <div className='flex flex-col items-center justify-between rounded-md bg-black/30 p-2 text-white shadow-lg'>
+                <div className='flex flex-col items-center justify-between rounded-md bg-black/30 p-2  text-foreground shadow-lg'>
                     <Button
                         id='upload'
                         disabled={count === 0}

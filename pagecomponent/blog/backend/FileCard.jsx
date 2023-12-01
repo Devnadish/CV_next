@@ -25,7 +25,7 @@ export const FileCard = ({
 
                 <p className='mt-1 flex font-normal'>
                     Exsit :
-                    <span className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs text-white'>
+                    <span className='flex items-center justify-center rounded-lg bg-green-600 p-1 px-2 text-xs  text-foreground'>
                         {isAvlibal}
                     </span>
                 </p>

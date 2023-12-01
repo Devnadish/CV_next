@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { updateTagAction } from '../actions/_actions';
+import { updateTagAction } from '../backend/tag_actions';
 import { useToast } from '@/components/ui/use-toast';
 import { AiOutlineEdit } from '@react-icons/all-files/ai/AiOutlineEdit';
 import { ToastAction } from '@/components/ui/toast';

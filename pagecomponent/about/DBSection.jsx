@@ -26,7 +26,7 @@ async function DBSection({ lang }) {
                                 key={skill.id}
                                 imgz={baseUrl + skill.imgx}
                                 txt={skill.pres}
-                                colorx={['bg-red-600']}
+                                colorx={['bg-destructive']}
                             />
                         );
                     })}

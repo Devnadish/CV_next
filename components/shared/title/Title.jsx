@@ -15,9 +15,6 @@ function Title({ title, flag }) {
             <h1 className=' font-tajawal w-fit  text-[.8rem]  capitalize text-accent-foreground  md:text-[1rem]'>
                 {title}
             </h1>
-            {/* <div>{children}</div> */}
-            {/* {icon}
-      {withBtn && <Button>more</Button>} */}
         </div>
     );
 }

@@ -2,7 +2,7 @@ import {
     getDataAfterSearch,
     showAllTag,
     showFreqBlog,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/backend/blog_action';
 
 import BlogsWithSearch from '@/pagecomponent/blog/showBlogWithSearch/blogs/BlogsWithSearch';
 import PageContainer from '@/components/shared/pagecontainer/PageContainer';

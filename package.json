@@ -18,7 +18,8 @@
     "dependencies": {
         "@formatjs/intl-localematcher": "^0.4.0",
         "@next/bundle-analyzer": "^13.4.19",
-        "@prisma/client": "^5.5.2",
+        "@prisma/client": "^5.6.0",
+        "@radix-ui/react-accordion": "^1.1.2",
         "@radix-ui/react-alert-dialog": "^1.0.5",
         "@radix-ui/react-collapsible": "^1.0.3",
         "@radix-ui/react-dialog": "^1.0.5",
@@ -35,6 +36,7 @@
         "@xeger/quill-image-actions": "^0.7.2",
         "@xeger/quill-image-formats": "^0.7.2",
         "autoprefixer": "^10.4.15",
+        "axios": "^1.6.2",
         "class-variance-authority": "^0.7.0",
         "clsx": "^2.0.0",
         "dompurify": "^3.0.6",
@@ -75,7 +77,7 @@
         "husky": "^8.0.3",
         "prettier": "3.0.3",
         "prettier-plugin-tailwindcss": "^0.5.7",
-        "prisma": "^5.5.2",
+        "prisma": "^5.6.0",
         "server-only": "^0.0.1",
         "typescript": "5.1.6"
     }

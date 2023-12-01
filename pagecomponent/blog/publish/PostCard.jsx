@@ -8,7 +8,7 @@ import Link from 'next/link';
 import {
     publishPost,
     unPublishPost,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/backend/blog_action';
 
 function PostCard({ title, actionName, varient, id, action, lang }) {
     const handleAction = async (id) => {

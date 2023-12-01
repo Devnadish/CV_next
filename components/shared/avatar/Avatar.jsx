@@ -1,5 +1,5 @@
 import Image from 'next/image';
-function Avatar({ src }) {
+function Avatar({ src, width = '35', height = '35' }) {
     if (src === '') {
         src = '/assets/noavatar.png';
     }
@@ -7,8 +7,8 @@ function Avatar({ src }) {
         <Image
             src={src}
             alt='me'
-            width='35'
-            height='35'
+            width={width}
+            height={height}
             className='m-2 rounded-full'
             //   placeholder="blur"
         />

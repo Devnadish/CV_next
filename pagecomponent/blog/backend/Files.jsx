@@ -1,5 +1,5 @@
 import { getLanguage } from './helper';
-import { checkFileIsExistAction } from './_action';
+import { checkFileIsExistAction } from './blog_action';
 
 import { FileCard } from './FileCard';
 

@@ -29,7 +29,7 @@ function page() {
             <div className='relative w-auto p-4 sm:mx-auto sm:max-w-sm'>
                 <BackGround />
 
-                <div className='relative mt-4 rounded-3xl bg-white p-4 shadow-lg '>
+                <div className='relative mt-4 rounded-3xl bg-primary-foreground p-4 shadow-lg '>
                     <div className='mx-auto'>
                         <div>
                             <h1 className='flex items-center justify-center text-2xl font-semibold'>
@@ -42,7 +42,7 @@ function page() {
                                 <UserEmail></UserEmail>
                                 <UserPassword></UserPassword>
                                 <div className='relative'>
-                                    <button className='rounded-md bg-blue-500 px-2 py-1 text-white'>
+                                    <button className='rounded-md bg-blue-500 px-2 py-1  text-foreground'>
                                         Submit
                                     </button>
                                 </div>

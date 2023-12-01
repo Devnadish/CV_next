@@ -11,7 +11,7 @@ function EditTitle({ id, title, description, tags }) {
     return (
         <div className='flex w-full items-center justify-start gap-4 pt-4 '>
             <Button size='xs' variant='grayGhost' onClick={() => setOpen(true)}>
-                <AiFillEdit className='text-white' />
+                <AiFillEdit className=' text-foreground' />
             </Button>
             <Button size='xs' variant='grayGhost'>
                 <AiFillEye />

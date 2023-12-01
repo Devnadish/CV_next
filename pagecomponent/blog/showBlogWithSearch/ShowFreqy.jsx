@@ -17,14 +17,14 @@ function ShowFreqy({ freq }) {
                     <Badge
                         key={freq.id}
                         variant='outline'
-                        className='flex  w-full cursor-pointer items-center justify-between border-foreground/30 hover:border-foreground  active:bg-red-400'
+                        className='flex  w-full cursor-pointer items-center justify-between border-foreground/30 hover:border-foreground  active:bg-destructive'
                         onClick={() => {
                             onSearch(freq.title);
                         }}
                     >
                         <div className='flex  w-full items-center justify-between gap-2'>
                             <span className='break-normal '>{freq.title}</span>
-                            <span className='min-w-[20px] border-l  border-white/50 text-right text-xs text-foreground/50'>
+                            <span className='min-w-[20px] border-l  border-primary/70 text-right text-xs text-foreground/50'>
                                 {freq.viewers}
                             </span>
                         </div>

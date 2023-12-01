@@ -44,7 +44,7 @@ const SearchOnLink = ({
                         onChange={handleSearch}
                         id='searchFiled'
                     />
-                    <p className='absolute right-5 top-2 rounded bg-slate-500 px-2 text-xs'>
+                    <p className='absolute right-5 top-2 rounded bg-primary px-2 text-xs text-primary-foreground'>
                         {blogCont}
                     </p>
                 </div>

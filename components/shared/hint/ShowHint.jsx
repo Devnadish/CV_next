@@ -11,7 +11,7 @@ const ShowHint = ({ icon, txt, link, title }) => {
                 <p className='text-md font-tajawal font-semibold   text-foreground'>
                     {title}
                 </p>
-                <p className='text-md   font-tajawal line-clamp-4 p-4 hover:line-clamp-none'>
+                <p className='text-md font-tajawal   line-clamp-4 p-4 font-light hover:line-clamp-none'>
                     {txt}
                 </p>
             </Link>

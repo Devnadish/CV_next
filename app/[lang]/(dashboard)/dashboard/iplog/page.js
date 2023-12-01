@@ -9,13 +9,13 @@ async function page() {
     const ips = await getAllIp();
 
     return (
-        <>
+        <div className='mt-4 text-center'>
             <p className='ml-4'>{`vistor Count =  ${ips.length}`}</p>
-            <div className='flex w-full flex-wrap items-center justify-between gap-4 p-4'>
+            <div className='m-auto mt-10 flex w-full flex-col flex-wrap items-center justify-between gap-4 p-4 md:flex-row'>
                 {ips.map((ip) => {
                     return (
                         <div
-                            className='flex flex-col   rounded-md bg-primary'
+                            className='flex flex-col   rounded-md bg-primary '
                             key={ip.id}
                         >
                             <DataShow ip={ip} />
@@ -23,7 +23,7 @@ async function page() {
                     );
                 })}
             </div>
-        </>
+        </div>
     );
 }
 
@@ -34,14 +34,11 @@ const DataShow = ({ ip }) => {
         <>
             <Collapsible>
                 <CollapsibleTrigger>
-                    <div className='flex w-full items-center justify-between gap-4'>
+                    <div className='flex  min-w-[300px] items-center justify-between gap-4'>
                         <ChevronsUpDown className='h-4 w-4' />
-                        {ip.country}
+                        <p>{ip.country} </p>
                         <p> {ip.ip}</p>
-                        <p className='rounded-md bg-red-600 p-1'>
-                            {' '}
-                            {ip.counter}
-                        </p>
+                        <p className=' w-10 bg-destructive p-1'>{ip.counter}</p>
                     </div>
                 </CollapsibleTrigger>
                 <CollapsibleContent>

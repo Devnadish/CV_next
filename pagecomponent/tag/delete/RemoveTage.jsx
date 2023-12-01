@@ -1,6 +1,6 @@
 'use client';
 import React, { useTransition } from 'react';
-import { deleteTagAction } from '../actions/_actions';
+import { deleteTagAction } from '../backend/tag_actions';
 import { MdDelete } from '@react-icons/all-files/md/MdDelete';
 
 function RemoveTage({ tagId }) {

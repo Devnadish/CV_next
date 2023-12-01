@@ -27,10 +27,10 @@ const toastVariants = cva(
                 default: 'border bg-background text-foreground',
                 destructive:
                     'destructive group border-destructive bg-destructive text-destructive-foreground',
-                green: 'bg-green-500 text-white hover:bg-green-400/90 ',
-                red: 'bg-red-500 text-white hover:bg-gred-400/90 ',
-                blue: 'bg-blue-500 text-white hover:bg-blue-400/90 ',
-                orange: 'bg-orange-500 text-white hover:bg-orange-400/90 ',
+                green: 'bg-green-500  text-foreground hover:bg-green-400/90 ',
+                red: 'bg-destructive  text-foreground hover:bg-gred-400/90 ',
+                blue: 'bg-blue-500  text-foreground hover:bg-blue-400/90 ',
+                orange: 'bg-orange-500  text-foreground hover:bg-orange-400/90 ',
             },
         },
         defaultVariants: {

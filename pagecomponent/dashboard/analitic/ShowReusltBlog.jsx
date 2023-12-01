@@ -21,7 +21,7 @@ function ShowReusltBlog({ posts, tags, lang }) {
         <div className='flex h-full w-full flex-col items-center justify-start overflow-auto bg-background/25 p-4 '>
             <InputHeader length={posts.length} lang={lang} />
 
-            <div className='mt-8 grid grid-cols-1 place-items-center gap-6 lg:grid-cols-3'>
+            <div className='mt-8 grid grid-cols-1 place-items-center gap-6  md:grid-cols-2 lg:grid-cols-3'>
                 {posts.map(async (post) => {
                     return <FileCard post={post} key={post.slug} tags={tags} />;
                 })}
@@ -99,17 +99,19 @@ const FileCard = ({ post }) => {
 function Fotter(props) {
     return (
         <div className='flex w-full items-center justify-between text-card-foreground'>
-            {/* <div className='flex items-center justify-between text-white'>
+            {/* <div className='flex items-center justify-between  text-foreground'>
                 <DeleteBlog id={props.id} />
             </div> */}
             <div className='flex w-full   items-center justify-between'>
                 <div className='flex items-center gap-2 text-xs font-normal'>
-                    <PenSquare size={15} className='text-white/40' />
-                    <span className='text-white/40'>{props.createdAt}</span>
+                    <PenSquare size={15} className=' text-foreground/40' />
+                    <span className=' text-foreground/40'>
+                        {props.createdAt}
+                    </span>
                 </div>
                 <div className='flex items-center gap-2 text-xs font-light'>
-                    <PenLine size={15} className='text-white/40' />
-                    <span className='text-white/40'>{props.updAt}</span>
+                    <PenLine size={15} className=' text-foreground/40' />
+                    <span className=' text-foreground/40'>{props.updAt}</span>
                 </div>
             </div>
         </div>

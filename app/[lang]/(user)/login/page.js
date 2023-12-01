@@ -7,7 +7,7 @@ function page() {
             <div className='relative flex w-full items-center justify-center sm:mx-auto sm:max-w-sm'>
                 <BackGround></BackGround>
 
-                <div className='relative rounded-3xl bg-white px-4 py-4 shadow-lg sm:rounded-3xl sm:p-4'>
+                <div className='relative rounded-3xl bg-primary-foreground px-4 py-4 shadow-lg sm:rounded-3xl sm:p-4'>
                     <div className='mx-auto max-w-sm'>
                         <div className='mt-3 text-2xl font-semibold'>
                             <h1>Login Please</h1>
@@ -48,7 +48,7 @@ function page() {
                                     </label>
                                 </div>
                                 <div className='relative'>
-                                    <button className='rounded-md bg-blue-500 px-2 py-1 text-white'>
+                                    <button className='rounded-md bg-blue-500 px-2 py-1  text-foreground'>
                                         Submit
                                     </button>
                                 </div>

@@ -8,7 +8,7 @@ import Comments from '@/pagecomponent/blog/comments/Comments';
 import {
     getBlogByslugfromDb,
     GETALLBLOG,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/backend/blog_action';
 import { getTimeElapsed } from '@/lib/calculateTimeAndDate';
 import { Blog } from '@/pagecomponent/blog/Blog';
 

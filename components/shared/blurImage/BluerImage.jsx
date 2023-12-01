@@ -13,7 +13,7 @@ export default function BlurImage({ image }) {
     return (
         <div
             style={{ letterSpacing: 0, wordSpacing: 0, fontSize: 0 }}
-            className='aspect-w-1 xl:aspect-w-7 relative h-52 w-52 overflow-hidden rounded-lg border-4 border-white bg-gray-900 shadow-md'
+            className='aspect-w-1 xl:aspect-w-7 relative h-52 w-52 overflow-hidden rounded-lg border-4  border-primary-foreground bg-gray-900 shadow-md'
         >
             <Image
                 src={image}

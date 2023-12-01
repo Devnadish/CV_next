@@ -29,7 +29,7 @@ function ShowTag({ tags }) {
         setIsFilter(false);
     };
     return (
-        <div className='flex w-full  flex-col  justify-start  gap-2  overflow-y-auto  overflow-x-hidden scroll-smooth px-4 '>
+        <div className='flex w-full  flex-col  justify-start  gap-2  overflow-y-auto  overflow-x-hidden  px-4'>
             {isFilter && (
                 <Button
                     size='xs'
@@ -44,7 +44,7 @@ function ShowTag({ tags }) {
                     <Badge
                         key={tag.tagName}
                         variant='outline'
-                        className='w-full cursor-pointer border-foreground/30 hover:border-foreground  active:bg-red-400'
+                        className='w-full cursor-pointer border-foreground/30 hover:border-foreground  active:bg-destructive'
                         onClick={() => {
                             // onSearch(tag.title);
                             handleSearchBody(tag.tagName);
@@ -53,7 +53,7 @@ function ShowTag({ tags }) {
                         <div className='flex  w-full items-center justify-between'>
                             <span>{tag.tagName}</span>
 
-                            <span className='min-w-[20px] border-l  border-white/50 text-right text-xs text-foreground/50'>
+                            <span className='min-w-[20px] border-l  border-primary/70 text-right text-xs text-foreground/50'>
                                 {tag.count}
                             </span>
                         </div>

@@ -1,19 +1,15 @@
 'use server';
 import { increaseViewers } from '../../dashboard/analitic/dbAction/dbAction';
-
+import { getBlogQuastion } from '@/pagecomponent/blog/Quastion/backend/quastion_action';
+import { getBlogComment } from '@/pagecomponent/blog/comments/backend/comments_action';
 import {
     createFiles,
     FileIsExist,
     getAllFiles,
     showTagfromDb,
-    // getDataAfterSearchFromDb,
     searchBlog,
     getFreqBlog,
-    AddcommentToDb,
     getBlogBySlug,
-    getBlogCommentFromDb,
-    addCommentCounterDb,
-    minusCommentCounterDb,
     showAllOnline_post,
     showAllOffline_post,
     publish,
@@ -23,7 +19,7 @@ import {
     DELETEallBOLGS,
     getBlogs,
     blogGetPageCount,
-} from './DBaction';
+} from './blog_db';
 import { revalidatePath } from 'next/cache';
 
 export async function getAllBlog(lang) {
@@ -73,7 +69,6 @@ export async function showAllTag(lang) {
 }
 
 export async function getDataAfterSearch(query, page) {
-    // const posts = await getDataAfterSearchFromDb(text, body, description, lang);
     const posts = await searchBlog(query, page);
     revalidatePath('http://localhost:3000/en/blog?text=adobe');
     return posts;
@@ -85,44 +80,32 @@ export async function showFreqBlog(lang) {
     return posts;
 }
 
-export async function AddComment(title, postID, postTitle, userID, userAvatar) {
-    const posts = await AddcommentToDb(
-        title,
-        postID,
-        postTitle,
-        userID,
-        userAvatar,
-    );
-    revalidatePath('/blog');
-    return posts;
-}
+// export async function getBlogByslugfromDb(slug) {
+//     const [postData, quastions] = await Promise.all([
+//         getBlogBySlug(slug),
+//         getBlogQuastion(postData[0].id),
+//     ]);
+//     revalidatePath('/blog');
+//     return { post: postData[0], quastions };
+// }
 
 export async function getBlogByslugfromDb(slug) {
-    const post = await getBlogBySlug(slug);
+    const postData = await getBlogBySlug(slug);
+    const quastions = await getBlogQuastion(postData[0].id);
+    const comments = await getBlogComment(postData[0].id);
     revalidatePath('/blog');
-    return post[0];
+    return { post: postData[0], quastions, comments };
 }
+
+// export async function getBlogByslugfromDb(slug) {
+//     const post = await getBlogBySlug(slug);
+//      const Qst = await getBlogQuastion(post[0].id);
+//     revalidatePath('/blog');
+//     return {post:post[0],quastion: Qst}
+// }
 export async function getBlogByIdfromDb(id) {
     const posts = await getBlogById(id);
     revalidatePath('/blog');
-    return posts;
-}
-
-export async function getBlogComment(PostID) {
-    const posts = await getBlogCommentFromDb(PostID);
-    revalidatePath('/blog/enai');
-    return posts;
-}
-
-export async function addCommentCounter(commentID) {
-    const posts = await addCommentCounterDb(commentID);
-    revalidatePath('/blog/enai');
-    return posts;
-}
-
-export async function minusCommentCounter(commentID) {
-    const posts = await minusCommentCounterDb(commentID);
-    revalidatePath('/blog/enai');
     return posts;
 }
 
@@ -183,4 +166,11 @@ export async function GETALLBLOG() {
 export async function GETBLOGPAGECOUNT(limit) {
     const count = await blogGetPageCount(limit);
     return count;
+}
+
+export async function getAnswers(id) {
+    const replay = await getQuestionWithAnswers(id);
+    // TODO: send dynmic url to revalidate path
+    revalidatePath('/blog/enai');
+    return replay;
 }

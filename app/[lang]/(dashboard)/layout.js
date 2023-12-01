@@ -9,11 +9,11 @@ export default function DashboardLayout({ children, params }) {
     return (
         <>
             <PageContainer>
-                <section className='relative flex h-full w-full rounded-sm border-l  border-gray-300/30 p-2'>
-                    <aside className='absolute -left-[28px] top-0  z-10 h-fit shadow-2xl'>
+                <section className='relative flex h-full w-full rounded-sm'>
+                    <aside className='absolute -top-3 left-1  z-10 h-fit'>
                         <DashBoardMenu lang={params.lang} />
                     </aside>
-                    <main className='flex-1 overflow-auto '>{children}</main>
+                    <main className='w-full'>{children}</main>
                 </section>
             </PageContainer>
             {/* </div> */}

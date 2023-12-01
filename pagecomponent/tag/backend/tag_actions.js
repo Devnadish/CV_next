@@ -5,7 +5,7 @@ import {
     deleteTag,
     editTag,
     TagsWithPost,
-} from '@/pagecomponent/tag/actions/dbaction';
+} from '@/pagecomponent/tag/backend/tag_db';
 // import { createTodo, updateTodo } from '@/lib/todos'
 import { revalidatePath } from 'next/cache';
 

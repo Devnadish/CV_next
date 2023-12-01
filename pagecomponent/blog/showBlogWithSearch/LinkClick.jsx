@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import { HiOutlineEye } from '@react-icons/all-files/hi/HiOutlineEye';
-import { increaseBlogViewers } from '@/pagecomponent/blog/dbAction/_action';
+import { increaseBlogViewers } from '@/pagecomponent/blog/backend/blog_action';
 function LinkClick({ slug, id, children }) {
     const decodedSlug = decodeURIComponent(slug);
     const router = useRouter();
@@ -13,10 +13,10 @@ function LinkClick({ slug, id, children }) {
     return (
         <Button
             onClick={handleClick}
-            className='flex w-full items-center justify-between bg-primary/70 text-foreground'
+            className='flex w-full items-center justify-between bg-primary/80 text-primary-foreground'
         >
             {children}
-            <HiOutlineEye className='h-4 w-4 text-foreground ' />
+            <HiOutlineEye className='h-4 w-4 text-primary-foreground ' />
         </Button>
     );
 }

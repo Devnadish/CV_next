@@ -10,6 +10,8 @@ import {
 } from './export';
 import ShowTag from '@/pagecomponent/blog/tag/ShowTag';
 import ShowFreqy from '@/pagecomponent/blog/showBlogWithSearch/ShowFreqy';
+import GoBack from '@/components/shared/goBack/GoBack';
+import Link from 'next/link';
 async function Blogs({ params, searchParams }) {
     const query = {
         text: searchParams?.text || '',
@@ -36,12 +38,19 @@ async function Blogs({ params, searchParams }) {
             {posts.length === 0 ? (
                 <Nopost />
             ) : (
-                <div className='flex '>
+                <div className='flex w-full'>
                     {/* Sidebar */}
                     <div
-                        className='sticky top-0 w-1/5 overflow-y-auto md:w-1/4'
+                        className='sticky top-0 hidden w-1/5 overflow-y-auto   md:flex  md:w-1/2 md:flex-col  lg:w-1/4 '
                         style={{ height: '80vh' }}
                     >
+                        <Link
+                            className='mt-1 w-10/12 self-center rounded-md bg-destructive p-2 text-center hover:bg-destructive/50'
+                            href='/dashboard/post/new'
+                            as='/dashboard/post/new'
+                        >
+                            New Post
+                        </Link>
                         <SideBar
                             dataLength={posts?.length}
                             tags={tags}
@@ -64,18 +73,7 @@ async function Blogs({ params, searchParams }) {
                         </div>
 
                         {/* Scrollable body */}
-                        <div
-                            className='min-h-screen flex-grow overflow-y-auto p-4'
-                            // key={Math.random()}
-                        >
-                            {/* <div className=' bg-blue-500'> */}
-                            {/* <BlogsWithSearch
-                            posts={posts}
-                            tags={tags}
-                            blogCont={posts.length}
-                            freq={freq}
-                            pageCount={pageCount}
-                        /> */}
+                        <div className='min-h-screen flex-grow overflow-y-auto p-4'>
                             <LoadMore
                                 tags={tags}
                                 blogCont={posts.length}
@@ -84,7 +82,6 @@ async function Blogs({ params, searchParams }) {
                                 query={query}
                                 postsData={posts}
                             />
-                            {/* </div> */}
                         </div>
                     </div>
                 </div>
@@ -115,9 +112,9 @@ const SearchHeader = ({ lang, Postlength, tags, freq, pageCount }) => {
 
 const SideBar = ({ dataLength, tags, freq }) => {
     const mainDivStyle =
-        'relative max-h-[48%] min-h-[45%] overflow-y-auto rounded-lg border border-foreground/30  shadow-xl';
+        'relative max-h-[48%] min-h-[45%] overflow-y-auto rounded-lg border border-foreground/30  shadow-xl bg-accent';
     const subMainDivStyle =
-        'sticky left-0 top-0 border-b border-foreground/30  bg-background  px-4  py-1 text-sm shadow-xl  ';
+        'sticky left-0 top-0 border-b border-foreground/30  bg-background  px-4  py-1 text-sm shadow-xl bg-primary/30 ';
     return (
         <div
             className='hidden  flex-col  overflow-y-auto border-r border-foreground/40 bg-accent  p-4  sm:flex  md:gap-8 '
@@ -190,7 +187,7 @@ const SideBar = ({ dataLength, tags, freq }) => {
 //                         <div className='sticky left-0 top-[0px] z-50 h-[100px] w-full bg-blue-800 shadow-xl'>
 //                             nafbar
 //                         </div>
-//                         <div className='h-[200%] w-full  bg-red-400'>cards</div>
+//                         <div className='h-[200%] w-full  bg-destructive'>cards</div>
 //                     </div>
 //                 </div>
 
@@ -198,8 +195,9 @@ const Nopost = () => {
     return (
         <PageContainer>
             <div className='flex h-full w-full items-center justify-center'>
-                <div className='flex  h-1/2 w-1/2 items-center justify-center  rounded-xl bg-white/10  text-2xl outline-dashed outline-2 outline-offset-8 outline-white/20 '>
+                <div className='flex  h-1/2 w-1/2 flex-col items-center justify-center gap-8  rounded-xl bg-primary/10  text-2xl outline-dashed outline-2 outline-offset-8 outline-primary/20 '>
                     Sorry .. No Online Post For Now
+                    <GoBack />
                 </div>
             </div>
         </PageContainer>

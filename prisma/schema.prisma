@@ -37,8 +37,9 @@ model BlogTable {
   crDate      String   @default("")
   viewers     Int      @default(0)
   targetlinks String[]
-  published   Boolean  @default(true)
+  published   Boolean  @default(false)
   language    String   @default("ar")
+  questions   String[]
   comments    String[]
   createdDate DateTime @default(now())
   updatedDate DateTime @updatedAt
@@ -48,7 +49,7 @@ model BlogComment {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
   title     String @default("")
   like      Int    @default(0)
-  dislike    Int    @default(0)
+  dislike   Int    @default(0)
   postID    String @default("")
   postTitle String @default("")
 
@@ -59,10 +60,14 @@ model BlogComment {
 }
 
 model BlogLink {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  title    String @default("")
-  slug     String @default("")
-  language String @default("")
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  title       String   @default("")
+  slug        String   @default("")
+  language    String   @default("")
+  userID      String   @default("")
+  useerAvatar String   @default("")
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
 }
 
 model Iplog {
@@ -75,4 +80,32 @@ model Iplog {
   loc      String @default("")
   org      String @default("")
   timezone String @default("")
+   createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
+}
+
+model Question {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  slug          String   @default("")
+  postID        String   @db.ObjectId
+  postTitle     String   @default("")
+  Question      String   @default("")
+  published     Boolean  @default(false)
+  createdDate   DateTime @default(now())
+  updatedDate   DateTime @updatedAt
+  publishedDate DateTime @default(now())
+  answersID     String[]
+
+  userID     String @default("")
+  userAvatar String @default("")
+}
+
+model Answer {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  Answer      String   @default("")
+  QuestionId  String   @default("")
+  createdDate DateTime @default(now())
+  updatedDate DateTime @updatedAt
+  userID      String   @default("")
+  userAvatar  String   @default("")
 }

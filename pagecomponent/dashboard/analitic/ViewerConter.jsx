@@ -17,7 +17,9 @@ function ViewerConter({ viewer, id }) {
                 onClick={() => plusOne(id)}
                 className='flex h-8 w-8 items-center justify-center bg-purple-600 hover:bg-purple-400'
             >
-                <p className='mb-[5px] text-2xl font-bold text-white'>+</p>
+                <p className='mb-[5px] text-2xl font-bold  text-foreground'>
+                    +
+                </p>
             </Button>
             <p className='self-center text-2xl font-bold text-green-600'>
                 {viewer}
@@ -25,9 +27,11 @@ function ViewerConter({ viewer, id }) {
             <Button
                 disabled={viewer === 0}
                 onClick={() => minuesOne(id)}
-                className='flex h-8 w-8 items-center justify-center bg-red-600 p-0 hover:bg-red-400 disabled:bg-gray-700 '
+                className='flex h-8 w-8 items-center justify-center bg-destructive p-0 hover:bg-destructive disabled:bg-gray-700 '
             >
-                <p className='mb-[5px] text-2xl font-bold text-white'>-</p>
+                <p className='mb-[5px] text-2xl font-bold  text-foreground'>
+                    -
+                </p>
             </Button>
         </div>
     );

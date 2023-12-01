@@ -4,7 +4,7 @@ import { AiFillEdit } from '@react-icons/all-files/ai/AiFillEdit';
 import DeleteWithAlertDialog from '@/components/shared/alertDialog/DeleteWithAlertDialog';
 import Link from 'next/link';
 import { MdDelete } from '@react-icons/all-files/md/MdDelete';
-import { deleteTagAction } from '../actions/_actions';
+import { deleteTagAction } from '../backend/tag_actions';
 
 const handleDelete = async (tagId, oldtagName) => {
     'use server';
@@ -34,7 +34,7 @@ const TagCard = ({ tag, handleDelete }) => {
                 className={`${boxBorder} flex w-full flex-col  gap-4 rounded-sm border p-4 md:max-w-[200px]`}
             >
                 <p>{tag.tag}</p>
-                <div className='flex items-center justify-between border-t border-white/50 py-2'>
+                <div className='flex items-center justify-between border-t  border-primary-foreground/50 py-2'>
                     <div className='text-xs'>
                         {tag.postCount === 0 ? (
                             <span className=' rounded-sm px-1  text-xs text-primary '>

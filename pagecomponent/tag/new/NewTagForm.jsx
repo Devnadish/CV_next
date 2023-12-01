@@ -2,7 +2,7 @@
 import React from 'react';
 import { AiOutlinePlus } from '@react-icons/all-files/ai/AiOutlinePlus';
 import { useRef } from 'react';
-import { createTagAction } from '../actions/_actions';
+import { createTagAction } from '../backend/tag_actions';
 import { useToast } from '@/components/ui/use-toast';
 import { Button } from '@/components/ui/button';
 
@@ -37,6 +37,7 @@ const NewTagForm = () => {
                 ref={formRef}
                 action={action}
                 className='flex items-center justify-between gap-4'
+                id='tagForm'
             >
                 <input
                     type='text'
@@ -46,7 +47,7 @@ const NewTagForm = () => {
 
                 <Button
                     type='submit'
-                    className='ml-2 px-2 py-1 text-sm  disabled:bg-red-400'
+                    className='ml-2 px-2 py-1 text-sm  disabled:bg-destructive'
                     size='sm'
                 >
                     <AiOutlinePlus size={'20px'} />

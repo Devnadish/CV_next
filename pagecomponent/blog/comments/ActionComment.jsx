@@ -6,7 +6,7 @@ import { AiOutlineDislike } from '@react-icons/all-files/ai/AiOutlineDislike';
 import {
     addCommentCounter,
     minusCommentCounter,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/comments/backend/comments_action';
 
 export const LikeComment = ({ counter, id }) => {
     const handleAddComment = async () => {

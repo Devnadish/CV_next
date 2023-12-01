@@ -16,7 +16,7 @@ function VersionControl() {
     return (
         <div>
             <div className='flex  w-full justify-between bg-primary'>
-                <p className='px-4 text-xs text-white'></p>
+                <p className='px-4 text-xs  text-foreground'></p>
                 <p className='px-4 text-xs text-black'></p>
 
                 <AlertDialog>

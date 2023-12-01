@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { FaPaperPlane } from '@react-icons/all-files/fa/FaPaperPlane';
 import { AiOutlineComment } from '@react-icons/all-files/ai/AiOutlineComment';
-import { AddComment } from '@/pagecomponent/blog/dbAction/_action';
+import { AddComment } from '@/pagecomponent/blog/comments/backend/comments_action';
 import { Button } from '@/components/ui/button';
 import Modal from '@/components/shared/modal/Modal';
 
@@ -58,6 +58,7 @@ const InputComment = ({ postID, userID, setOpen, postTitle, useAvatar }) => {
             <form
                 action={handleAddComment}
                 className='flex w-full items-center justify-center gap-2 px-2'
+                id='commentform'
             >
                 <Input
                     value={comment}

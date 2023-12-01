@@ -5,7 +5,8 @@ import dynamic from 'next/dynamic';
 import { Analytics } from '@vercel/analytics/react';
 import { lateef, cairo, tajawal } from '@/lib/fonts';
 import { Toaster } from '@/components/ui/toaster';
-import NextTopLoader from 'nextjs-toploader';
+// import NextTopLoader from 'nextjs-toploader';
+// import InternetStatus from '@/components/shared/internet/InternetStatus';
 const Providers = dynamic(() => import('@/Providers/Provider'));
 export const metadata = {
     title: 'EazyCode',
@@ -38,7 +39,7 @@ export default function RootLayout({ children, params }) {
                             <div className='row-span-1'>
                                 <Navbar lang={params.lang} />
                             </div>
-                            <NextTopLoader
+                            {/* <NextTopLoader
                                 color='#2299DD'
                                 initialPosition={0.08}
                                 crawlSpeed={200}
@@ -48,7 +49,8 @@ export default function RootLayout({ children, params }) {
                                 easing='ease'
                                 speed={200}
                                 shadow='0 0 10px #2299DD,0 0 5px #2299DD'
-                            />
+                            /> */}
+                            {/* <InternetStatus /> */}
                             <div> {children}</div>
                             <div>
                                 <Footer lang={params.lang} />

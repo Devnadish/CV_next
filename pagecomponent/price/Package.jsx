@@ -25,7 +25,7 @@ export const Package = ({
 }) => {
     return (
         <>
-            <div className='font-tajawal   relative mt-6      w-full  bg-red-100  '>
+            <div className='font-tajawal   destructive relative      mt-6  w-full  '>
                 <Plane
                     category={category}
                     facility={facility}
@@ -54,7 +54,7 @@ const Plane = ({
             <Card className='flex min-h-[420px]  flex-col justify-between'>
                 <CardHeader className='p-2'>
                     {recommend && (
-                        <div className='absolute  left-2 top-0 z-50 flex -translate-y-1/2 items-center justify-between gap-4 rounded-full bg-orange-500 px-3 py-2  text-sm font-semibold tracking-wider text-white shadow-md '>
+                        <div className='absolute  left-2 top-0 z-50 flex -translate-y-1/2 items-center justify-between gap-4 rounded-full bg-orange-500 px-3 py-2  text-sm font-semibold tracking-wider  text-foreground shadow-md '>
                             <p>{hint}</p>
                             <FcApproval className='h-6 w-6' />
                         </div>

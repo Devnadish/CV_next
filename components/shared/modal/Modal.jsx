@@ -13,7 +13,7 @@ function Modal({ open, setOpen, title = '', Description, children }) {
             {/* <DialogTrigger >Open</DialogTrigger> */}
 
             <DialogContent
-                className={'max-h-[90vh] overflow-y-scroll lg:max-w-screen-lg'}
+                className={'max-h-[90vh] overflow-y-auto lg:max-w-screen-lg'}
             >
                 <DialogHeader>
                     <DialogTitle>{title}</DialogTitle>

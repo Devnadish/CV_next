@@ -1,23 +1,25 @@
-import { getAllBlog, Separator, NewTargetLink } from './export';
+import { getAllBlog, NewTargetLink } from './export';
 async function page({ params }) {
     const posts = await getAllBlog(params.lang);
 
     return (
         <>
-            <h1 className='my-4 ml-4 text-2xl font-semibold'>
+            <h1 className='my-4 ml-4 text-center text-2xl font-semibold'>
                 Blog Count:{posts.length}
             </h1>
-            <div className='flex w-full flex-wrap items-center justify-between gap-4 rounded-lg bg-card px-4 py-4 text-foreground'>
+            <div className='flex w-full flex-wrap items-center   justify-between gap-4 rounded-lg bg-card px-4 py-4 text-foreground'>
                 {posts.map((post) => {
                     let blogStyle;
                     post.viewers === 0
-                        ? (blogStyle = 'bg-gray-400 border-gray-400')
-                        : (blogStyle = 'bg-green-600  border-green-600');
+                        ? (blogStyle =
+                              'bg-secondary text-primary-foreground  border-gray-400')
+                        : (blogStyle =
+                              'bg-primary text-primary-foreground  border-primary');
 
                     let blogDivStyle;
                     post.viewers === 0
-                        ? (blogDivStyle = 'border-gray-400')
-                        : (blogDivStyle = 'border-green-600');
+                        ? (blogDivStyle = 'border-primary')
+                        : (blogDivStyle = 'border-secondary');
                     return (
                         <BlogData
                             key={post.id}
@@ -38,18 +40,19 @@ function BlogData(props) {
     return (
         <>
             <div
-                className={`${props.blogDivStyle} flex max-w-[250px] flex-wrap items-center justify-between gap-4 rounded-md border bg-card p-4  text-sm text-foreground`}
+                className={`${props.blogDivStyle} m-auto flex  max-w-[350px] flex-wrap items-center justify-between gap-4 rounded-md border bg-primary/20  p-4  text-sm text-primary-foreground`}
             >
-                <div
-                    className={`${props.blogStyle}  mansory-2  h-[25px] w-[25px] items-center justify-center rounded-full text-accent-foreground`}
-                >
-                    <p className='text-md flex w-full items-center justify-center text-accent-foreground'>
+                <div className='flex w-full items-center justify-between border-b  border-primary pb-2'>
+                    <p
+                        className={`${props.blogStyle} flex  h-[25px] w-[25px] items-center justify-center rounded-md text-accent-foreground `}
+                    >
                         {props.post.viewers}
                     </p>
+                    <p className='text-foreground'>{props.post.title}</p>
+                    <p className='text-foreground'>
+                        {props.post.language === 'en' ? 'English' : 'عربي'}
+                    </p>
                 </div>
-                <p>{props.post.title}</p>
-                <p>{props.post.language}</p>
-                <Separator />
                 <NewTargetLink id={props.post.id} />
                 <div className='w-full'>
                     {props.post.targetlinks.map((link) => {

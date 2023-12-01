@@ -13,10 +13,9 @@ import { useToast } from '@/components/ui/use-toast';
 import {
     createFileAction,
     updatePostAction,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/backend/blog_action';
 import DeleteWithAlertDialog from '@/components/shared/alertDialog/DeleteWithAlertDialog';
 import GoBack from '@/components/shared/goBack/GoBack';
-import { v4 as uuidv4 } from 'uuid';
 
 const ReactQuill = dynamic(
     async () => {
@@ -32,6 +31,7 @@ const ReactQuill = dynamic(
 
 import 'react-quill/dist/quill.snow.css';
 import '@/styles/styles.css';
+import PageContainer from '@/components/shared/pagecontainer/PageContainer';
 
 const toolbar = {
     container: [
@@ -156,126 +156,132 @@ export default function Editor({
     }
 
     return (
-        <div className='flex w-full flex-col items-center  px-4'>
-            {updateMode ? (
-                <div className='mb-4 flex w-[90%]  items-center  gap-4  bg-white/10 px-4 '>
-                    <GoBack />
-                    <p className='flex   h-[40px] w-full items-center justify-center rounded-sm  px-4 text-xl'>
-                        Update Post
+        <PageContainer>
+            <div className='flex w-full flex-col items-center  '>
+                {updateMode ? (
+                    <div className='mb-4 flex w-[90%]  items-center  gap-4  bg-primary-foreground/10 px-4 '>
+                        <GoBack />
+                        <p className='flex   h-[40px] w-full items-center justify-center rounded-sm  px-4 text-xl'>
+                            Update Post
+                        </p>
+                    </div>
+                ) : (
+                    <p className='my-2 w-fit rounded-full bg-green-700 px-4'>
+                        New Post
                     </p>
-                </div>
-            ) : (
-                <p className='mt-2 w-fit rounded-full bg-green-700 px-4'>
-                    New Post
-                </p>
-            )}
-
-            <div className='flex w-full flex-col items-start justify-evenly gap-4 md:flex-row'>
-                {/* title with slug */}
-                <div className='flex w-full flex-col gap-2 md:w-1/4'>
-                    <Textarea
-                        // className="md:w-1/4 "
-                        name='titleName'
-                        value={title}
-                        onChange={(e) => setTitle(e.target.value)}
-                        id='title'
-                        placeholder='Post Title'
-                        rows='2'
-                    />
-                    <p className='text-xs'>
-                        <span className='mr-2 rounded-sm  bg-primary/50 px-2 py-0.5 font-semibold '>
-                            slug
-                        </span>{' '}
-                        {slug}
-                    </p>
-                </div>
-                {/* description with button */}
-                <div className='flex w-full flex-col gap-4'>
-                    <Textarea
-                        className='md:w-full'
-                        name='subtitle'
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                        id='subtitle'
-                        placeholder='Description'
-                        rows='2'
-                    />
-                    <div className='flex flex-col gap-4 md:flex-row'>
-                        <Button
-                            className='w-full disabled:bg-red-500 disabled:text-white'
-                            disabled={isSave ? 1 : 0}
-                            onClick={handleSavePost}
-                            variant={updateMode ? 'red' : 'green'}
-                        >
-                            {updateMode ? <p>Update Post</p> : <p>New Post</p>}
-                        </Button>
-                    </div>
-                </div>
-                {/* tag with lang */}
-                <div className='flex h-full w-full  flex-col gap-4 rounded-md  border border-foreground/20 px-4 py-2  md:w-1/4'>
-                    <SelectTag
-                        tagElement={tagElement}
-                        setTagElement={setTagElement}
-                        tagData={tagData}
-                    />
-
-                    <div className='flex items-center justify-evenly space-x-4'>
-                        <label className='inline-flex items-center'>
-                            <input
-                                type='radio'
-                                name='language'
-                                value='en'
-                                checked={language === 'en'}
-                                className='form-radio h-4 w-4 text-indigo-600'
-                                onChange={() => setLanguage('en')}
-                            />
-                            <span className='ml-2  text-foreground'>
-                                English
-                            </span>
-                        </label>
-                        <label className='inline-flex items-center'>
-                            <input
-                                type='radio'
-                                name='language'
-                                value='ar'
-                                checked={language === 'ar'}
-                                className='form-radio h-4 w-4 text-indigo-600'
-                                onChange={() => setLanguage('ar')}
-                            />
-                            <span className='ml-2 text-foreground'>عربي</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            {/* editor */}
-            <div className='p-4'>
-                {mounted && (
-                    <div className='flex items-center justify-end'>
-                        {/* <EditorToolbar /> */}
-                        <ActionButton
-                            setData={setData}
-                            data={data}
-                            title={title}
-                            tagElement={tagElement}
-                            description={description}
-                            slug={slug}
-                        />
-                    </div>
                 )}
 
-                <ReactQuill
-                    className='container'
-                    theme='snow'
-                    value={data}
-                    onChange={setData}
-                    placeholder='write post...'
-                    modules={{ toolbar: toolbar }}
-                    style={{ width: '100%' }}
-                    // modules={modules}
-                    // formats={formats}
-                />
+                <div className='flex w-full flex-col items-start justify-evenly gap-4 lg:flex-col'>
+                    {/* title with slug */}
+                    <div className='flex w-full flex-col gap-4 md:flex-row'>
+                        <div className='flex w-full flex-col gap-2 lg:w-1/4'>
+                            <Textarea
+                                // className="md:w-1/4 "
+                                name='titleName'
+                                value={title}
+                                onChange={(e) => setTitle(e.target.value)}
+                                id='title'
+                                placeholder='Post Title'
+                                rows='2'
+                            />
+                            <p className='text-xs'>
+                                <span className='mr-2 rounded-sm  bg-primary/50 px-2 py-0.5 font-semibold '>
+                                    slug
+                                </span>{' '}
+                                {slug}
+                            </p>
+                        </div>
+                        {/* description with button */}
+                        <div className='flex w-full flex-col gap-4'>
+                            <Textarea
+                                className='md:w-full'
+                                name='subtitle'
+                                value={description}
+                                onChange={(e) => setDescription(e.target.value)}
+                                id='subtitle'
+                                placeholder='Description'
+                                rows='2'
+                            />
+                        </div>
+                        <div className='flex h-full w-full  flex-col gap-4 rounded-md  border border-foreground/20 px-4 py-2  lg:w-1/4'>
+                            <SelectTag
+                                tagElement={tagElement}
+                                setTagElement={setTagElement}
+                                tagData={tagData}
+                            />
+
+                            <div className='flex items-center justify-evenly space-x-4'>
+                                <label className='inline-flex items-center'>
+                                    <input
+                                        type='radio'
+                                        name='language'
+                                        value='en'
+                                        checked={language === 'en'}
+                                        className='form-radio h-4 w-4 text-indigo-600'
+                                        onChange={() => setLanguage('en')}
+                                    />
+                                    <span className='ml-2  text-foreground'>
+                                        English
+                                    </span>
+                                </label>
+                                <label className='inline-flex items-center'>
+                                    <input
+                                        type='radio'
+                                        name='language'
+                                        value='ar'
+                                        checked={language === 'ar'}
+                                        className='form-radio h-4 w-4 text-indigo-600'
+                                        onChange={() => setLanguage('ar')}
+                                    />
+                                    <span className='ml-2 text-foreground'>
+                                        عربي
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* tag with lang */}
+
+                    <Button
+                        className='w-full text-foreground disabled:bg-destructive '
+                        disabled={isSave ? 1 : 0}
+                        onClick={handleSavePost}
+                        variant={updateMode ? 'red' : 'green'}
+                    >
+                        {updateMode ? <p>Update Post</p> : <p>New Post</p>}
+                    </Button>
+                </div>
+                {/* editor */}
+                <div className='w-full'>
+                    {mounted && (
+                        <div className='flex items-center justify-end'>
+                            {/* <EditorToolbar /> */}
+                            <ActionButton
+                                setData={setData}
+                                data={data}
+                                title={title}
+                                tagElement={tagElement}
+                                description={description}
+                                slug={slug}
+                            />
+                        </div>
+                    )}
+
+                    <ReactQuill
+                        className='container'
+                        theme='snow'
+                        value={data}
+                        onChange={setData}
+                        placeholder='write post...'
+                        modules={{ toolbar: toolbar }}
+                        style={{ width: '100%' }}
+                        // modules={modules}
+                        // formats={formats}
+                    />
+                </div>
             </div>
-        </div>
+        </PageContainer>
     );
 }
 const SelectTag = ({ tagElement, setTagElement, tagData }) => {
@@ -285,7 +291,7 @@ const SelectTag = ({ tagElement, setTagElement, tagData }) => {
                 // name="tagsName"
                 id='tagsID'
                 value={tagElement}
-                className='mt-2 h-6 w-full  outline outline-1 outline-offset-4 outline-white/50    '
+                className='mt-2 h-6 w-full  outline outline-1 outline-offset-4 outline-primary-foreground/50    '
                 onChange={(e) => setTagElement(e.target.value)}
             >
                 <option value=''>select Tag</option>
@@ -384,7 +390,7 @@ const ActionButton = ({
             <DeleteWithAlertDialog
                 action={handleClear}
                 des={
-                    <p className='my-4 rounded-lg border border-white/30 p-2 text-center'>
+                    <p className='my-4 rounded-lg border  border-primary-foreground/30 p-2 text-center'>
                         Your Post Will Be{' '}
                         <span className='text-red-500 '>Deleted</span>
                     </p>

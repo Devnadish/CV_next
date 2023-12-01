@@ -67,7 +67,7 @@ export function IamKhalid({
             </div>
             <div className='my-4 flex items-center justify-around gap-4 '>
                 <Button type='button' variant='blue'>
-                    <FaHandshake className='text-xl text-white' />
+                    <FaHandshake className='text-xl  text-foreground' />
                     <p className='font-tajawal font-semibold'>
                         {' '}
                         {waitingForyou}{' '}
@@ -78,7 +78,7 @@ export function IamKhalid({
                     type='button'
                     className='flex items-center gap-2'
                 >
-                    <FiDownload className='text-xl text-white' />
+                    <FiDownload className='text-xl  text-foreground' />
                     <p className='font-tajawal font-semibold'>{download}</p>
                 </Button>
             </div>

@@ -17,6 +17,7 @@ export async function FileIsExist(slug) {
         };
     }
 }
+
 export async function getAllFiles(lang) {
     try {
         return await db.BlogTable.findMany({
@@ -141,61 +142,6 @@ export async function updatePostActionOnDb(
     }
 }
 
-// export async function searchBlog(query, page) {
-//     consoleLog(query.tag);
-//     const searchKeyword = decodeURIComponent(query.text);
-//     const bodyFlag = decodeURIComponent(query.body);
-//     const descriptionFlag = decodeURIComponent(query.description);
-//     const searchLang = query.lang;
-//     const tagQuery = query.tag;
-//     const skipPage = (page - 1) * query.limit;
-
-//     try {
-//         let where = {};
-//         if (searchKeyword) {
-//             where = {
-//                 OR: [
-//                     {
-//                         title: {
-//                             contains: searchKeyword,
-//                             mode: 'insensitive',
-//                         },
-//                     },
-//                     { tag: { contains: tagQuery, mode: 'insensitive' } },
-//                     bodyFlag && {
-//                         body: { contains: searchKeyword, mode: 'insensitive' },
-//                     },
-//                     descriptionFlag && {
-//                         description: {
-//                             contains: searchKeyword,
-//                             mode: 'insensitive',
-//                         },
-//                     },
-//                 ].filter(Boolean),
-//                 language: searchLang,
-//             };
-//         }
-
-//         const results = await db.BlogTable.findMany({
-//             where,
-//             //  how may to shift
-//             skip: Math.abs(skipPage),
-//             // take for how may contain in result
-//             take: query.limit,
-//             orderBy: {
-//                 viewers: query.sortDirection === 'desc' ? 'desc' : 'asc',
-//             },
-//         });
-
-//         return results;
-//     } catch (error) {
-//         console.error('Error retrieving filtered URLs:', error);
-//         throw error;
-//     } finally {
-//         await db.$disconnect();
-//     }
-// }
-
 export async function searchBlog(query, page) {
     const searchKeyword = decodeURIComponent(query.text);
     const bodyFlag = decodeURIComponent(query.body);
@@ -219,81 +165,12 @@ export async function searchBlog(query, page) {
         };
 
         const results = await db.BlogTable.findMany(options);
-        // console.log(
-        //     results.map((result) => result.title),
-        //     page,
-        // );
-        // consoleLog(results, page);
         return results;
     } catch (error) {
         console.error('Error retrieving filtered URLs:', error);
         throw error;
     }
 }
-
-// export async function searchBlog(query, page) {
-//     const searchKeyword = decodeURIComponent(query.text);
-//     const bodyFlag = decodeURIComponent(query.body);
-//     const descriptionFlag = decodeURIComponent(query.description);
-//     const searchLang = query.lang;
-//     const tagQuery = query.tag;
-//     const skipPage = (page - 1) * query.limit;
-
-//     try {
-//         let where = {};
-//         // If a tag is selected, filter based on the tag
-//         if (tagQuery) {
-//             where.tag = { contains: tagQuery, mode: 'insensitive' };
-//         }
-//         // If no tag is selected or there is a search keyword, filter based on the search conditions
-//         if (!tagQuery || searchKeyword) {
-//             const searchConditions = [
-//                 {
-//                     title: {
-//                         contains: searchKeyword,
-//                         mode: 'insensitive',
-//                     },
-//                 },
-//                 (bodyFlag || descriptionFlag) && {
-//                     OR: [
-//                         {
-//                             body: {
-//                                 contains: searchKeyword,
-//                                 mode: 'insensitive',
-//                             },
-//                         },
-//                         {
-//                             description: {
-//                                 contains: searchKeyword,
-//                                 mode: 'insensitive',
-//                             },
-//                         },
-//                     ],
-//                 },
-//             ].filter(Boolean);
-
-//             where = {
-//                 ...where,
-//                 OR: searchConditions,
-//                 language: searchLang,
-//             };
-//         }
-
-//         const results = await db.BlogTable.findMany({
-//             where,
-//             skip: Math.abs(skipPage),
-//             take: query.limit,
-//             orderBy: {
-//                 viewers: query.sortDirection === 'desc' ? 'desc' : 'asc',
-//             },
-//         });
-
-//         return results;
-//     } catch (error) {
-//         console.error('Error retrieving filtered URLs:', error);
-//         throw error;
-//     }
-// }
 
 export async function getBlogs() {
     try {
@@ -304,63 +181,6 @@ export async function getBlogs() {
         throw error;
     } finally {
         await db.$disconnect();
-    }
-}
-
-// ------- comment Action
-export async function AddcommentToDb(
-    title,
-    postID,
-    postTitle,
-    userID,
-    userAvatar,
-) {
-    try {
-        const BlogTable = await db.BlogComment.create({
-            data: { title, postID, postTitle, userID, userAvatar },
-        });
-        return { BlogTable };
-    } catch (error) {
-        return { error };
-    }
-}
-
-export async function getBlogCommentFromDb(PostID) {
-    try {
-        return await db.BlogComment.findMany({
-            where: { postID: PostID },
-        });
-    } catch (error) {
-        consoleLog(error);
-    }
-}
-
-export async function addCommentCounterDb(commentID) {
-    try {
-        await db.BlogComment.update({
-            where: {
-                id: commentID,
-            },
-            data: {
-                like: { increment: 1 },
-            },
-        });
-    } catch (error) {
-        consoleLog(error.message);
-    }
-}
-export async function minusCommentCounterDb(commentID) {
-    try {
-        await db.BlogComment.update({
-            where: {
-                id: commentID,
-            },
-            data: {
-                dislike: { increment: 1 },
-            },
-        });
-    } catch (error) {
-        consoleLog(error.message);
     }
 }
 
@@ -376,7 +196,6 @@ export async function blogGetPageCount(limit) {
     return pageCount;
 }
 
-// ---------- publish actions ----------
 export async function showAllOnline_post(lang) {
     try {
         return await db.BlogTable.findMany({

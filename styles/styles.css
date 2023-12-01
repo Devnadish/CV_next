@@ -11,8 +11,9 @@ textarea {
     resize: none;
 }
 .ql-container.ql-snow {
-    background-color: #f3f3f3;
+    background-color: #f5e0e0;
     height: 90%;
+    border: 1px solid blue !important;
 }
 .ql-editor.ql-blank {
     width: 100%;

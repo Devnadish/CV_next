@@ -37,7 +37,7 @@ export function CardLink({
     return (
         <div>
             <Button
-                className='text-white hover:bg-primary hover:text-accent-foreground'
+                className=' text-foreground hover:bg-primary hover:text-accent-foreground'
                 onClick={() => {
                     linking();
                 }}

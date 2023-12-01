@@ -62,6 +62,7 @@ const EditTagForm = ({ id, title }) => {
                 <form
                     action={action}
                     className='flex w-full items-center justify-between'
+                    id='edittagform'
                 >
                     <input
                         type='text'
@@ -72,7 +73,7 @@ const EditTagForm = ({ id, title }) => {
                     />
                     <Button
                         type='submit'
-                        className='ml-2 px-2 py-1 text-sm  disabled:bg-red-400'
+                        className='ml-2 px-2 py-1 text-sm  disabled:bg-destructive'
                         size='sm'
                     >
                         <AiOutlineEdit size={'20px'} />

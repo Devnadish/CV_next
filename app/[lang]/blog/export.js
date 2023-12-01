@@ -3,7 +3,7 @@ import {
     showFreqBlog,
     getDataAfterSearch,
     GETBLOGPAGECOUNT,
-} from '@/pagecomponent/blog/dbAction/_action';
+} from '@/pagecomponent/blog/backend/blog_action';
 import PageContainer from '@/components/shared/pagecontainer/PageContainer';
 import BlogsWithSearch from '@/pagecomponent/blog/showBlogWithSearch/blogs/BlogsWithSearch';
 import { LoadMore } from '@/pagecomponent/blog/showBlogWithSearch/blogs/load-more';

@@ -21,7 +21,7 @@ const ListFromDb = async () => {
     return (
         <div>
             {/* <Suspense fallback={<div>Loading...</div>}> */}
-            <div className='bg-black text-white'>Db table</div>
+            <div className='bg-black  text-foreground'>Db table</div>
             <div className='mx-auto flex w-full items-center justify-between '>
                 <p className='text-md bg-blue-300 px-4'>
                     Blogs : {Dbpost.blogs.length}
