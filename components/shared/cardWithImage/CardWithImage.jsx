@@ -19,7 +19,7 @@ const CardWithImage = ({
 }) => {
     return (
         <>
-            <Card className='items-cener flex min-h-[200px] min-w-[250px] flex-col  justify-between   overflow-hidden bg-card'>
+            <Card className='items-cener mx-auto flex min-h-[200px] min-w-[250px] max-w-[100%]    flex-col   justify-between overflow-hidden bg-card '>
                 <CardHeader className='border-b border-r-primary bg-primary/40 p-2'>
                     <CardTitle className='flex w-full items-center justify-between '>
                         <Title title={title} flag='subtitle' />

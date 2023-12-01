@@ -16,7 +16,7 @@ const Navbar = async ({ lang }) => {
                 <Profile />
                 <MenuItems navigation={navigation} lang={lang} />
             </div>
-            <Logo />
+            {/* <Logo /> */}
         </nav>
     );
 };
@@ -51,14 +51,14 @@ function MenuItems({ navigation, lang }) {
       >
         {navigation.blog}
       </Link> */}
-            <Link
+            {/* <Link
                 href={`/${lang}/blog/`}
                 as={`/${lang}/blog/`}
                 prefetch={false}
                 className={menuStly}
             >
                 {navigation.blog}
-            </Link>
+            </Link> */}
             <Link
                 href={`/${lang}/dashboard`}
                 as={`/${lang}/dashboard`}
