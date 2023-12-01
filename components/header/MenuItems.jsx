@@ -3,7 +3,7 @@ function MenuItems({ navigation, lang }) {
     const menuStly =
         ' border-b-2 border-primary-foreground/40 p-2 px-4 w-full   hover:bg-primary';
     return (
-        <div className='flex items-center flex-col sm:flex-row justify-around gap-4 capitalize text-foreground'>
+        <div className='flex flex-col items-center justify-around gap-4 capitalize text-foreground sm:flex-row'>
             <Link href={`/${lang}`} prefetch={false} className={menuStly}>
                 {navigation.home}
             </Link>
@@ -40,4 +40,4 @@ function MenuItems({ navigation, lang }) {
     );
 }
 
-export default MenuItems
+export default MenuItems;

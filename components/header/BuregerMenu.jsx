@@ -2,21 +2,19 @@
 import React, { useState } from 'react';
 import { Button } from '../ui/button';
 import { Menu } from 'lucide-react';
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetFooter,
-    SheetHeader,
-    SheetTitle,
-} from '@/components/ui/sheet';
+import { Sheet, SheetContent } from '@/components/ui/sheet';
 import MenuItems from './MenuItems';
 
-function BuregerMenu({navigation,lang}) {
+function BuregerMenu({ navigation, lang }) {
     const [open, setOpen] = useState(false);
     return (
         <div>
-            <Button onClick={()=>{setOpen(true)}}  variant='menughost'>
+            <Button
+                onClick={() => {
+                    setOpen(true);
+                }}
+                variant='menughost'
+            >
                 <Menu className='text-foreground' />
             </Button>
             <Sheet open={open} onOpenChange={setOpen}>
@@ -29,15 +27,3 @@ function BuregerMenu({navigation,lang}) {
 }
 
 export default BuregerMenu;
-
-const DisplayMenu = ({ open, setOpen, tags, freq }) => {
-    return (
-        <>
-            <Sheet open={open} onOpenChange={setOpen}>
-                <SheetContent>
-                    <MenuItems navigation={navigation} lang={lang} />
-                </SheetContent>
-            </Sheet>
-        </>
-    );
-};
